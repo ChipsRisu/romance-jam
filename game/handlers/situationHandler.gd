@@ -1,6 +1,9 @@
 extends Node
 
+var ui: UI = null
 var container: Node = null
+
+var activeSituation: Situation = null
 
 # TODO there should be a void situation
 const SITUATION_PATH_DICTIONARY := {
@@ -35,12 +38,22 @@ func loadSituation(from: Situation.Key, to: Situation.Key) -> void:
 	# TODO start loading screen here
 	
 	# Remove all children
+	activeSituation = null
 	for child in container.get_children():
 		container.remove_child(child)
 		child.queue_free()
 	
 	# Load new Situation
 	var situation = load(situationPath)
-	container.add_child(situation.instantiate())
+	activeSituation = situation.instantiate()
+	container.add_child(activeSituation)
+	
+	# reset the HUD
+	toggleMovement(false)
+	ui.resetHud()
 	
 	# TODO close loading screen
+
+func toggleMovement(value: bool) -> void:
+	if activeSituation != null:
+		activeSituation.updateUi(value)

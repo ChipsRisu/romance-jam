@@ -20,6 +20,9 @@ enum Key {
 	CAVE 				= 500
 }
 
+@onready var exits = $Exits
+@onready var interactions = $Interactions
+
 @export var currentSituation: Situation.Key
 
 func _ready() -> void:
@@ -27,9 +30,15 @@ func _ready() -> void:
 	_handle_exits()
 
 func _handle_exits() -> void:
-	for exit: Exit in $Exits.get_children():
+	for exit: Exit in exits.get_children():
 		exit.button_up.connect(func(): SituationHandler.loadSituation(currentSituation, exit.target))
 
 func _handle_interactions() -> void:
-	for interaction: Interaction in $Interactions.get_children():
+	for interaction: Interaction in interactions.get_children():
 		interaction.button_up.connect(func(): DialogueHandler.start(interaction))
+
+func updateUi(isMoving: bool) -> void:
+	if isMoving: exits.show() 
+	else: exits.hide()
+	for interaction: Interaction in interactions.get_children():
+		interaction.disabled = isMoving

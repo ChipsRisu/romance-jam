@@ -1,32 +1,39 @@
 [gd_scene format=3 uid="uid://b25mlauqjsjij"]
 
 [ext_resource type="Script" uid="uid://cfimnigv185r6" path="res://game/main.gd" id="1_oa506"]
+[ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/exits/icon_ph.png" id="2_emt18"]
+[ext_resource type="Script" uid="uid://dtev185tk47ad" path="res://game/ui.gd" id="2_vop5m"]
 
 [node name="Main" type="Node" unique_id=1423148464]
 script = ExtResource("1_oa506")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=509589652]
+[node name="UI" type="CanvasLayer" parent="." unique_id=509589652]
+script = ExtResource("2_vop5m")
 
-[node name="Curtain" type="ColorRect" parent="CanvasLayer" unique_id=48843067]
+[node name="Curtain" type="ColorRect" parent="UI" unique_id=48843067]
 visible = false
 offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0, 0, 0, 1)
 
-[node name="UI" type="Control" parent="CanvasLayer" unique_id=424322695]
+[node name="HUD" type="Control" parent="UI" unique_id=424322695]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="CanvasLayer/UI" unique_id=312735694]
+[node name="toggleMovement" type="TextureButton" parent="UI/HUD" unique_id=354950663]
 layout_mode = 0
-offset_left = 925.0
-offset_top = 21.0
-offset_right = 1132.0
-offset_bottom = 78.0
-text = "CLIQUE MOI DESSUS PITIÉ"
+offset_left = 1085.0
+offset_top = 579.0
+offset_right = 1136.0
+offset_bottom = 630.0
+toggle_mode = true
+texture_normal = ExtResource("2_emt18")
+texture_pressed = ExtResource("2_emt18")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1080960320]
 
 [node name="SituationContainer" type="Node" parent="." unique_id=1260952937]
+
+[connection signal="toggled" from="UI/HUD/toggleMovement" to="." method="_on_toggle_movement_toggled"]

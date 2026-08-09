@@ -8,6 +8,11 @@ script = ExtResource("1_ivfd3")
 [node name="Background" type="Sprite2D" parent="." unique_id=1733816860]
 centered = false
 
-[node name="Interactions" type="Node2D" parent="." unique_id=2023153733]
+[node name="Interactions" type="Control" parent="." unique_id=317613732]
+layout_mode = 3
+anchors_preset = 0
 
-[node name="Exits" type="Node2D" parent="." unique_id=1619345788]
+[node name="Exits" type="Control" parent="." unique_id=2130133361]
+visible = false
+layout_mode = 3
+anchors_preset = 0
