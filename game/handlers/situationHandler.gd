@@ -14,14 +14,13 @@ const SITUATION_PATH_DICTIONARY := {
 	Situation.Key.HOUSE_ATTIC: "", 		# NOT IMPLEMENTED
 	Situation.Key.VILLAGE_PLACE: "", 	# NOT IMPLEMENTED
 	Situation.Key.SEASIDE_BEACH: "", 	# NOT IMPLEMENTED
-	Situation.Key.SEASIDE_COVE: "", 		# NOT IMPLEMENTED
+	Situation.Key.SEASIDE_COVE: "", 	# NOT IMPLEMENTED
 	Situation.Key.FOREST_CLEARING: "", 	# NOT IMPLEMENTED
-	Situation.Key.FOREST_SHACK: "", 		# NOT IMPLEMENTED
-	Situation.Key.CAVE: "", 				# NOT IMPLEMENTED
+	Situation.Key.FOREST_SHACK: "", 	# NOT IMPLEMENTED
+	Situation.Key.CAVE: "", 			# NOT IMPLEMENTED
 }
 
 func loadSituation(from: Situation.Key, to: Situation.Key) -> void: 
-	print(from, to)
 	var situationPath = SITUATION_PATH_DICTIONARY[to]
 	
 	# TODO only for dev

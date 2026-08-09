@@ -2,8 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://dgxhb7cwv83tf" path="res://game/situations/house/house.tscn" id="1_siur2"]
 [ext_resource type="Texture2D" uid="uid://b6ybcpsjt4yx1" path="res://game/situations/house/livingroom/background_ph.png" id="2_c5tpr"]
+[ext_resource type="Texture2D" uid="uid://dfsixxku14hna" path="res://game/characters/place_holder/ph1.png" id="3_qlnk6"]
 [ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/exits/icon_ph.png" id="3_s1b53"]
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/exits/exit.gd" id="3_sg5su"]
+[ext_resource type="Script" uid="uid://cxgf0bbqy1ufq" path="res://game/interactions/interaction.gd" id="4_2unxk"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_siur2")]
 currentSituation = 103
@@ -12,6 +14,27 @@ currentSituation = 103
 position = Vector2(-5.000001, -2)
 scale = Vector2(1.8954248, 1.5955882)
 texture = ExtResource("2_c5tpr")
+
+[node name="someGuy" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(2023153733) index="0" unique_id=158375740]
+offset_left = 328.0
+offset_top = 242.0
+offset_right = 574.0
+offset_bottom = 594.3007
+texture_normal = ExtResource("3_qlnk6")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("4_2unxk")
+key = "npc_test"
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="somTv" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(2023153733) index="1" unique_id=56274864]
+offset_left = 827.0
+offset_top = 283.0
+offset_right = 997.0
+offset_bottom = 368.0
+script = ExtResource("4_2unxk")
+key = "spot_test"
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
 [node name="toKitchen" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(1619345788) index="1" unique_id=580967365]
 offset_left = 1077.0

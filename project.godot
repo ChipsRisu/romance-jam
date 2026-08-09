@@ -19,12 +19,58 @@ config/icon="res://icon.svg"
 
 Dialogic="*uid://ds2q0uclmolvu"
 SituationHandler="*uid://20shskkv1isi"
+DialogueHandler="*uid://b848jypnm7a10"
 
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
-layout/style_directory={}
+directories/dch_directory={
+"place_holder": "res://game/characters/place_holder/place_holder.dch"
+}
+directories/dtl_directory={
+"npc_test": "res://game/timelines/place_holder/npc_test.dtl",
+"spot_test": "res://game/timelines/place_holder/spot_test.dtl"
+}
+layout/style_directory={
+"": "res://game/timelines/styles/compact.tres",
+"compact": "res://game/timelines/styles/compact.tres",
+"full": "res://game/timelines/styles/full.tres"
+}
+variables={}
+glossary/default_case_sensitive=true
+layout/style_list=["res://game/timelines/styles/compact.tres", "res://game/timelines/styles/full.tres"]
+layout/default_style="res://game/timelines/styles/compact.tres"
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
 
 [display]
 

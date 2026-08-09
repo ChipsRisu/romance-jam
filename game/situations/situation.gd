@@ -20,14 +20,16 @@ enum Key {
 	CAVE 				= 500
 }
 
-@onready var interactions = $Interactions
-@onready var exits = $Exits
-
 @export var currentSituation: Situation.Key
 
 func _ready() -> void:
+	_handle_interactions()
 	_handle_exits()
 
 func _handle_exits() -> void:
-	for exit: Exit in exits.get_children():
+	for exit: Exit in $Exits.get_children():
 		exit.button_up.connect(func(): SituationHandler.loadSituation(currentSituation, exit.target))
+
+func _handle_interactions() -> void:
+	for interaction: Interaction in $Interactions.get_children():
+		interaction.button_up.connect(func(): DialogueHandler.start(interaction))
