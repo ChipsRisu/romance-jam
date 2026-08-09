@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://duvo5ju3he11g"]
+
+[ext_resource type="Script" uid="uid://bh0sty5c4vq0w" path="res://game/situations/situation.gd" id="1_ivfd3"]
+
+[node name="Situation" type="Node2D" unique_id=1060838879]
+script = ExtResource("1_ivfd3")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1733816860]
+centered = false
+
+[node name="Interactions" type="Node2D" parent="." unique_id=2023153733]
+
+[node name="Exits" type="Node2D" parent="." unique_id=1619345788]
