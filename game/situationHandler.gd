@@ -22,13 +22,10 @@ func _ready() -> void:
 	child_entered_tree.connect(connectChildrenSignals)
 	_loadSituation(0, Situation.Key.HOUSE_KITCHEN)
 
-# TODO this seems shitty, there should be a better way to hand event ?
 func connectChildrenSignals(node: Node) -> void :
-	if node.has_signal("exit"):
-		node.exit.connect(_loadSituation)
+	if node.has_signal("do_exit"):
+		node.do_exit.connect(_loadSituation)
 		
-	for child in node.get_children():
-		connectChildrenSignals(child)
 
 func _loadSituation(from: Situation.Key, to: Situation.Key) -> void: 
 	var situationPath = SITUATION_PATH_DICTIONARY[to]
