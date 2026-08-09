@@ -1,20 +1,23 @@
 class_name Situation
 extends Node2D
 
+# IMPORTANT: changing a number means changing ALL related target in Situations
+# Please handle this with care
 enum Key {
-	HOUSE_FRONT,
-	HOUSE_ENTRANCE,
-	HOUSE_CORRIDOR,
-	HOUSE_LIVINGROOM,
-	HOUSE_KITCHEN,
-	HOUSE_BEDROOM,
-	HOUSE_ATTIC,
-	VILLAGE_PLACE,
-	SEASIDE_BEACH,
-	SEASIDE_COVE,
-	FOREST_CLEARING,
-	FOREST_SHACK,
-	CAVE
+	VOID 				= 0,
+	HOUSE_FRONT 		= 100,
+	HOUSE_ENTRANCE 		= 101,
+	HOUSE_CORRIDOR 		= 102,
+	HOUSE_LIVINGROOM 	= 103,
+	HOUSE_KITCHEN 		= 104,
+	HOUSE_BEDROOM 		= 105,
+	HOUSE_ATTIC 		= 106,
+	VILLAGE_PLACE 		= 200,
+	SEASIDE_BEACH 		= 300,
+	SEASIDE_COVE 		= 301,
+	FOREST_CLEARING 	= 400,
+	FOREST_SHACK 		= 401,
+	CAVE 				= 500
 }
 
 @onready var interactions = $Interactions
@@ -22,19 +25,9 @@ enum Key {
 
 @export var currentSituation: Situation.Key
 
-signal do_exit(current: Situation.Key, target: Situation.Key)
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	_handle_exit()
+	_handle_exits()
 
-func _handle_exit() -> void:
-	var action = func (target: Situation.Key):
-		do_exit.emit(currentSituation, target)
-	
+func _handle_exits() -> void:
 	for exit: Exit in exits.get_children():
-		exit.triggered.connect(action)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+		exit.button_up.connect(func(): SituationHandler.loadSituation(currentSituation, exit.target))

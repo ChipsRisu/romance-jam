@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/exits/exit.gd" id="2_oqwqd"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_bsgn5")]
+currentSituation = 101
 
 [node name="toCorridor" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(1619345788) index="0" unique_id=2138552675]
 offset_left = 564.0
@@ -13,6 +14,5 @@ offset_right = 604.0
 offset_bottom = 604.0
 texture_normal = ExtResource("2_de40p")
 script = ExtResource("2_oqwqd")
-current = 2
-target = 2
+target = 102
 metadata/_custom_type_script = "uid://bkutm1ui3usqp"

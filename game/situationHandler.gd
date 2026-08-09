@@ -1,12 +1,15 @@
-class_name SituationHandler
 extends Node
 
+var container: Node = null
+
+# TODO there should be a void situation
 const SITUATION_PATH_DICTIONARY := {
+	Situation.Key.VOID: "",				# TODO should be a special scene
 	Situation.Key.HOUSE_FRONT: "",		# NOT IMPLEMENTED
 	Situation.Key.HOUSE_ENTRANCE: "", 	# NOT IMPLEMENTED
 	Situation.Key.HOUSE_CORRIDOR: "", 	# NOT IMPLEMENTED
-	Situation.Key.HOUSE_LIVINGROOM: "res://game/situations/house/livingroom/livingroom.tscn",
-	Situation.Key.HOUSE_KITCHEN: "res://game/situations/house/kitchen/kitchen.tscn",
+	Situation.Key.HOUSE_LIVINGROOM: 	"res://game/situations/house/livingroom/livingroom.tscn",
+	Situation.Key.HOUSE_KITCHEN: 		"res://game/situations/house/kitchen/kitchen.tscn",
 	Situation.Key.HOUSE_BEDROOM: "", 	# NOT IMPLEMENTED
 	Situation.Key.HOUSE_ATTIC: "", 		# NOT IMPLEMENTED
 	Situation.Key.VILLAGE_PLACE: "", 	# NOT IMPLEMENTED
@@ -17,31 +20,28 @@ const SITUATION_PATH_DICTIONARY := {
 	Situation.Key.CAVE: "", 				# NOT IMPLEMENTED
 }
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	child_entered_tree.connect(connectChildrenSignals)
-	_loadSituation(0, Situation.Key.HOUSE_KITCHEN)
-
-func connectChildrenSignals(node: Node) -> void :
-	if node.has_signal("do_exit"):
-		node.do_exit.connect(_loadSituation)
-		
-
-func _loadSituation(from: Situation.Key, to: Situation.Key) -> void: 
+func loadSituation(from: Situation.Key, to: Situation.Key) -> void: 
+	print(from, to)
 	var situationPath = SITUATION_PATH_DICTIONARY[to]
 	
-	if situationPath.is_empty() || !ResourceLoader.exists(situationPath): return;
+	# TODO only for dev
 	print("LOAD SITUATION FROM ", from, " TO ", to, " > ", situationPath)
 	
+	# Prevent NPE (should happen only during dev)
+	if (container == null 
+		|| situationPath.is_empty() 
+		|| !ResourceLoader.exists(situationPath)): 
+		return;
+	
 	# TODO start loading screen here
+	
 	# Remove all children
-	for child in get_children():
-		remove_child(child)
+	for child in container.get_children():
+		container.remove_child(child)
 		child.queue_free()
 	
 	# Load new Situation
 	var situation = load(situationPath)
-	add_child(situation.instantiate())
+	container.add_child(situation.instantiate())
+	
 	# TODO close loading screen
-	
-	

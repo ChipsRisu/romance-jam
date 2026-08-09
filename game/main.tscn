@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b25mlauqjsjij"]
 
-[ext_resource type="Script" uid="uid://20shskkv1isi" path="res://game/situationHandler.gd" id="1_oa506"]
+[ext_resource type="Script" uid="uid://cfimnigv185r6" path="res://game/main.gd" id="1_oa506"]
 
 [node name="Main" type="Node" unique_id=1423148464]
+script = ExtResource("1_oa506")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=509589652]
 
@@ -28,5 +29,4 @@ text = "CLIQUE MOI DESSUS PITIÉ"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1080960320]
 
-[node name="SituationContainer" type="Node" parent="." unique_id=1260952937 groups=["SituationHandler"]]
-script = ExtResource("1_oa506")
+[node name="SituationContainer" type="Node" parent="." unique_id=1260952937]

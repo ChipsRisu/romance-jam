@@ -6,14 +6,12 @@
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/exits/exit.gd" id="3_sg5su"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_siur2")]
+currentSituation = 103
 
 [node name="Background" parent="." index="0" unique_id=1733816860]
 position = Vector2(-5.000001, -2)
 scale = Vector2(1.8954248, 1.5955882)
 texture = ExtResource("2_c5tpr")
-
-[node name="toCorridor" parent="Exits" parent_id_path=PackedInt32Array(1619345788) index="0" unique_id=2138552675]
-current = 3
 
 [node name="toKitchen" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(1619345788) index="1" unique_id=580967365]
 offset_left = 1077.0
@@ -22,5 +20,4 @@ offset_right = 1117.0
 offset_bottom = 377.0
 texture_normal = ExtResource("3_s1b53")
 script = ExtResource("3_sg5su")
-current = 3
-target = 4
+target = 104
