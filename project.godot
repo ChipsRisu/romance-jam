@@ -29,8 +29,8 @@ directories/dch_directory={
 "place_holder": "res://game/characters/place_holder/place_holder.dch"
 }
 directories/dtl_directory={
-"npc_test": "res://game/timelines/place_holder/npc_test.dtl",
-"spot_test": "res://game/timelines/place_holder/spot_test.dtl"
+"npc_test_103_1": "res://game/timelines/place_holder/npc_test.dtl",
+"spot_test_103_1": "res://game/timelines/place_holder/spot_test.dtl"
 }
 layout/style_directory={
 "": "res://game/timelines/styles/compact.tres",
