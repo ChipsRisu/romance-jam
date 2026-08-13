@@ -16,7 +16,9 @@ TBD
 - [ChipsRisu](https://x.com/ChipsRisu)
 - [Iloya](https://x.com/Iloya9)
 - [Lumiole](https://x.com/LumioleEtheree)
+- [Meika_Amethyst](https://x.com/KunaMeika)
 - [Plumeep](https://bsky.app/profile/plumeep.bsky.social)
+- [Shu](https://www.instagram.com/_shu_theflower_/)
 - [Vulcainos](https://vulcainos.fr/)
 - [Yagacapy](https://bsky.app/profile/did:plc:5ycbicrhnlwf4lgupmyde6he)
 
