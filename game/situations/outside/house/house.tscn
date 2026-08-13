@@ -1,6 +1,25 @@
 [gd_scene format=3 uid="uid://drdvi3kexim6t"]
 
 [ext_resource type="PackedScene" uid="uid://duvo5ju3he11g" path="res://game/situations/situation.tscn" id="1_f3uog"]
+[ext_resource type="Texture2D" uid="uid://dgue1vccuini7" path="res://game/situations/outside/house/front_wip.png" id="2_fwt57"]
+[ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/exits/icon_ph.png" id="3_sw6yt"]
+[ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/exits/exit.gd" id="4_qnv1c"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_f3uog")]
 currentSituation = 100
+
+[node name="Background" parent="." index="0" unique_id=1733816860]
+position = Vector2(18.999998, -50.999996)
+scale = Vector2(1.3768117, 1.3768116)
+texture = ExtResource("2_fwt57")
+
+[node name="Exit" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=588566584]
+layout_mode = 0
+offset_left = 525.0
+offset_top = 481.0
+offset_right = 565.0
+offset_bottom = 521.0
+texture_normal = ExtResource("3_sw6yt")
+script = ExtResource("4_qnv1c")
+target = 101
+metadata/_custom_type_script = "uid://bkutm1ui3usqp"
