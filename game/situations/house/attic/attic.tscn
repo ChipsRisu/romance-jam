@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://deq1amhu85qlg"]
+
+[ext_resource type="PackedScene" uid="uid://dgxhb7cwv83tf" path="res://game/situations/house/house.tscn" id="1_nqwdd"]
+
+[node name="Situation" unique_id=1060838879 instance=ExtResource("1_nqwdd")]
+currentSituation = 106
+
+[node name="toCorridor" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
+layout_mode = 0

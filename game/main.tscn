@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cfimnigv185r6" path="res://game/main.gd" id="1_oa506"]
 [ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/exits/icon_ph.png" id="2_emt18"]
 [ext_resource type="Script" uid="uid://dtev185tk47ad" path="res://game/ui.gd" id="2_vop5m"]
+[ext_resource type="Script" uid="uid://c31o8eq45sq0q" path="res://game/dev_menu.gd" id="4_vop5m"]
 
 [node name="Main" type="Node" unique_id=1423148464]
 script = ExtResource("1_oa506")
@@ -32,8 +33,55 @@ toggle_mode = true
 texture_normal = ExtResource("2_emt18")
 texture_pressed = ExtResource("2_emt18")
 
+[node name="DEV MENU" type="Control" parent="UI" unique_id=2119271310]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_vop5m")
+
+[node name="Panel" type="Panel" parent="UI/DEV MENU" unique_id=1285691018]
+layout_mode = 0
+offset_right = 378.0
+offset_bottom = 119.0
+
+[node name="DevData" type="GridContainer" parent="UI/DEV MENU/Panel" unique_id=1071711886]
+layout_mode = 0
+offset_right = 363.0
+offset_bottom = 119.0
+columns = 2
+
+[node name="Label" type="Label" parent="UI/DEV MENU/Panel/DevData" unique_id=1030281274]
+layout_mode = 2
+text = "DEV MENU"
+
+[node name="blank" type="Control" parent="UI/DEV MENU/Panel/DevData" unique_id=1868136518]
+layout_mode = 2
+
+[node name="Situation" type="Label" parent="UI/DEV MENU/Panel/DevData" unique_id=425860666]
+layout_mode = 2
+text = "Situation"
+
+[node name="SituationSelector" type="OptionButton" parent="UI/DEV MENU/Panel/DevData" unique_id=2039615235]
+layout_mode = 2
+
+[node name="Day" type="Label" parent="UI/DEV MENU/Panel/DevData" unique_id=1029357537]
+layout_mode = 2
+text = "Day"
+
+[node name="DaySelector" type="OptionButton" parent="UI/DEV MENU/Panel/DevData" unique_id=354946548]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/DEV MENU/Panel" unique_id=543000057]
+visible = false
+layout_mode = 0
+offset_right = 246.0
+offset_bottom = 136.0
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1080960320]
 
 [node name="SituationContainer" type="Node" parent="." unique_id=1260952937]
 
 [connection signal="toggled" from="UI/HUD/toggleMovement" to="." method="_on_toggle_movement_toggled"]
+[connection signal="item_selected" from="UI/DEV MENU/Panel/DevData/SituationSelector" to="UI/DEV MENU" method="_on_situation_selector_item_selected"]
+[connection signal="item_selected" from="UI/DEV MENU/Panel/DevData/DaySelector" to="." method="_on_day_selector_item_selected"]

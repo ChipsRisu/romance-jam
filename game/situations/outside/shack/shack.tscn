@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dnv7v1308tye6"]
+
+[ext_resource type="PackedScene" uid="uid://duvo5ju3he11g" path="res://game/situations/situation.tscn" id="1_a81k0"]
+
+[node name="Situation" unique_id=1060838879 instance=ExtResource("1_a81k0")]
+currentSituation = 401

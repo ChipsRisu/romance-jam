@@ -20,6 +20,17 @@ enum Key {
 	CAVE 				= 500
 }
 
+enum Day {
+	ALL = 0,
+	MON = 1,
+	TUE = 2,
+	WEN = 3,
+	THU = 4,
+	FRI = 5,
+	SAT = 6,
+	SUN = 7,
+}
+
 @onready var exits = $Exits
 @onready var interactions = $Interactions
 
