@@ -26,7 +26,7 @@ const SITUATION_PATH_DICTIONARY := {
 func loadSituation(from: Situation.Key, to: Situation.Key) -> void: 
 	var situationPath = SITUATION_PATH_DICTIONARY[to]
 	
-	# TODO only for dev purpose
+	# only for dev purpose
 	print("LOAD SITUATION FROM ", from, " TO ", to, " > ", situationPath)
 	
 	# Prevent NPE (should happen only during dev)
@@ -40,15 +40,24 @@ func loadSituation(from: Situation.Key, to: Situation.Key) -> void:
 	# Set the scene
 	_clean()
 	_load(to)
+	_resetHud()
 	
 	# Update the game state
 	GameHandler.state.situation = to
 	
-	# reset the HUD
-	toggleMovement(false)
-	ui.resetHud()
-	
 	# TODO close loading screen
+
+func reloadSituation() -> void:
+	var situation = GameHandler.state.situation
+	var situationPath = SITUATION_PATH_DICTIONARY[situation]
+	
+	# only for dev purpose
+	print("RELOAD SITUATION ", situation)
+	
+	# Set the scene
+	_clean()
+	_load(situation)
+	_resetHud()
 
 func toggleMovement(value: bool) -> void:
 	if activeSituation != null:
@@ -67,3 +76,7 @@ func _clean() -> void:
 	for child in container.get_children():
 		container.remove_child(child)
 		child.queue_free()
+
+func _resetHud() -> void:
+	toggleMovement(false)
+	ui.resetHud()

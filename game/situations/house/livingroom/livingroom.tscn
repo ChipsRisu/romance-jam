@@ -26,6 +26,7 @@ ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("4_2unxk")
 key = "npc_test"
+dayAbsenceList = Array[int]([2, 0])
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
 [node name="somTv" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="1" unique_id=56274864]
@@ -36,10 +37,10 @@ offset_right = 997.0
 offset_bottom = 368.0
 script = ExtResource("4_2unxk")
 key = "spot_test"
+ignoreDayForDialogue = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
-[node name="toCorridor" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
-layout_mode = 0
+[node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
 offset_left = 595.0
 offset_top = 555.0
 offset_right = 646.0

@@ -4,8 +4,6 @@ func setDay(day: Situation.Day) -> void:
 	if Situation.Day.ALL == day:
 		return
 	print("CHANGE DAY ", day)
-	
-	# TODO handle scene reload
 	GameHandler.state.day = day
 	
 func next() -> Situation.Day:

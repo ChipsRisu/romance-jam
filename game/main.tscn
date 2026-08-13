@@ -84,4 +84,4 @@ offset_bottom = 136.0
 
 [connection signal="toggled" from="UI/HUD/toggleMovement" to="." method="_on_toggle_movement_toggled"]
 [connection signal="item_selected" from="UI/DEV MENU/Panel/DevData/SituationSelector" to="UI/DEV MENU" method="_on_situation_selector_item_selected"]
-[connection signal="item_selected" from="UI/DEV MENU/Panel/DevData/DaySelector" to="." method="_on_day_selector_item_selected"]
+[connection signal="item_selected" from="UI/DEV MENU/Panel/DevData/DaySelector" to="UI/DEV MENU" method="_on_day_selector_item_selected"]

@@ -9,6 +9,3 @@ func _ready() -> void:
 
 func _on_toggle_movement_toggled(toggled_on: bool) -> void:
 	SituationHandler.toggleMovement(toggled_on)
-
-func _on_day_selector_item_selected(index: int) -> void:
-	DayHandler.setDay(index)

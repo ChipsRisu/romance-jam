@@ -13,4 +13,6 @@ func start(interaction: Interaction) -> void:
 		Dialogic.start(id)
 
 func workingId(interaction: Interaction) -> String:
+	if interaction.ignoreDayForDialogue:
+		return "%s_%s" % [interaction.key, GameHandler.state.situation]
 	return "%s_%s_%s" % [interaction.key, GameHandler.state.situation, GameHandler.state.day]
