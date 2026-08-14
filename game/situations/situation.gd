@@ -1,3 +1,4 @@
+@icon("res://icons/situation.svg")
 class_name Situation
 extends Node2D
 

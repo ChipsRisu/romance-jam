@@ -1,3 +1,4 @@
+@icon("res://icons/exit.svg")
 class_name Exit
 extends TextureButton
 

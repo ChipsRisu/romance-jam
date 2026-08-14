@@ -1,3 +1,4 @@
+@icon("res://icons/interaction.svg")
 class_name Interaction
 extends TextureButton
 
