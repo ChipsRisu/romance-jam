@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6ybcpsjt4yx1"
-path="res://.godot/imported/background_ph.png-e97f8d331f397ac02b8f80b1e3f55767.ctex"
+uid="uid://bvm2ew4neadfo"
+path="res://.godot/imported/House_Background.png-1f31d56c868a5ada40514d2d5a09482d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/situations/house/livingroom/background_ph.png"
-dest_files=["res://.godot/imported/background_ph.png-e97f8d331f397ac02b8f80b1e3f55767.ctex"]
+source_file="res://game/situations/outside/house/House_Background.png"
+dest_files=["res://.godot/imported/House_Background.png-1f31d56c868a5ada40514d2d5a09482d.ctex"]
 
 [params]
 

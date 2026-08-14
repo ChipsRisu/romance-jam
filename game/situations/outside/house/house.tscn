@@ -1,17 +1,27 @@
 [gd_scene format=3 uid="uid://drdvi3kexim6t"]
 
 [ext_resource type="PackedScene" uid="uid://duvo5ju3he11g" path="res://game/situations/situation.tscn" id="1_f3uog"]
-[ext_resource type="Texture2D" uid="uid://dgue1vccuini7" path="res://game/situations/outside/house/front_wip.png" id="2_fwt57"]
+[ext_resource type="Texture2D" uid="uid://bvm2ew4neadfo" path="res://game/situations/outside/house/House_Background.png" id="2_sw6yt"]
 [ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/exits/icon_ph.png" id="3_sw6yt"]
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/exits/exit.gd" id="4_qnv1c"]
+
+[sub_resource type="Environment" id="Environment_qnv1c"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 2.98
+glow_bloom = 0.04
+glow_hdr_luminance_cap = 20.73
+adjustment_enabled = true
+adjustment_contrast = 0.995
+adjustment_saturation = 1.16
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_f3uog")]
 currentSituation = 100
 
 [node name="Background" parent="." index="0" unique_id=1733816860]
-position = Vector2(18.999998, -50.999996)
-scale = Vector2(1.3768117, 1.3768116)
-texture = ExtResource("2_fwt57")
+position = Vector2(0, -1297)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_sw6yt")
 
 [node name="Exit" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=588566584]
 layout_mode = 0
@@ -23,3 +33,18 @@ texture_normal = ExtResource("3_sw6yt")
 script = ExtResource("4_qnv1c")
 target = 101
 metadata/_custom_type_script = "uid://bkutm1ui3usqp"
+
+[node name="PostProcess" type="WorldEnvironment" parent="." index="3" unique_id=1710839961]
+environment = SubResource("Environment_qnv1c")
+
+[node name="DayLightOutside" type="CanvasModulate" parent="." index="4" unique_id=1287111946]
+visible = false
+color = Color(0.97248214, 0.9708113, 0.9480118, 1)
+
+[node name="SunRiseAndSunSetOutside" type="CanvasModulate" parent="." index="5" unique_id=1677839753]
+visible = false
+color = Color(0.956158, 0.88325727, 0.89493954, 1)
+
+[node name="NightOutside" type="CanvasModulate" parent="." index="6" unique_id=248487507]
+visible = false
+color = Color(0.339051, 0.42689574, 0.54891586, 1)

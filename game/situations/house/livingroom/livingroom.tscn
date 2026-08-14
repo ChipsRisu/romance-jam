@@ -1,19 +1,28 @@
 [gd_scene format=3 uid="uid://v6q8ckn5wtor"]
 
 [ext_resource type="PackedScene" uid="uid://dgxhb7cwv83tf" path="res://game/situations/house/house.tscn" id="1_siur2"]
-[ext_resource type="Texture2D" uid="uid://b6ybcpsjt4yx1" path="res://game/situations/house/livingroom/background_ph.png" id="2_c5tpr"]
+[ext_resource type="Texture2D" uid="uid://cv8jd10t27oar" path="res://game/situations/house/livingroom/Livingroom_Background.png" id="2_qlnk6"]
 [ext_resource type="Texture2D" uid="uid://dfsixxku14hna" path="res://game/characters/place_holder/ph1.png" id="3_qlnk6"]
 [ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/exits/icon_ph.png" id="3_s1b53"]
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/exits/exit.gd" id="3_sg5su"]
 [ext_resource type="Script" uid="uid://cxgf0bbqy1ufq" path="res://game/interactions/interaction.gd" id="4_2unxk"]
 
+[sub_resource type="Environment" id="Environment_2unxk"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 2.98
+glow_bloom = 0.04
+glow_hdr_luminance_cap = 20.73
+adjustment_enabled = true
+adjustment_contrast = 0.995
+adjustment_saturation = 1.16
+
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_siur2")]
 currentSituation = 103
 
 [node name="Background" parent="." index="0" unique_id=1733816860]
-position = Vector2(-5.000001, -2)
-scale = Vector2(1.8954248, 1.5955882)
-texture = ExtResource("2_c5tpr")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_qlnk6")
 
 [node name="someGuy" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="0" unique_id=158375740]
 layout_mode = 0
@@ -55,3 +64,18 @@ offset_bottom = 377.0
 texture_normal = ExtResource("3_s1b53")
 script = ExtResource("3_sg5su")
 target = 104
+
+[node name="PostProcess" type="WorldEnvironment" parent="." index="3" unique_id=951861593]
+environment = SubResource("Environment_2unxk")
+
+[node name="DayLightInside" type="CanvasModulate" parent="." index="4" unique_id=1987770854]
+visible = false
+color = Color(0.9642642, 0.95476073, 0.94147336, 1)
+
+[node name="SunRiseAndSunSetInside" type="CanvasModulate" parent="." index="5" unique_id=1693849330]
+visible = false
+color = Color(0.9205674, 0.86703116, 0.84388596, 1)
+
+[node name="NightInside" type="CanvasModulate" parent="." index="6" unique_id=1974290248]
+visible = false
+color = Color(0.35158047, 0.43703914, 0.47763354, 1)

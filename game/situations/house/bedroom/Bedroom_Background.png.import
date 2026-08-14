@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh3x84pvogjr2"
-path="res://.godot/imported/attic_wip.png-786bf43c14b7628291f5bebef60c0376.ctex"
+uid="uid://cv6agv81h50dd"
+path="res://.godot/imported/Bedroom_Background.png-f2411f9f96649c6b66994e4df156ecc7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/situations/house/attic/attic_wip.png"
-dest_files=["res://.godot/imported/attic_wip.png-786bf43c14b7628291f5bebef60c0376.ctex"]
+source_file="res://game/situations/house/bedroom/Bedroom_Background.png"
+dest_files=["res://.godot/imported/Bedroom_Background.png-f2411f9f96649c6b66994e4df156ecc7.ctex"]
 
 [params]
 

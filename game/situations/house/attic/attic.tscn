@@ -1,17 +1,42 @@
 [gd_scene format=3 uid="uid://deq1amhu85qlg"]
 
 [ext_resource type="PackedScene" uid="uid://dgxhb7cwv83tf" path="res://game/situations/house/house.tscn" id="1_nqwdd"]
-[ext_resource type="Texture2D" uid="uid://bh3x84pvogjr2" path="res://game/situations/house/attic/attic_wip.png" id="2_drqy5"]
+[ext_resource type="Texture2D" uid="uid://tutc3veal11m" path="res://game/situations/house/attic/Attic_Background.png" id="2_drqy5"]
+
+[sub_resource type="Environment" id="Environment_o40di"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 2.98
+glow_bloom = 0.04
+glow_hdr_luminance_cap = 20.73
+adjustment_enabled = true
+adjustment_contrast = 0.995
+adjustment_saturation = 1.16
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_nqwdd")]
 currentSituation = 106
 
 [node name="Background" parent="." index="0" unique_id=1733816860]
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_drqy5")
 
-[node name="toCorridor" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
-layout_mode = 0
+[node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
 offset_left = 873.0
 offset_top = 554.0
 offset_right = 924.0
 offset_bottom = 605.0
+
+[node name="PostProcess" type="WorldEnvironment" parent="." index="3" unique_id=1370793356]
+environment = SubResource("Environment_o40di")
+
+[node name="DayLightInside" type="CanvasModulate" parent="." index="4" unique_id=1145233739]
+visible = false
+color = Color(0.9642642, 0.95476073, 0.94147336, 1)
+
+[node name="SunRiseAndSunSetInside" type="CanvasModulate" parent="." index="5" unique_id=100092297]
+visible = false
+color = Color(0.9205674, 0.86703116, 0.84388596, 1)
+
+[node name="NightInside" type="CanvasModulate" parent="." index="6" unique_id=1792563253]
+visible = false
+color = Color(0.35158047, 0.43703914, 0.47763354, 1)
