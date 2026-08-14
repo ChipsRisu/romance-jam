@@ -69,14 +69,14 @@ func _ready() -> void:
 
 func _handle_exits() -> void:
 	for exit: Exit in exits.get_children():
-		exit.button_up.connect(func(): SituationHandler.loadSituation(currentSituation, exit.target))
+		exit.pressed.connect(func(): SituationHandler.loadSituation(currentSituation, exit.target))
 
 func _handle_interactions() -> void:
 	for interaction: Interaction in interactions.get_children():
 		if interaction.dayAbsenceList.has(GameHandler.state.day):
 			interaction.hide()
 		else: 
-			interaction.button_up.connect(func(): DialogueHandler.start(interaction))
+			interaction.pressed.connect(func(): DialogueHandler.start(interaction))
 
 func updateUi(isMoving: bool) -> void:
 	if isMoving: exits.show() 
