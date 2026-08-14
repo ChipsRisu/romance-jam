@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://dt0b8a2s1tgsp" path="res://game/Asset/Backgrounds/Salon_Background.png" id="1_t77xu"]
 [ext_resource type="Texture2D" uid="uid://bot4wbx11b31c" path="res://game/Asset/2D_Characters/Rosine.png" id="2_yufsc"]
+[ext_resource type="Texture2D" uid="uid://dpipq6eicgap5" path="res://game/Asset/Backgrounds/TreeHouse.png" id="3_j4cjk"]
+[ext_resource type="Texture2D" uid="uid://unsqg4uxfjdf" path="res://game/Asset/Texture/Leaves_Tile.png" id="4_y3o7c"]
 
 [sub_resource type="Environment" id="Environment_ssidi"]
 background_mode = 3
@@ -13,13 +15,35 @@ adjustment_enabled = true
 adjustment_contrast = 0.995
 adjustment_saturation = 1.16
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_t77xu"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_6tcxi"]
+offsets = PackedFloat32Array(0, 0.13207547, 0.7830189, 1)
+colors = PackedColorArray(1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_yufsc"]
+gradient = SubResource("Gradient_6tcxi")
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fvwoe"]
 particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(500, 200, 1)
-spread = 180.0
-initial_velocity_max = 15.0
-gravity = Vector3(0, 0, 0)
+direction = Vector3(0, 0, 0)
+spread = 20.0
+initial_velocity_min = -20.0
+initial_velocity_max = -20.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 49.99998
+gravity = Vector3(0, 30, 0)
+scale_min = 0.049999997
+scale_max = 0.19999999
+color_ramp = SubResource("GradientTexture1D_yufsc")
+anim_speed_max = 0.049999997
+anim_offset_max = 1.0
 turbulence_noise_strength = 14.24
 turbulence_noise_scale = 8.98
 
@@ -40,24 +64,26 @@ color = Color(0.9205674, 0.86703116, 0.84388596, 1)
 visible = false
 color = Color(0.35158047, 0.43703914, 0.47763354, 1)
 
-[node name="Leaf_Particle" type="GPUParticles2D" parent="." unique_id=777179827]
-visible = false
-amount = 100
-visibility_rect = Rect2(-500, -200, 1000, 400)
-process_material = SubResource("ParticleProcessMaterial_fvwoe")
-
-[node name="Fireflies_Particle" type="GPUParticles2D" parent="." unique_id=1024428219]
-visible = false
-amount = 50
-visibility_rect = Rect2(-500, -200, 1000, 400)
-process_material = SubResource("ParticleProcessMaterial_fvwoe")
-
 [node name="SalonBackground" type="Sprite2D" parent="." unique_id=1439307225]
+visible = false
 position = Vector2(2, 0)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_t77xu")
 
 [node name="Rosine" type="Sprite2D" parent="." unique_id=1066702116]
+visible = false
 position = Vector2(-29.999996, 141)
 scale = Vector2(0.9972222, 0.99722224)
 texture = ExtResource("2_yufsc")
+
+[node name="TreeHouse" type="Sprite2D" parent="." unique_id=1772682005]
+position = Vector2(10.999985, 7)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_j4cjk")
+
+[node name="Leaf_Particle" type="GPUParticles2D" parent="." unique_id=777179827]
+material = SubResource("CanvasItemMaterial_t77xu")
+amount = 100
+texture = ExtResource("4_y3o7c")
+visibility_rect = Rect2(-500, -200, 1000, 400)
+process_material = SubResource("ParticleProcessMaterial_fvwoe")
