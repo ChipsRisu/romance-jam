@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://df084kpqqhh7d"]
+
+[ext_resource type="Texture2D" uid="uid://dt0b8a2s1tgsp" path="res://game/Asset/Backgrounds/Salon_Background.png" id="1_t77xu"]
+[ext_resource type="Texture2D" uid="uid://bot4wbx11b31c" path="res://game/Asset/2D_Characters/Rosine.png" id="2_yufsc"]
+
+[sub_resource type="Environment" id="Environment_ssidi"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 2.98
+glow_bloom = 0.04
+glow_hdr_luminance_cap = 20.73
+adjustment_enabled = true
+adjustment_contrast = 0.995
+adjustment_saturation = 1.16
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fvwoe"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(500, 200, 1)
+spread = 180.0
+initial_velocity_max = 15.0
+gravity = Vector3(0, 0, 0)
+turbulence_noise_strength = 14.24
+turbulence_noise_scale = 8.98
+
+[node name="Node2D" type="Node2D" unique_id=387300341]
+
+[node name="PostProcess" type="WorldEnvironment" parent="." unique_id=1202245832]
+environment = SubResource("Environment_ssidi")
+
+[node name="DayLightInside" type="CanvasModulate" parent="." unique_id=76986583]
+visible = false
+color = Color(0.9642642, 0.95476073, 0.94147336, 1)
+
+[node name="SunRiseAndSunSetInside" type="CanvasModulate" parent="." unique_id=1021461300]
+visible = false
+color = Color(0.9205674, 0.86703116, 0.84388596, 1)
+
+[node name="NightInside" type="CanvasModulate" parent="." unique_id=1401238600]
+visible = false
+color = Color(0.35158047, 0.43703914, 0.47763354, 1)
+
+[node name="Leaf_Particle" type="GPUParticles2D" parent="." unique_id=777179827]
+visible = false
+amount = 100
+visibility_rect = Rect2(-500, -200, 1000, 400)
+process_material = SubResource("ParticleProcessMaterial_fvwoe")
+
+[node name="Fireflies_Particle" type="GPUParticles2D" parent="." unique_id=1024428219]
+visible = false
+amount = 50
+visibility_rect = Rect2(-500, -200, 1000, 400)
+process_material = SubResource("ParticleProcessMaterial_fvwoe")
+
+[node name="SalonBackground" type="Sprite2D" parent="." unique_id=1439307225]
+position = Vector2(2, 0)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_t77xu")
+
+[node name="Rosine" type="Sprite2D" parent="." unique_id=1066702116]
+position = Vector2(-29.999996, 141)
+scale = Vector2(0.9972222, 0.99722224)
+texture = ExtResource("2_yufsc")
