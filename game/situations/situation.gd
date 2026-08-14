@@ -1,4 +1,5 @@
 @icon("res://icons/situation.svg")
+@tool
 class_name Situation
 extends Node2D
 
@@ -36,6 +37,31 @@ enum Day {
 @onready var interactions = $Interactions
 
 @export var currentSituation: Situation.Key
+
+#region config warning
+func _get_configuration_warnings():
+	var errorList: Array[String] = [];
+	
+	var interactionsNode: Node = find_child("Interactions");
+	if interactionsNode == null:
+		errorList.append("This node need Controle node named 'Interactions'");
+	elif not interactionsNode.is_class("Control"):
+		errorList.append("'Interactions' node need to be Control");
+	
+	var exitsNode: Node = find_child("Exits");
+	if exitsNode == null:
+		errorList.append("This node need Controle node named 'Exits'");
+	elif not exitsNode.is_class("Control"):
+		errorList.append("'Exits' node need to be Control");
+	
+	var backgroundNode: Node = find_child("Background");
+	if backgroundNode == null:
+		errorList.append("This node need Sprite2D node named 'Background'");
+	elif not backgroundNode.is_class("Sprite2D"):
+		errorList.append("'Background' node need to be Sprite2D");
+	
+	return errorList;
+#endregion
 
 func _ready() -> void:
 	_handle_interactions()
