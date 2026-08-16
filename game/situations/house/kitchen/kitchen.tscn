@@ -1,10 +1,21 @@
 [gd_scene format=3 uid="uid://cy7vsp0nymvha"]
 
 [ext_resource type="PackedScene" uid="uid://dgxhb7cwv83tf" path="res://game/situations/house/house.tscn" id="1_vjvbf"]
-[ext_resource type="Texture2D" uid="uid://c0m4tsvi3t11x" path="res://game/situations/house/kitchen/kitchen_wip.png" id="2_n1dga"]
+[ext_resource type="Texture2D" uid="uid://cu6ogo04ncjaj" path="res://game/situations/house/kitchen/cuisine.png" id="2_n1dga"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_vjvbf")]
 currentSituation = 104
 
 [node name="Background" parent="." index="0" unique_id=1733816860]
+scale = Vector2(0.29999998, 0.29999998)
 texture = ExtResource("2_n1dga")
+
+[node name="Exits" parent="." index="2" unique_id=2130133361]
+visible = true
+
+[node name="toEntrance" parent="Exits" index="0" unique_id=2138552675]
+visible = false
+offset_left = 25.0
+offset_top = 360.0
+offset_right = 76.0
+offset_bottom = 411.0
