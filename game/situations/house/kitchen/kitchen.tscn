@@ -10,11 +10,7 @@ currentSituation = 104
 scale = Vector2(0.29999998, 0.29999998)
 texture = ExtResource("2_n1dga")
 
-[node name="Exits" parent="." index="2" unique_id=2130133361]
-visible = true
-
-[node name="toEntrance" parent="Exits" index="0" unique_id=2138552675]
-visible = false
+[node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
 offset_left = 25.0
 offset_top = 360.0
 offset_right = 76.0

@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://duvo5ju3he11g" path="res://game/situations/situation.tscn" id="1_8e1sy"]
 [ext_resource type="Texture2D" uid="uid://b120fgj8c1odd" path="res://game/situations/outside/beach/illu_plage_final_jour.png" id="2_1l6vo"]
-[ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/exits/icon_ph.png" id="3_drqwb"]
-[ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/exits/exit.gd" id="4_1fahc"]
+[ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="3_drqwb"]
+[ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/clickables/exits/exit.gd" id="4_1fahc"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_8e1sy")]
 currentSituation = 300
