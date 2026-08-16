@@ -67,7 +67,7 @@ func _get_configuration_warnings():
 
 func _ready() -> void:
 	tag = GameHandler.getActiveTag()
-	print(tag)
+	#print(tag)
 	_handle_background()
 	_handle_interactions()
 	_handle_exits()
@@ -96,7 +96,7 @@ func _handle_interactions() -> void:
 
 func _handle_background() -> void: 
 	## get first alt background with tag and show it
-	print(tag)
+	#print(tag)
 	for alt: AltBackground in background.get_children():
 		if alt.match_tag(tag):
 			alt.show()

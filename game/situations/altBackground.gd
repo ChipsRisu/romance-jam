@@ -1,8 +1,8 @@
 class_name AltBackground
 extends Sprite2D
 
-@export var tag: Variant
+@export var tag: String
 
-func match_tag(_tag: Variant) -> bool:
-	print (_tag, "===", tag)
-	return _tag != null && _tag == tag
+func match_tag(_tag: String) -> bool:
+	#print (_tag, "===", tag)
+	return not _tag.is_empty() && _tag == tag

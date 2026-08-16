@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="3_ruivo"]
 [ext_resource type="Script" uid="uid://te5kw2qd31t2" path="res://game/situations/altBackground.gd" id="4_da2dy"]
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/clickables/exits/exit.gd" id="4_h54gt"]
+[ext_resource type="Texture2D" uid="uid://bty56ygi6xm3b" path="res://game/situations/house/entrance/illu_entree_TOUT_FERMER.png" id="5_027fo"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_qm48i")]
 
@@ -15,11 +16,19 @@ texture = ExtResource("2_ruivo")
 
 [node name="test" type="Sprite2D" parent="Background" index="0" unique_id=307630875]
 visible = false
-position = Vector2(1919.9994, 1079.9999)
+position = Vector2(1920, 1080)
 scale = Vector2(0.99999034, 0.99999034)
 texture = ExtResource("3_h54gt")
 script = ExtResource("4_da2dy")
 tag = "test"
+
+[node name="aa" type="Sprite2D" parent="Background" index="1" unique_id=907322441]
+visible = false
+position = Vector2(1919.9995, 1080)
+texture = ExtResource("5_027fo")
+script = ExtResource("4_da2dy")
+tag = "aa"
+metadata/_custom_type_script = "uid://te5kw2qd31t2"
 
 [node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
 offset_left = 546.0
@@ -37,6 +46,7 @@ offset_bottom = 349.0
 texture_normal = ExtResource("3_ruivo")
 script = ExtResource("4_h54gt")
 target = 104
+tag = "aa"
 
 [node name="toAttic" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="2" unique_id=319703694]
 layout_mode = 0
