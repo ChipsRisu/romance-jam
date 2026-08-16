@@ -1,0 +1,23 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(1, 1, 1, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "",
+&"description": "Relation avec la PP : Chaleureuse, mais peu bavarde, sauf lorsqu'elle parle de ses souvenirs.
+Objet : Appareil photo 
+Hobby : Photographie polaroid",
+&"display_name": "Rosine",
+&"mirror": false,
+&"nicknames": ["Grand-mère"],
+&"offset": Vector2(0, 0),
+&"portraits": {},
+&"scale": 1.0
+}

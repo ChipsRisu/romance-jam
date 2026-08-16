@@ -26,7 +26,13 @@ DayHandler="*uid://2716wtum0pls"
 [dialogic]
 
 directories/dch_directory={
-"place_holder": "res://game/characters/place_holder/place_holder.dch"
+"elise": "res://game/characters/elise/elise.dch",
+"gabin": "res://game/characters/gabin/gabin.dch",
+"lucia": "res://game/characters/lucia/lucia.dch",
+"marius": "res://game/characters/marius/marius.dch",
+"place_holder": "res://game/characters/place_holder/place_holder.dch",
+"rosine": "res://game/characters/rosine/rosine.dch",
+"solene": "res://game/characters/solene/solene.dch"
 }
 directories/dtl_directory={
 "npc_test_103_1": "res://game/timelines/place_holder/npc_test.dtl",

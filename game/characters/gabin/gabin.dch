@@ -1,0 +1,22 @@
+{
+"@path": "res://addons/dialogic/Resources/character.gd",
+"@subpath": NodePath(""),
+&"_translation_id": "",
+&"color": Color(0.98046875, 0.5649185, 0.030639648, 1),
+&"custom_info": {
+"prefix": "",
+"sound_mood_default": "",
+"sound_moods": {},
+"style": "",
+"suffix": ""
+},
+&"default_portrait": "",
+&"description": "Il lui manque une dent, Enfant du voisins
+Objet : Kazoo ",
+&"display_name": "Gabin",
+&"mirror": false,
+&"nicknames": ["L'enfant aux infos"],
+&"offset": Vector2(0, 0),
+&"portraits": {},
+&"scale": 1.0
+}
