@@ -15,3 +15,12 @@ func _on_situation_selector_item_selected(index: int) -> void:
 func _on_day_selector_item_selected(index: int) -> void:
 	DayHandler.setDay(index)
 	SituationHandler.reloadSituation()
+
+
+func _on_mini_game_selector_item_selected(index: int) -> void:
+	for game in $"../../MiniGames".get_children():
+		game.visible = false;
+	
+	match index:
+		1:
+			$"../../MiniGames/Taquin".visible = true;

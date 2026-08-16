@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://d0nh8r3de3nom"]
+
+[ext_resource type="Script" uid="uid://ll4l6n722x78" path="res://game/mini-games/taquin/taquin.gd" id="1_5l0kq"]
+
+[node name="Taquin" type="Node2D" unique_id=759186582]
+script = ExtResource("1_5l0kq")
+
+[node name="Tile1" type="Sprite2D" parent="." unique_id=1233817339]
+position = Vector2(-250, -250)
+scale = Vector2(1.9, 1.9)
+
+[node name="Label" type="Label" parent="Tile1" unique_id=794351391]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "1"
+
+[node name="Tile2" type="Sprite2D" parent="." unique_id=486496627]
+position = Vector2(0, -250)
+scale = Vector2(1.9, 1.9)
+
+[node name="Label" type="Label" parent="Tile2" unique_id=2035438352]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "2"
+
+[node name="Tile3" type="Sprite2D" parent="." unique_id=864348952]
+position = Vector2(250, -250)
+scale = Vector2(1.9, 1.9)
+
+[node name="Label" type="Label" parent="Tile3" unique_id=1011970790]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "3"
+
+[node name="Tile4" type="Sprite2D" parent="." unique_id=2040573653]
+position = Vector2(-250, 0)
+scale = Vector2(1.9, 1.9)
+
+[node name="Label" type="Label" parent="Tile4" unique_id=1140370857]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "4"
+
+[node name="Tile5" type="Sprite2D" parent="." unique_id=583238018]
+scale = Vector2(1.9, 1.9)
+
+[node name="Label" type="Label" parent="Tile5" unique_id=2013839519]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "5"
+
+[node name="Tile6" type="Sprite2D" parent="." unique_id=812410321]
+position = Vector2(250, 0)
+scale = Vector2(1.9, 1.9)
+
+[node name="Label" type="Label" parent="Tile6" unique_id=1282922707]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "6"
+
+[node name="Tile7" type="Sprite2D" parent="." unique_id=1523543973]
+position = Vector2(-250, 250)
+scale = Vector2(1.9, 1.9)
+
+[node name="Label" type="Label" parent="Tile7" unique_id=911942276]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "7"
+
+[node name="Tile8" type="Sprite2D" parent="." unique_id=723135179]
+position = Vector2(0, 250)
+scale = Vector2(1.9, 1.9)
+
+[node name="Label" type="Label" parent="Tile8" unique_id=2079691083]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "8"
+
+[node name="Tile9" type="Sprite2D" parent="." unique_id=2135111677]
+position = Vector2(250, 250)
+scale = Vector2(1.9, 1.9)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1128889252]
