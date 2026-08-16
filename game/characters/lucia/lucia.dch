@@ -10,7 +10,7 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "default",
 &"description": "Rôle : Elise est admirative de Lucia, de son point de vue, elle a l'air forte, sûre d'elle et de toujours aller de l'avant (potentiel point d'accroche pour son évolution et son questionnement)
 -> Lucia n'est en réalité pas aussi sûre d'elle qu'elle en a l'air, mais elle sait se montrer confiante dans les situations sociales
 Code couleur : Rose
@@ -19,6 +19,16 @@ Code couleur : Rose
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "\"res://game/characters/lucia/lucia.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 &"scale": 1.0
 }

@@ -10,13 +10,23 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "default",
 &"description": "Il lui manque une dent, Enfant du voisins
 Objet : Kazoo ",
 &"display_name": "Gabin",
 &"mirror": false,
 &"nicknames": ["L'enfant aux infos"],
 &"offset": Vector2(0, 0),
-&"portraits": {},
+&"portraits": {
+"default": {
+"export_overrides": {
+"image": "\"res://game/characters/gabin/gabin.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
 &"scale": 1.0
 }
