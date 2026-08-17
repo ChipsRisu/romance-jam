@@ -126,7 +126,6 @@ popup/item_1/id = 1
 
 [node name="Taquin" parent="MiniGames" unique_id=759186582 instance=ExtResource("5_5un7r")]
 visible = false
-position = Vector2(960, 540)
 
 [connection signal="toggled" from="UI/HUD/toggleMovement" to="." method="_on_toggle_movement_toggled"]
 [connection signal="item_selected" from="UI/DEV MENU/Panel/VBoxContainer/SituationHBox/SituationSelector" to="UI/DEV MENU" method="_on_situation_selector_item_selected"]

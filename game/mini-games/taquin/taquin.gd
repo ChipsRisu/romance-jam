@@ -5,6 +5,9 @@ var solved: Array[Sprite2D] = [];
 var emptyTile: Sprite2D;
 var gameIsFinish = false;
 
+var viewportSize: Vector2;
+var tileSize: float = 300;
+
 #region setup
 func _ready() -> void:
 	tiles = [$Tile5, $Tile8, $Tile2, $Tile1, $Tile9, $Tile3, $Tile4, $Tile7, $Tile6];
@@ -12,15 +15,25 @@ func _ready() -> void:
 	
 	solved = [$Tile1, $Tile2, $Tile3, $Tile4, $Tile5, $Tile6, $Tile7, $Tile8, $Tile9];
 	#tiles.shuffle(); PAS faire de random car solution pas forcément possible (faq de https://www.dcode.fr/solveur-taquin-3x3)
+	
+	viewportSize = get_viewport_rect().size / 2;
+	position = viewportSize;
+	
+	tileSize = (get_viewport_rect().size.y - (viewportSize.y / 3)) / 3;
+	var tileScale = tileSize/579;
+	for tile in tiles:
+		tile.scale = Vector2(tileScale,tileScale);
+	
 	placeTiles();
 	emptyTile = $Tile9;
+	
 
 func placeTiles() -> void:
 	for index in range(tiles.size()):
 		var tile: Sprite2D = tiles[index];
 		
-		tile.position.x = ((index%3)-1) * 300;
-		tile.position.y = (((index/3) as int)-1) * 300;
+		tile.position.x = ((index%3)-1) * tileSize;
+		tile.position.y = (((index/3) as int)-1) * tileSize;
 		#print(tile.position, tile.name)
 #endregion
 
@@ -30,7 +43,7 @@ func _input(event) -> void:
 		return;
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
 		#print(event);
-		var mousePosition: Vector2 = (event as InputEventMouseButton).global_position - get_viewport_rect().size /2;
+		var mousePosition: Vector2 = (event as InputEventMouseButton).global_position - viewportSize;
 		#print(mousePosition)
 		var col = getColFrom(mousePosition.x);
 		var row = getRowFrom(mousePosition.y);
@@ -93,18 +106,18 @@ func detectIfWin() -> void:
 
 func getRowFrom(y: float) -> int:
 	var row = 0;
-	if y < -150:
+	if y < -tileSize/2:
 		row = -1;
-	elif  y > 150:
+	elif  y > tileSize/2:
 		row = 1;
 	return row;
 
 	
 func getColFrom(x: float) -> int:
 	var col = 0;
-	if x < -150:
+	if x < -tileSize/2:
 		col = -1;
-	elif  x > 150:
+	elif  x > tileSize/2:
 		col = 1;
 	return col;
 #endregion
