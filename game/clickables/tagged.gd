@@ -5,4 +5,4 @@ extends TextureButton
 
 ## Either has no tag or has matching tag
 func match_tag(_tag: String) -> bool:
-	return tag.is_empty() || tag == _tag
+	return tag == null || tag.is_empty() || tag == _tag

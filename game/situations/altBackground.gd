@@ -5,4 +5,4 @@ extends Sprite2D
 
 func match_tag(_tag: String) -> bool:
 	#print (_tag, "===", tag)
-	return not _tag.is_empty() && _tag == tag
+	return  tag != null && not _tag.is_empty() && _tag == tag
