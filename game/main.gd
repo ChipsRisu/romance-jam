@@ -9,6 +9,7 @@ func _ready() -> void:
 	
 	## TEST CODE HERE
 	GameHandler.state.tags.set(Situation.Key.HOUSE_ENTRANCE, "test")
+	Dialogic.start("prologue_1")
 	# INFO dans entrance 1 exit et 2 background en test avec "test" et "aa"
 	##
 

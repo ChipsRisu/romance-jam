@@ -1,0 +1,42 @@
+maman: Je suis contente que tu acceptes de voir ta grand-mère.
+maman: Je suis sûre que Mamie sera contente de te voir, tu en reviendra grandie!
+join elise left
+elise: Tu m'as quand même un peu forcé à venir pour aider Mamie.. -expression grognon-
+[clear time="1.0"]
+# Jouer la cinématique
+[background arg="res://game/situations/outside/house/illu_maison_ext_final.png" fade="0.0"]
+[wait_input]
+do SituationHandler.loadSituation(100)
+[clear time="1.0"]
+join rosine (present/default) right
+rosine: Oh, vous êtes arrivées déjà !!
+rosine: Je suis tellement contente mais ça fait si longtemps, rappelle moi ton prénom?
+rosine: La route s'est bien passé?
+rosine: Viens, viens je vais te montrer ta chambre, il est déjà assez tard. Veux-tu grignoter un truc avant?  -sourire doux-
+- Oui
+	[clear time="1.0"]
+	# Scène de repas
+	[background arg="res://game/situations/house/kitchen/cuisine.png" fade="0.0"]
+	*un lourd silence s'installe pendant le repas*
+	join elise left
+	elise: (Mh.. je la croyais plus bavarde, peut-être que je devrais dire quelque chose?)
+	elise: Ca fait longtemps que tu es installée ici..?
+	join rosine right
+	rosine: Oh oui tu sais, ça fait quelques décennies hahaha -sourire nostalgique-
+	rosine: C'est ici que j'ai passé mes plus beaux souvenirs d'enfance! Mais je n'ai plus tout mes souvenirs de cette époque, c'était il y a de cela bien longtemps.
+	rosine: Je me rappelle uniquement que j'étais venue passer les vacances ici, comme toi.
+	elise: Ooooh, mh d'accord.
+- Non
+	[clear time="1.0"]
+	join rosine (present/default) right
+	# Scène de chambre
+	[background arg="res://game/situations/house/bedroom/chambre.png" fade="0.0"]
+	[wait time="2.0"]
+	rosine: Je te laisse ranger tes affaires, je vais me coucher, on se voit demain pour commencer ce qu'il y a à faire.
+	leave rosine [animation="Fade Out" wait="true"]
+do SituationHandler.loadSituation(105)
+[clear time="1.0"]
+[style name="compact"]
+elise: Je vais aller voir ce que je peux faire...
+[wait_input]
+[end_timeline]

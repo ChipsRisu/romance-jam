@@ -29,6 +29,7 @@ directories/dch_directory={
 "elise": "res://game/characters/elise/elise.dch",
 "gabin": "res://game/characters/gabin/gabin.dch",
 "lucia": "res://game/characters/lucia/lucia.dch",
+"maman": "res://game/characters/mere/maman.dch",
 "marius": "res://game/characters/marius/marius.dch",
 "place_holder": "res://game/characters/place_holder/place_holder.dch",
 "rosine": "res://game/characters/rosine/rosine.dch",
@@ -36,17 +37,18 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "npc_test_103_1": "res://game/timelines/place_holder/npc_test.dtl",
+"prologue_1": "res://game/timelines/prologue/prologue_1.dtl",
 "spot_test_103_1": "res://game/timelines/place_holder/spot_test.dtl"
 }
 layout/style_directory={
-"": "res://game/timelines/styles/compact.tres",
+"": "res://game/timelines/styles/full.tres",
 "compact": "res://game/timelines/styles/compact.tres",
 "full": "res://game/timelines/styles/full.tres"
 }
 variables={}
 glossary/default_case_sensitive=true
 layout/style_list=["res://game/timelines/styles/compact.tres", "res://game/timelines/styles/full.tres"]
-layout/default_style="res://game/timelines/styles/compact.tres"
+layout/default_style="res://game/timelines/styles/full.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
