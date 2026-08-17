@@ -25,6 +25,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="toggleMovement" type="TextureButton" parent="UI/HUD" unique_id=354950663]
+visible = false
 layout_mode = 0
 offset_left = 1085.0
 offset_top = 579.0
@@ -35,6 +36,7 @@ texture_normal = ExtResource("2_emt18")
 texture_pressed = ExtResource("2_emt18")
 
 [node name="DEV MENU" type="Control" parent="UI" unique_id=2119271310]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
