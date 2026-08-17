@@ -1,19 +1,17 @@
 [gd_scene format=3 uid="uid://v6q8ckn5wtor"]
 
 [ext_resource type="PackedScene" uid="uid://dgxhb7cwv83tf" path="res://game/situations/house/house.tscn" id="1_siur2"]
-[ext_resource type="Texture2D" uid="uid://b6ybcpsjt4yx1" path="res://game/situations/house/livingroom/background_ph.png" id="2_c5tpr"]
+[ext_resource type="Texture2D" uid="uid://be3mim2mg646" path="res://game/situations/house/livingroom/illu_salon.png" id="2_qlnk6"]
 [ext_resource type="Texture2D" uid="uid://dfsixxku14hna" path="res://game/characters/place_holder/ph1.png" id="3_qlnk6"]
-[ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/exits/icon_ph.png" id="3_s1b53"]
-[ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/exits/exit.gd" id="3_sg5su"]
-[ext_resource type="Script" uid="uid://cxgf0bbqy1ufq" path="res://game/interactions/interaction.gd" id="4_2unxk"]
+[ext_resource type="Script" uid="uid://cxgf0bbqy1ufq" path="res://game/clickables/interactions/interaction.gd" id="4_2unxk"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_siur2")]
 currentSituation = 103
 
 [node name="Background" parent="." index="0" unique_id=1733816860]
-position = Vector2(-5.000001, -2)
-scale = Vector2(1.8954248, 1.5955882)
-texture = ExtResource("2_c5tpr")
+position = Vector2(-112, 3)
+scale = Vector2(0.35582483, 0.29953703)
+texture = ExtResource("2_qlnk6")
 
 [node name="someGuy" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="0" unique_id=158375740]
 layout_mode = 0
@@ -29,29 +27,19 @@ key = "npc_test"
 dayAbsenceList = Array[int]([2, 0])
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
-[node name="somTv" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="1" unique_id=56274864]
+[node name="tv" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="1" unique_id=56274864]
 layout_mode = 0
-offset_left = 827.0
-offset_top = 283.0
-offset_right = 997.0
-offset_bottom = 368.0
+offset_left = 128.0
+offset_top = 422.0
+offset_right = 313.0
+offset_bottom = 555.0
 script = ExtResource("4_2unxk")
 key = "spot_test"
 ignoreDayForDialogue = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
 [node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
-offset_left = 595.0
-offset_top = 555.0
-offset_right = 646.0
-offset_bottom = 606.0
-
-[node name="toKitchen" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="1" unique_id=580967365]
-layout_mode = 0
-offset_left = 1077.0
-offset_top = 337.0
-offset_right = 1117.0
-offset_bottom = 377.0
-texture_normal = ExtResource("3_s1b53")
-script = ExtResource("3_sg5su")
-target = 104
+offset_left = 1064.0
+offset_top = 338.0
+offset_right = 1115.0
+offset_bottom = 389.0

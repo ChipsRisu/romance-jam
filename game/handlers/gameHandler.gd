@@ -18,4 +18,8 @@ func save() -> void:
 
 func _setup() -> void:
 	DayHandler.setDay(state.day)
-	SituationHandler.loadSituation(Situation.Key.VOID, state.situation)
+	SituationHandler.loadSituation(state.situation)
+
+func getActiveTag() -> Variant:
+	print(state.situation)
+	return state.tags.get(state.situation) if state.situation != null || Situation.Key.VOID == state.situation else null

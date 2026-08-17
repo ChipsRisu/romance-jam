@@ -10,7 +10,7 @@ const SITUATION_PATH_DICTIONARY := {
 	Situation.Key.VOID: "",				# TODO should be a special scene
 	Situation.Key.HOUSE_FRONT: 			"res://game/situations/outside/house/house.tscn",
 	Situation.Key.HOUSE_ENTRANCE: 		"res://game/situations/house/entrance/entrance.tscn",
-	Situation.Key.HOUSE_CORRIDOR: 		"res://game/situations/house/corridor/corridor.tscn",
+	#Situation.Key.HOUSE_CORRIDOR: 		"res://game/situations/house/corridor/corridor.tscn",
 	Situation.Key.HOUSE_LIVINGROOM: 	"res://game/situations/house/livingroom/livingroom.tscn",
 	Situation.Key.HOUSE_KITCHEN: 		"res://game/situations/house/kitchen/kitchen.tscn",
 	Situation.Key.HOUSE_BEDROOM: 		"res://game/situations/house/bedroom/bedroom.tscn",
@@ -23,7 +23,10 @@ const SITUATION_PATH_DICTIONARY := {
 	Situation.Key.CAVE: 				"res://game/situations/outside/cave/cave.tscn",
 }
 
-func loadSituation(from: Situation.Key, to: Situation.Key) -> void: 
+## Charge une nouvelle situation
+func loadSituation(to: Situation.Key) -> void: 
+	var from: Situation.Key = GameHandler.state.situation if GameHandler.state.situation else Situation.Key.VOID
+	
 	var situationPath = SITUATION_PATH_DICTIONARY[to]
 	
 	# only for dev purpose
@@ -47,6 +50,7 @@ func loadSituation(from: Situation.Key, to: Situation.Key) -> void:
 	
 	# TODO close loading screen
 
+## Recharge la Situation actuelle et effectue les change
 func reloadSituation() -> void:
 	var situation = GameHandler.state.situation
 	var situationPath = SITUATION_PATH_DICTIONARY[situation]
@@ -59,18 +63,24 @@ func reloadSituation() -> void:
 	_load(situation)
 	_resetHud()
 
+## Active le HUD de déplacement et bloque les interactions
 func toggleMovement(value: bool) -> void:
 	if activeSituation != null:
 		activeSituation.updateUi(value)
 
 func _load(to: Situation.Key) -> void:
 	if Situation.Key.VOID == to:
+		# TODO
 		return
 	
+	# Updates current situtation state
+	GameHandler.state.situation = to
+	
+	# Instantiate the scene
 	var situation = load(SITUATION_PATH_DICTIONARY[to])
 	activeSituation = situation.instantiate()
 	container.add_child(activeSituation)
-	
+
 func _clean() -> void:
 	activeSituation = null
 	for child in container.get_children():

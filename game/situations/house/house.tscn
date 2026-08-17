@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dgxhb7cwv83tf"]
 
 [ext_resource type="PackedScene" uid="uid://duvo5ju3he11g" path="res://game/situations/situation.tscn" id="1_bsgn5"]
-[ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/exits/icon_ph.png" id="2_de40p"]
-[ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/exits/exit.gd" id="2_oqwqd"]
+[ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="2_de40p"]
+[ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/clickables/exits/exit.gd" id="2_oqwqd"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_bsgn5")]
 currentSituation = 101
