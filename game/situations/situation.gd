@@ -38,7 +38,7 @@ enum Day {
 @onready var exits = $Exits
 
 @export var currentSituation: Situation.Key
-var tag: Variant
+var tag: String
 
 #region config warning
 func _get_configuration_warnings():

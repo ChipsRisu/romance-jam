@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://d0nh8r3de3nom"]
+
+[ext_resource type="Script" uid="uid://ll4l6n722x78" path="res://game/mini-games/taquin/taquin.gd" id="1_5l0kq"]
+[ext_resource type="Texture2D" uid="uid://bow1paw8ou7xd" path="res://game/mini-games/taquin/assets/CarouselMaker_ImageSplitter_1.png" id="2_ngk3k"]
+[ext_resource type="Texture2D" uid="uid://b8ju8srts6lhy" path="res://game/mini-games/taquin/assets/CarouselMaker_ImageSplitter_2.png" id="3_27rww"]
+[ext_resource type="Texture2D" uid="uid://dhvcgy2gn2lrb" path="res://game/mini-games/taquin/assets/CarouselMaker_ImageSplitter_3.png" id="4_msm6c"]
+[ext_resource type="Texture2D" uid="uid://dkw1ifv41ah5e" path="res://game/mini-games/taquin/assets/CarouselMaker_ImageSplitter_4.png" id="5_kea58"]
+[ext_resource type="Texture2D" uid="uid://batr3j3e8f03e" path="res://game/mini-games/taquin/assets/CarouselMaker_ImageSplitter_5.png" id="6_2323b"]
+[ext_resource type="Texture2D" uid="uid://ci5sbydq22fmn" path="res://game/mini-games/taquin/assets/CarouselMaker_ImageSplitter_6.png" id="7_273pr"]
+[ext_resource type="Texture2D" uid="uid://cr8nrda5qas34" path="res://game/mini-games/taquin/assets/CarouselMaker_ImageSplitter_7.png" id="8_pm5m1"]
+[ext_resource type="Texture2D" uid="uid://rs1bet1vsa0o" path="res://game/mini-games/taquin/assets/CarouselMaker_ImageSplitter_8.png" id="9_1l3tl"]
+[ext_resource type="Texture2D" uid="uid://cyecpio2whxkt" path="res://game/mini-games/taquin/assets/CarouselMaker_ImageSplitter_9.png" id="10_78frp"]
+
+[sub_resource type="Animation" id="Animation_27rww"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tile9:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tile9:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_msm6c"]
+resource_name = "finishGame"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tile9:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 1.1, 1.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.065, 1.065), Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Tile9:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kea58"]
+_data = {
+&"RESET": SubResource("Animation_27rww"),
+&"finishGame": SubResource("Animation_msm6c")
+}
+
+[node name="Taquin" type="Node2D" unique_id=759186582]
+script = ExtResource("1_5l0kq")
+
+[node name="Tile1" type="Sprite2D" parent="." unique_id=1233817339]
+position = Vector2(-300, -300)
+scale = Vector2(0.518, 0.518)
+texture = ExtResource("2_ngk3k")
+
+[node name="Tile2" type="Sprite2D" parent="." unique_id=486496627]
+position = Vector2(0, -300)
+scale = Vector2(0.518, 0.518)
+texture = ExtResource("3_27rww")
+
+[node name="Tile3" type="Sprite2D" parent="." unique_id=864348952]
+position = Vector2(300, -300)
+scale = Vector2(0.518, 0.518)
+texture = ExtResource("4_msm6c")
+
+[node name="Tile4" type="Sprite2D" parent="." unique_id=2040573653]
+position = Vector2(-300, 0)
+scale = Vector2(0.518, 0.518)
+texture = ExtResource("5_kea58")
+
+[node name="Tile5" type="Sprite2D" parent="." unique_id=583238018]
+scale = Vector2(0.518, 0.518)
+texture = ExtResource("6_2323b")
+
+[node name="Tile6" type="Sprite2D" parent="." unique_id=812410321]
+position = Vector2(300, 0)
+scale = Vector2(0.518, 0.518)
+texture = ExtResource("7_273pr")
+
+[node name="Tile7" type="Sprite2D" parent="." unique_id=1523543973]
+position = Vector2(-300, 300)
+scale = Vector2(0.518, 0.518)
+texture = ExtResource("8_pm5m1")
+
+[node name="Tile8" type="Sprite2D" parent="." unique_id=723135179]
+position = Vector2(0, 300)
+scale = Vector2(0.518, 0.518)
+texture = ExtResource("9_1l3tl")
+
+[node name="Tile9" type="Sprite2D" parent="." unique_id=2135111677]
+visible = false
+position = Vector2(300, 300)
+scale = Vector2(0.518, 0.518)
+texture = ExtResource("10_78frp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=629864462]
+libraries/ = SubResource("AnimationLibrary_kea58")
