@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://26i3m78yj535"
-path="res://.godot/imported/icon_ph.png-d98b4059afafe5b94a1bf3711b30a79e.ctex"
+uid="uid://bfruyaf7h8j7a"
+path="res://.godot/imported/illu_entree_PORTE_OUVERT_SOLO.png-7a29807ee537f39e1ad8e7c0d7c134ef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/exits/icon_ph.png"
-dest_files=["res://.godot/imported/icon_ph.png-d98b4059afafe5b94a1bf3711b30a79e.ctex"]
+source_file="res://game/situations/house/entrance/illu_entree_PORTE_OUVERT_SOLO.png"
+dest_files=["res://.godot/imported/illu_entree_PORTE_OUVERT_SOLO.png-7a29807ee537f39e1ad8e7c0d7c134ef.ctex"]
 
 [params]
 

@@ -9,7 +9,7 @@ enum Key {
 	VOID 				= 0,
 	HOUSE_FRONT 		= 100,
 	HOUSE_ENTRANCE 		= 101,
-	HOUSE_CORRIDOR 		= 102,
+	#HOUSE_CORRIDOR 		= 102,
 	HOUSE_LIVINGROOM 	= 103,
 	HOUSE_KITCHEN 		= 104,
 	HOUSE_BEDROOM 		= 105,
@@ -33,10 +33,12 @@ enum Day {
 	SUN = 7,
 }
 
-@onready var exits = $Exits
+@onready var background = $Background
 @onready var interactions = $Interactions
+@onready var exits = $Exits
 
 @export var currentSituation: Situation.Key
+var tag: Variant
 
 #region config warning
 func _get_configuration_warnings():
@@ -64,22 +66,39 @@ func _get_configuration_warnings():
 #endregion
 
 func _ready() -> void:
+	tag = GameHandler.getActiveTag()
+	#print(tag)
+	_handle_background()
 	_handle_interactions()
 	_handle_exits()
+	
 
-func _handle_exits() -> void:
-	for exit: Exit in exits.get_children():
-		exit.pressed.connect(func(): SituationHandler.loadSituation(currentSituation, exit.target))
-
-func _handle_interactions() -> void:
-	for interaction: Interaction in interactions.get_children():
-		if interaction.dayAbsenceList.has(GameHandler.state.day):
-			interaction.hide()
-		else: 
-			interaction.pressed.connect(func(): DialogueHandler.start(interaction))
-
+## Called to update the move HUD
 func updateUi(isMoving: bool) -> void:
 	if isMoving: exits.show() 
 	else: exits.hide()
 	for interaction: Interaction in interactions.get_children():
 		interaction.disabled = isMoving
+
+func _handle_exits() -> void:
+	for exit: Exit in exits.get_children():
+		if exit.match_tag(tag):
+			exit.pressed.connect(func(): SituationHandler.loadSituation(exit.target))
+		else:
+			exit.hide()
+
+func _handle_interactions() -> void:
+	for interaction: Interaction in interactions.get_children():
+		if interaction.is_present_today() && interaction.match_tag(tag):
+			interaction.pressed.connect(func(): DialogueHandler.start(interaction))
+		else: 
+			interaction.hide()
+
+func _handle_background() -> void: 
+	## get first alt background with tag and show it
+	#print(tag)
+	for alt: AltBackground in background.get_children():
+		if alt.match_tag(tag):
+			alt.show()
+		else:
+			alt.hide()

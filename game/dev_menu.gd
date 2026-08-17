@@ -10,7 +10,7 @@ func _ready() -> void:
 		daySelector.add_item(day, Situation.Day[day])
 
 func _on_situation_selector_item_selected(index: int) -> void:
-	SituationHandler.loadSituation(Situation.Key.VOID, situationSelector.get_selected_id())
+	SituationHandler.loadSituation(situationSelector.get_selected_id())
 
 func _on_day_selector_item_selected(index: int) -> void:
 	DayHandler.setDay(index)
