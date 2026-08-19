@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://dym5ueltmlq84"]
+
+[ext_resource type="Script" uid="uid://byb4ddv3aakl3" path="res://game/timelines/prologue/prologue_cinematique.gd" id="1_ewcwn"]
+[ext_resource type="Texture2D" uid="uid://bnhf6n5ajaan3" path="res://game/situations/outside/house/illu_maison_ext_final.png" id="2_bo64d"]
+[ext_resource type="Texture2D" uid="uid://bsf4hs6ckr4s8" path="res://icon.svg" id="3_bo64d"]
+
+[sub_resource type="Animation" id="Animation_6rh8k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IlluMaisonExtFinal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, -323.99997)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wd2nv"]
+resource_name = "cinematique"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IlluMaisonExtFinal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 4),
+"transitions": PackedFloat32Array(0.31864, 0.3535533, 0.37892982),
+"update": 0,
+"values": [Vector2(576, -323.99997), Vector2(576, -323.99997), Vector2(576, 971.99994)]
+}
+
+[sub_resource type="Animation" id="Animation_7bc7g"]
+resource_name = "logo"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Logo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bo64d"]
+resource_name = "texteContinue"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7bc7g"]
+_data = {
+&"RESET": SubResource("Animation_6rh8k"),
+&"cinematique": SubResource("Animation_wd2nv"),
+&"logo": SubResource("Animation_7bc7g"),
+&"texteContinue": SubResource("Animation_bo64d")
+}
+
+[node name="PrologueCinematique" type="Node2D" unique_id=1854472787]
+script = ExtResource("1_ewcwn")
+
+[node name="IlluMaisonExtFinal" type="Sprite2D" parent="." unique_id=1427282147]
+position = Vector2(576, -323.99997)
+scale = Vector2(0.29999998, 0.29999998)
+texture = ExtResource("2_bo64d")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=977049997]
+libraries/ = SubResource("AnimationLibrary_7bc7g")
+
+[node name="Logo" type="Sprite2D" parent="." unique_id=2084538847]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(557, 316)
+texture = ExtResource("3_bo64d")
+
+[node name="Label" type="Label" parent="." unique_id=2036304546]
+modulate = Color(1, 1, 1, 0)
+offset_left = 341.0
+offset_top = 539.0
+offset_right = 791.0
+offset_bottom = 608.0
+theme_override_font_sizes/font_size = 34
+text = "Cliquez pour continuer"
+horizontal_alignment = 1
+uppercase = true
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
