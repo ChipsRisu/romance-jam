@@ -7,7 +7,7 @@ var activeSituation: Situation = null
 
 # TODO there should be a void situation
 const SITUATION_PATH_DICTIONARY := {
-	Situation.Key.VOID: "",				# TODO should be a special scene
+	Situation.Key.VOID: "",				# Special scene
 	Situation.Key.HOUSE_FRONT: 			"res://game/situations/outside/house/house.tscn",
 	Situation.Key.HOUSE_ENTRANCE: 		"res://game/situations/house/entrance/entrance.tscn",
 	#Situation.Key.HOUSE_CORRIDOR: 		"res://game/situations/house/corridor/corridor.tscn",
@@ -36,7 +36,8 @@ func loadSituation(to: Situation.Key) -> void:
 	if (container == null 
 		|| situationPath.is_empty() 
 		|| !ResourceLoader.exists(situationPath)): 
-		return;
+		print("COULD NOT FIND ", to)
+		to = Situation.Key.VOID
 	
 	# TODO start loading screen here
 	
@@ -63,27 +64,28 @@ func reloadSituation() -> void:
 	_load(situation)
 	_resetHud()
 
+func loadVoid() -> void:
+	loadSituation(Situation.Key.VOID)
+
 ## Active le HUD de déplacement et bloque les interactions
 func toggleMovement(value: bool) -> void:
 	if activeSituation != null:
 		activeSituation.updateUi(value)
 
 func _load(to: Situation.Key) -> void:
-	if Situation.Key.VOID == to:
-		# TODO
-		return
-	
 	# Updates current situtation state
 	GameHandler.state.situation = to
 	
-	# Instantiate the scene
-	var situation = load(SITUATION_PATH_DICTIONARY[to])
-	activeSituation = situation.instantiate()
-	container.add_child(activeSituation)
+	if !Situation.Key.VOID == to:
+		# Instantiate the scene
+		var situation = load(SITUATION_PATH_DICTIONARY[to])
+		activeSituation = situation.instantiate()
+		container.add_child(activeSituation)
 
 func _clean() -> void:
 	activeSituation = null
 	for child in container.get_children():
+		print('A')
 		container.remove_child(child)
 		child.queue_free()
 

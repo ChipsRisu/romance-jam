@@ -1,8 +1,6 @@
 extends Node
 
 func setDay(day: Situation.Day) -> void:
-	if Situation.Day.ALL == day:
-		return
 	print("CHANGE DAY ", day)
 	GameHandler.state.day = day
 	
