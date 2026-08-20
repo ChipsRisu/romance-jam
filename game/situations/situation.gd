@@ -23,6 +23,7 @@ enum Key {
 }
 
 enum Day {
+	VOID = 0,
 	MON = 1,
 	TUE = 2,
 	WEN = 3,
@@ -70,7 +71,6 @@ func _ready() -> void:
 	_handle_background()
 	_handle_interactions()
 	_handle_exits()
-	
 
 ## Called to update the move HUD
 func updateUi(isMoving: bool) -> void:
@@ -95,9 +95,5 @@ func _handle_interactions() -> void:
 
 func _handle_background() -> void: 
 	## get first alt background with tag and show it
-	#print(tag)
 	for alt: AltBackground in background.get_children():
-		if alt.match_tag(tag):
-			alt.show()
-		else:
-			alt.hide()
+		alt.visible = alt.match_tag(tag)

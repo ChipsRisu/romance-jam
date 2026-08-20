@@ -2,14 +2,15 @@ extends Node
 
 var state: GameState
 
+## Start new game
 func start() -> void:
 	state = GameState.new()
-	# TODO prepare something ?
 	_setup()
 	
-# TODO should be fetch from file
-func load() -> void:
-	state = GameState.new()
+	DialogueHandler.start_prologue()
+
+func load_save() -> void:
+	state = GameState.new() # TODO should be fetch from file
 	_setup()
 	
 # TODO should save state to file

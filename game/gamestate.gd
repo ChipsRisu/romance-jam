@@ -8,4 +8,4 @@ var tags: Dictionary
 
 func _init() -> void:
 	self.situation = Situation.Key.VOID
-	self.day = Situation.Day.MON
+	self.day = Situation.Day.VOID
