@@ -1,6 +1,6 @@
 @icon("res://icons/exit.svg")
 class_name Exit
-extends TaggedButton
+extends ClickableButton
 
 const BLINK_PROPERTY = "modulate:a"
 const BLINK_TIME = 1.5

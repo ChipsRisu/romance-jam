@@ -23,7 +23,6 @@ enum Key {
 }
 
 enum Day {
-	ALL = 0,
 	MON = 1,
 	TUE = 2,
 	WEN = 3,
@@ -82,7 +81,7 @@ func updateUi(isMoving: bool) -> void:
 
 func _handle_exits() -> void:
 	for exit: Exit in exits.get_children():
-		if exit.match_tag(tag):
+		if exit.is_present_today() && exit.match_tag(tag):
 			exit.pressed.connect(func(): SituationHandler.loadSituation(exit.target))
 		else:
 			exit.hide()
