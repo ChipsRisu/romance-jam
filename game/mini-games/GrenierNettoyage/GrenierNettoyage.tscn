@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ca1t6cqxksvoy"]
+
+[ext_resource type="Script" uid="uid://b1yafasy2fao1" path="res://game/mini-games/GrenierNettoyage/grenier_nettoyage.gd" id="1_2ov8r"]
+[ext_resource type="Texture2D" uid="uid://c0du4vsoocpu5" path="res://game/situations/house/attic/illu_grenier.png" id="1_77kuc"]
+[ext_resource type="PackedScene" uid="uid://s6m3wwjj376i" path="res://game/mini-games/GrenierNettoyage/toile.tscn" id="2_r2k1b"]
+
+[sub_resource type="Animation" id="Animation_2ov8r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.6706895, 0.6706895, 0.6706895, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_d5koi"]
+resource_name = "finishGame"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.6706895, 0.6706895, 0.6706895, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_emtxt"]
+_data = {
+&"RESET": SubResource("Animation_2ov8r"),
+&"finishGame": SubResource("Animation_d5koi")
+}
+
+[node name="GrenierNettoyage" type="Node2D" unique_id=1388560005]
+modulate = Color(0.6706895, 0.6706895, 0.6706895, 1)
+script = ExtResource("1_2ov8r")
+
+[node name="background" type="Sprite2D" parent="." unique_id=1112437109]
+position = Vector2(576, 324)
+scale = Vector2(0.29999998, 0.3)
+texture = ExtResource("1_77kuc")
+
+[node name="toiles" type="Node2D" parent="." unique_id=1674104876]
+
+[node name="Toile4" parent="toiles" unique_id=789648483 instance=ExtResource("2_r2k1b")]
+
+[node name="Toile" parent="toiles" unique_id=832298695 instance=ExtResource("2_r2k1b")]
+position = Vector2(1016, 129)
+
+[node name="Toile2" parent="toiles" unique_id=1454219978 instance=ExtResource("2_r2k1b")]
+position = Vector2(277, 482)
+
+[node name="Toile3" parent="toiles" unique_id=14208142 instance=ExtResource("2_r2k1b")]
+position = Vector2(735, 501)
+
+[node name="Timer" type="Timer" parent="." unique_id=273950442]
+wait_time = 6.0
+one_shot = true
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1316641495]
+libraries/ = SubResource("AnimationLibrary_emtxt")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

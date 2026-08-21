@@ -4,7 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="2_emt18"]
 [ext_resource type="Script" uid="uid://dtev185tk47ad" path="res://game/ui.gd" id="2_vop5m"]
 [ext_resource type="Script" uid="uid://c31o8eq45sq0q" path="res://game/dev_menu.gd" id="4_vop5m"]
-[ext_resource type="PackedScene" uid="uid://d0nh8r3de3nom" path="res://game/mini-games/taquin/taquin.tscn" id="5_5un7r"]
+[ext_resource type="PackedScene" uid="uid://d0nh8r3de3nom" path="res://game/mini-games/Taquin/taquin.tscn" id="5_5un7r"]
+[ext_resource type="PackedScene" uid="uid://ca1t6cqxksvoy" path="res://game/mini-games/GrenierNettoyage/GrenierNettoyage.tscn" id="5_dgpao"]
 
 [node name="Main" type="Node" unique_id=1423148464]
 script = ExtResource("1_oa506")
@@ -114,17 +115,22 @@ text = "Minigame"
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 selected = 0
-item_count = 2
+item_count = 3
 popup/item_0/text = "None"
 popup/item_0/id = 0
 popup/item_1/text = "Taquin Puzzle"
 popup/item_1/id = 1
+popup/item_2/text = "Grenier"
+popup/item_2/id = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1080960320]
 
 [node name="SituationContainer" type="Node" parent="." unique_id=1260952937]
 
 [node name="MiniGames" type="CanvasLayer" parent="." unique_id=60564221]
+
+[node name="GrenierNettoyage" parent="MiniGames" unique_id=1388560005 instance=ExtResource("5_dgpao")]
+visible = false
 
 [node name="Taquin" parent="MiniGames" unique_id=759186582 instance=ExtResource("5_5un7r")]
 visible = false
