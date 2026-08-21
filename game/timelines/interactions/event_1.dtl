@@ -1,0 +1,9 @@
+if {util.isRoomDone} == true:
+	return
+elif {util.isRoomChecked} == true:
+	set {util.isRoomDone} = true
+else:
+	return
+[style name="full"]
+rosine (present/default): Ma chérie, j'espère que tu t'es bien reposé !
+rosine: J'ai commencé à préparer le petit déjeuner!

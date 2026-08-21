@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dgxhb7cwv83tf" path="res://game/situations/house/house.tscn" id="1_nqwdd"]
 [ext_resource type="Texture2D" uid="uid://c0du4vsoocpu5" path="res://game/situations/house/attic/illu_grenier.png" id="2_drqy5"]
+[ext_resource type="Script" uid="uid://bkxb5bsfprnxl" path="res://game/situations/house/attic/photo.gd" id="3_o40di"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_nqwdd")]
 currentSituation = 106
@@ -9,6 +10,15 @@ currentSituation = 106
 [node name="Background" parent="." index="0" unique_id=1733816860]
 scale = Vector2(0.300463, 0.30046296)
 texture = ExtResource("2_drqy5")
+
+[node name="photo" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="0" unique_id=1782886491]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 66.0
+offset_right = 536.0
+offset_bottom = 106.0
+script = ExtResource("3_o40di")
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
 [node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
 offset_left = 873.0

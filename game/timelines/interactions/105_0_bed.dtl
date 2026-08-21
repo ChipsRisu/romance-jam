@@ -1,0 +1,10 @@
+[style name="compact"]
+Aller dormir et terminer la journée ?
+- oui
+	if {util.isRoomDone} == false:
+		elise: Il est un peu tôt pour dormir...
+	else:
+		do DayHandler.next()
+- non
+jump event_1/
+[end_timeline]
