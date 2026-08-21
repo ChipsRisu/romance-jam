@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8ju8srts6lhy"
-path="res://.godot/imported/CarouselMaker_ImageSplitter_2.png-970522aef711be83e4019b01dc009211.ctex"
+uid="uid://cylni1iket737"
+path="res://.godot/imported/cible.webp-2aa20e2f17118b32e60b1f80342d8593.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/mini-games/Taquin/assets/CarouselMaker_ImageSplitter_2.png"
-dest_files=["res://.godot/imported/CarouselMaker_ImageSplitter_2.png-970522aef711be83e4019b01dc009211.ctex"]
+source_file="res://game/mini-games/StandTire/assets/cible.webp"
+dest_files=["res://.godot/imported/cible.webp-2aa20e2f17118b32e60b1f80342d8593.ctex"]
 
 [params]
 
