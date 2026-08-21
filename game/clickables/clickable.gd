@@ -12,4 +12,8 @@ func match_tag(_tag: String) -> bool:
 ## Either ignore the day or check if should be present today
 func is_present_today() -> bool:
 	var today = GameHandler.state.day
-	return self.ignoreDay || self.dayAbsenceList.has(today)
+	return self.ignoreDay || self.dayPresenceList.has(today)
+
+## Called on clicked, to override if needed
+func on_clicked_custom() -> void:
+	pass

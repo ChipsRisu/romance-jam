@@ -9,7 +9,6 @@ enum Key {
 	VOID 				= 0,
 	HOUSE_FRONT 		= 100,
 	HOUSE_ENTRANCE 		= 101,
-	#HOUSE_CORRIDOR 		= 102,
 	HOUSE_LIVINGROOM 	= 103,
 	HOUSE_KITCHEN 		= 104,
 	HOUSE_BEDROOM 		= 105,
@@ -67,7 +66,6 @@ func _get_configuration_warnings():
 
 func _ready() -> void:
 	tag = GameHandler.getActiveTag()
-	#print(tag)
 	_handle_background()
 	_handle_interactions()
 	_handle_exits()

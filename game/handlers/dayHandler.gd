@@ -8,6 +8,7 @@ func next() -> Situation.Day:
 	var day = GameHandler.state.day
 	if Situation.Day.SUN != day:
 		setDay(day + 1)
+		DialogueHandler.start_day_description()
 	else:
 		DialogueHandler.start_epilogue()
 	

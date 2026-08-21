@@ -5,14 +5,18 @@ const EPILOGUE_TIMELINE = "epilogue_1"
 
 func start(interaction: Interaction) -> void:
 	interaction.checked = true
-	if interaction.ignoreDay: _start("%s_%s" % [interaction.key, GameHandler.state.situation])
-	else: _start("%s_%s_%s" % [interaction.key, GameHandler.state.situation, GameHandler.state.day])
+	interaction.on_clicked_custom()
+	if interaction.ignoreDay: _start("%s_%s_%s" % [GameHandler.state.situation, interaction.type, interaction.key])
+	else: _start("%s_%s_%s_%s" % [GameHandler.state.situation, interaction.type, interaction.key, GameHandler.state.day])
 
 func start_prologue() -> void:
 	_start(PROLOGUE_TIMELINE)
 
 func start_epilogue() -> void:
 	_start(EPILOGUE_TIMELINE)
+
+func start_day_description() -> void:
+	_start("day_%s" % [GameHandler.state.day])
 
 func start_situation_description(ignoreDay: bool = true) -> void:
 	if ignoreDay: _start("situation_%s" % [GameHandler.state.situation])

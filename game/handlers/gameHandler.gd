@@ -20,7 +20,13 @@ func save() -> void:
 func _setup() -> void:
 	DayHandler.setDay(state.day)
 	SituationHandler.loadSituation(state.situation)
+	
+	## TODO dev mode only
+	Dialogic.VAR.set_variable("skipIntro", true);
 
 func getActiveTag() -> String: 
-	print(state.situation)
 	return str(state.tags.get(state.situation)) if state.situation != null || Situation.Key.VOID == state.situation else ""
+
+func setActiveTag(tag: String) -> void:
+	if state.situation != null && Situation.Key.VOID != state.situation:
+		state.tags.set(state.situation, tag)

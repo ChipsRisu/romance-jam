@@ -84,10 +84,14 @@ func _load(to: Situation.Key) -> void:
 func _clean() -> void:
 	activeSituation = null
 	for child in container.get_children():
-		print('A')
 		container.remove_child(child)
 		child.queue_free()
+
+# TODO below could be moved to an UI handler ?
 
 func _resetHud() -> void:
 	toggleMovement(false)
 	ui.resetHud()
+
+func hideHud(value: bool) -> void:
+	ui.movementVisibility(!value)
