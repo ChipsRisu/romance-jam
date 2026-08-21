@@ -1,18 +1,32 @@
 extends Node
 
-func start(interaction: Interaction) -> void:
-	# TODO maybe some logic here ? 
-	# Or else we can just skip this handler and use Dialogic directly, since it's already a Singleton itself !
-	var id = workingId(interaction)
-	interaction.checked = true
-	
-	# For Dev purpose only
-	print("INTERACTION TRIGGERED > ", id)
-	
-	if Dialogic.timeline_exists(id):
-		Dialogic.start(id)
+const PROLOGUE_TIMELINE = "prologue_1"
+const EPILOGUE_TIMELINE = "epilogue_1"
 
-func workingId(interaction: Interaction) -> String:
-	if interaction.ignoreDayForDialogue:
-		return "%s_%s" % [interaction.key, GameHandler.state.situation]
-	return "%s_%s_%s" % [interaction.key, GameHandler.state.situation, GameHandler.state.day]
+func start(interaction: Interaction) -> void:
+	interaction.checked = true
+	interaction.on_clicked_custom()
+	if interaction.ignoreDay: _start("%s_%s_%s" % [GameHandler.state.situation, interaction.type, interaction.key])
+	else: _start("%s_%s_%s_%s" % [GameHandler.state.situation, interaction.type, interaction.key, GameHandler.state.day])
+
+func start_prologue() -> void:
+	_start(PROLOGUE_TIMELINE)
+
+func start_epilogue() -> void:
+	_start(EPILOGUE_TIMELINE)
+
+func start_day_description() -> void:
+	_start("day_%s" % [GameHandler.state.day])
+
+func start_situation_description(ignoreDay: bool = true) -> void:
+	if ignoreDay: _start("situation_%s" % [GameHandler.state.situation])
+	else: _start("situation_%s_%s" % [GameHandler.state.situation, GameHandler.state.day])
+
+func _start(timeline: String) -> void:
+	# For Dev purpose only
+	print("TIMELINE TRIGGERED > ", timeline)
+	
+	if Dialogic.timeline_exists(timeline):
+		Dialogic.start(timeline)
+	else:
+		printerr("Not found: ", timeline)

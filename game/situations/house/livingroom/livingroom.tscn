@@ -2,8 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://dgxhb7cwv83tf" path="res://game/situations/house/house.tscn" id="1_siur2"]
 [ext_resource type="Texture2D" uid="uid://be3mim2mg646" path="res://game/situations/house/livingroom/illu_salon.png" id="2_qlnk6"]
-[ext_resource type="Texture2D" uid="uid://dfsixxku14hna" path="res://game/characters/place_holder/ph1.png" id="3_qlnk6"]
 [ext_resource type="Script" uid="uid://cxgf0bbqy1ufq" path="res://game/clickables/interactions/interaction.gd" id="4_2unxk"]
+[ext_resource type="Texture2D" uid="uid://d0qjwo1s066q2" path="res://game/characters/rosine/present/rosine.png" id="4_s1b53"]
+[ext_resource type="Script" uid="uid://d0hol2f70bcrx" path="res://game/situations/house/livingroom/rosine.gd" id="5_4461h"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_siur2")]
 currentSituation = 103
@@ -13,29 +14,31 @@ position = Vector2(-112, 3)
 scale = Vector2(0.35582483, 0.29953703)
 texture = ExtResource("2_qlnk6")
 
-[node name="someGuy" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="0" unique_id=158375740]
-layout_mode = 0
-offset_left = 328.0
-offset_top = 242.0
-offset_right = 574.0
-offset_bottom = 594.3007
-texture_normal = ExtResource("3_qlnk6")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("4_2unxk")
-key = "npc_test"
-dayAbsenceList = Array[int]([2, 0])
-metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
-
-[node name="tv" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="1" unique_id=56274864]
+[node name="tv" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="0" unique_id=56274864]
 layout_mode = 0
 offset_left = 128.0
 offset_top = 422.0
 offset_right = 313.0
 offset_bottom = 555.0
 script = ExtResource("4_2unxk")
-key = "spot_test"
-ignoreDayForDialogue = true
+key = "tv"
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="rosine" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="1" unique_id=997041288]
+layout_mode = 0
+offset_left = 542.0
+offset_top = 162.0
+offset_right = 917.0
+offset_bottom = 630.75
+texture_normal = ExtResource("4_s1b53")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("5_4461h")
+key = "rosine"
+type = 1
+tag = "photo"
+dayPresenceList = Array[int]([1])
+ignoreDay = false
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
 [node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]

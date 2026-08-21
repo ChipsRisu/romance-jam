@@ -9,7 +9,6 @@ enum Key {
 	VOID 				= 0,
 	HOUSE_FRONT 		= 100,
 	HOUSE_ENTRANCE 		= 101,
-	#HOUSE_CORRIDOR 		= 102,
 	HOUSE_LIVINGROOM 	= 103,
 	HOUSE_KITCHEN 		= 104,
 	HOUSE_BEDROOM 		= 105,
@@ -23,6 +22,7 @@ enum Key {
 }
 
 enum Day {
+	VOID = 0,
 	MON = 1,
 	TUE = 2,
 	WEN = 3,
@@ -66,11 +66,9 @@ func _get_configuration_warnings():
 
 func _ready() -> void:
 	tag = GameHandler.getActiveTag()
-	#print(tag)
 	_handle_background()
 	_handle_interactions()
 	_handle_exits()
-	
 
 ## Called to update the move HUD
 func updateUi(isMoving: bool) -> void:
@@ -95,9 +93,5 @@ func _handle_interactions() -> void:
 
 func _handle_background() -> void: 
 	## get first alt background with tag and show it
-	#print(tag)
 	for alt: AltBackground in background.get_children():
-		if alt.match_tag(tag):
-			alt.show()
-		else:
-			alt.hide()
+		alt.visible = alt.match_tag(tag)

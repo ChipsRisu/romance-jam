@@ -2,18 +2,50 @@
 
 [ext_resource type="PackedScene" uid="uid://dgxhb7cwv83tf" path="res://game/situations/house/house.tscn" id="1_88c0l"]
 [ext_resource type="Texture2D" uid="uid://dcxq8p7eg2gop" path="res://game/situations/house/bedroom/chambre.png" id="2_0qhty"]
+[ext_resource type="Script" uid="uid://sgs5rqdtdebn" path="res://game/situations/house/bedroom/bedroom.gd" id="2_4kf76"]
+[ext_resource type="Script" uid="uid://3rvnbn0kbmgx" path="res://game/situations/house/bedroom/pc.gd" id="3_k12ir"]
+[ext_resource type="Script" uid="uid://cxgf0bbqy1ufq" path="res://game/clickables/interactions/interaction.gd" id="3_ribbl"]
+[ext_resource type="Script" uid="uid://dkb0tvvwojhk" path="res://game/situations/house/bedroom/books.gd" id="4_5f7w4"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_88c0l")]
-currentSituation = 105
+script = ExtResource("2_4kf76")
+currentSituation = 0
 
 [node name="Background" parent="." index="0" unique_id=1733816860]
 scale = Vector2(0.300463, 0.30046296)
 texture = ExtResource("2_0qhty")
 
-[node name="Exits" parent="." index="2" unique_id=2130133361]
-visible = true
+[node name="pc" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="0" unique_id=184879660]
+layout_mode = 0
+offset_left = 1009.0
+offset_top = 290.0
+offset_right = 1129.0
+offset_bottom = 380.0
+script = ExtResource("3_k12ir")
+key = "pc"
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
-[node name="toEntrance" parent="Exits" index="0" unique_id=2138552675]
+[node name="books" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="1" unique_id=1109607879]
+layout_mode = 0
+offset_left = 453.0
+offset_top = 300.0
+offset_right = 526.0
+offset_bottom = 367.0
+script = ExtResource("4_5f7w4")
+key = "books"
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="bed" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="2" unique_id=585891202]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 396.0
+offset_right = 670.0
+offset_bottom = 616.0
+script = ExtResource("3_ribbl")
+key = "bed"
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
 offset_left = 649.0
 offset_top = 553.0
 offset_right = 700.0

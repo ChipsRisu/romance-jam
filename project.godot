@@ -33,9 +33,18 @@ directories/dch_directory={
 "marius": "res://game/characters/marius/marius.dch",
 "place_holder": "res://game/characters/place_holder/place_holder.dch",
 "rosine": "res://game/characters/rosine/rosine.dch",
+"smut_tribal": "res://game/characters/misc/smut_tribal.dch",
 "solene": "res://game/characters/solene/solene.dch"
 }
 directories/dtl_directory={
+"103_1_rosine_1": "res://game/timelines/interactions/103_1_rosine_1.dtl",
+"104_1_rosine_1": "res://game/timelines/interactions/104_1_rosine_1.dtl",
+"105_0_bed": "res://game/timelines/interactions/105_0_bed.dtl",
+"105_0_books": "res://game/timelines/interactions/105_0_books.dtl",
+"105_0_pc": "res://game/timelines/interactions/105_pc.dtl",
+"day_1": "res://game/timelines/new_day/day_1.dtl",
+"event_1": "res://game/timelines/interactions/event_1.dtl",
+"event_photo_1": "res://game/timelines/interactions/event_photo_1.dtl",
 "npc_test_103_1": "res://game/timelines/place_holder/npc_test.dtl",
 "prologue_1": "res://game/timelines/prologue/prologue_1.dtl",
 "spot_test_103_1": "res://game/timelines/place_holder/spot_test.dtl"
@@ -45,7 +54,18 @@ layout/style_directory={
 "compact": "res://game/timelines/styles/compact.tres",
 "full": "res://game/timelines/styles/full.tres"
 }
-variables={}
+variables={
+"dialogue": {
+"favStreamer": ""
+},
+"photoCount": 0,
+"skipIntro": false,
+"util": {
+"booksClickedCounter": 0,
+"isRoomChecked": false,
+"isRoomDone": false
+}
+}
 glossary/default_case_sensitive=true
 layout/style_list=["res://game/timelines/styles/compact.tres", "res://game/timelines/styles/full.tres"]
 layout/default_style="res://game/timelines/styles/full.tres"

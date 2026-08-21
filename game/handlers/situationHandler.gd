@@ -10,7 +10,6 @@ const SITUATION_PATH_DICTIONARY := {
 	Situation.Key.VOID: "",				# Special scene
 	Situation.Key.HOUSE_FRONT: 			"res://game/situations/outside/house/house.tscn",
 	Situation.Key.HOUSE_ENTRANCE: 		"res://game/situations/house/entrance/entrance.tscn",
-	#Situation.Key.HOUSE_CORRIDOR: 		"res://game/situations/house/corridor/corridor.tscn",
 	Situation.Key.HOUSE_LIVINGROOM: 	"res://game/situations/house/livingroom/livingroom.tscn",
 	Situation.Key.HOUSE_KITCHEN: 		"res://game/situations/house/kitchen/kitchen.tscn",
 	Situation.Key.HOUSE_BEDROOM: 		"res://game/situations/house/bedroom/bedroom.tscn",
@@ -85,10 +84,14 @@ func _load(to: Situation.Key) -> void:
 func _clean() -> void:
 	activeSituation = null
 	for child in container.get_children():
-		print('A')
 		container.remove_child(child)
 		child.queue_free()
+
+# TODO below could be moved to an UI handler ?
 
 func _resetHud() -> void:
 	toggleMovement(false)
 	ui.resetHud()
+
+func hideHud(value: bool) -> void:
+	ui.movementVisibility(!value)

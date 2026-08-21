@@ -12,32 +12,37 @@
 
 [node name="Background" parent="." index="0" unique_id=1733816860]
 scale = Vector2(0.30000004, 0.30000004)
-texture = ExtResource("2_ruivo")
+texture = ExtResource("5_027fo")
 
-[node name="test" type="Sprite2D" parent="Background" index="0" unique_id=307630875]
-visible = false
-position = Vector2(1920, 1080)
-scale = Vector2(0.99999034, 0.99999034)
-texture = ExtResource("3_h54gt")
-script = ExtResource("4_da2dy")
-tag = "test"
-
-[node name="aa" type="Sprite2D" parent="Background" index="1" unique_id=907322441]
+[node name="attic" type="Sprite2D" parent="Background" index="0" unique_id=907322441]
 visible = false
 position = Vector2(1919.9995, 1080)
-texture = ExtResource("5_027fo")
+texture = ExtResource("2_ruivo")
 script = ExtResource("4_da2dy")
-tag = "aa"
+tag = "attic"
 metadata/_custom_type_script = "uid://te5kw2qd31t2"
 
-[node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
+[node name="both" type="Sprite2D" parent="Background" index="1" unique_id=629400897]
+visible = false
+position = Vector2(1919.9996, 1079.9999)
+texture = ExtResource("3_h54gt")
+script = ExtResource("4_da2dy")
+tag = "both"
+metadata/_custom_type_script = "uid://te5kw2qd31t2"
+
+[node name="Exits" parent="." index="2" unique_id=2130133361]
+visible = true
+
+[node name="toEntrance" parent="Exits" index="0" unique_id=2138552675]
 offset_left = 546.0
 offset_top = 573.0
 offset_right = 597.0
 offset_bottom = 624.0
 target = 100
+dayPresenceList = Array[int]([2, 3, 4])
+ignoreDay = false
 
-[node name="toKitchen" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="1" unique_id=396106836]
+[node name="toKitchen" type="TextureButton" parent="Exits" index="1" unique_id=396106836]
 layout_mode = 0
 offset_left = 925.0
 offset_top = 309.0
@@ -46,9 +51,8 @@ offset_bottom = 349.0
 texture_normal = ExtResource("3_ruivo")
 script = ExtResource("4_h54gt")
 target = 104
-tag = "aa"
 
-[node name="toAttic" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="2" unique_id=319703694]
+[node name="toAttic" type="TextureButton" parent="Exits" index="2" unique_id=319703694]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 19.0
@@ -57,8 +61,20 @@ offset_bottom = 59.0
 texture_normal = ExtResource("3_ruivo")
 script = ExtResource("4_h54gt")
 target = 106
+tag = "attic"
 
-[node name="toLivingroom" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="3" unique_id=1280012470]
+[node name="toAttic2" type="TextureButton" parent="Exits" index="3" unique_id=654177368]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 19.0
+offset_right = 636.0
+offset_bottom = 59.0
+texture_normal = ExtResource("3_ruivo")
+script = ExtResource("4_h54gt")
+target = 106
+tag = "both"
+
+[node name="toLivingroom" type="TextureButton" parent="Exits" index="4" unique_id=1280012470]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 326.0
@@ -68,7 +84,7 @@ texture_normal = ExtResource("3_ruivo")
 script = ExtResource("4_h54gt")
 target = 103
 
-[node name="toBedroom" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="4" unique_id=432658431]
+[node name="toBedroom" type="TextureButton" parent="Exits" index="5" unique_id=432658431]
 layout_mode = 0
 offset_left = 371.0
 offset_top = 248.0
@@ -77,3 +93,4 @@ offset_bottom = 299.0
 texture_normal = ExtResource("3_ruivo")
 script = ExtResource("4_h54gt")
 target = 105
+tag = "both"

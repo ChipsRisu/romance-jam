@@ -1,3 +1,5 @@
+if {skipIntro} == true:
+	jump SKIP
 maman: Je suis contente que tu acceptes de voir ta grand-mère.
 maman: Je suis sûre que Mamie sera contente de te voir, tu en reviendra grandie!
 join elise left
@@ -35,9 +37,10 @@ rosine: Viens, viens je vais te montrer ta chambre, il est déjà assez tard. Ve
 	[wait time="2.0"]
 	rosine: Je te laisse ranger tes affaires, je vais me coucher, on se voit demain pour commencer ce qu'il y a à faire.
 	leave rosine [animation="Fade Out" wait="true"]
+label SKIP (Skip intro)
 do SituationHandler.loadSituation(105)
 [clear time="1.0"]
 [style name="compact"]
 elise: Je vais aller voir ce que je peux faire...
-[wait_input]
+do DayHandler.next()
 [end_timeline]
