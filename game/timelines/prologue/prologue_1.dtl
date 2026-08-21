@@ -4,7 +4,8 @@ join elise left
 elise: Tu m'as quand même un peu forcé à venir pour aider Mamie.. -expression grognon-
 [clear time="1.0"]
 # Jouer la cinématique
-[background arg="res://game/situations/outside/house/illu_maison_ext_final.png" fade="0.0"]
+[background scene="res://game/timelines/prologue/PrologueCinematique.tscn" fade="0.5" transition="Simple Fade"]
+[wait time="7.0"]
 [wait_input]
 do SituationHandler.loadSituation(100)
 [clear time="1.0"]
