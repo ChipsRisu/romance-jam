@@ -1,13 +1,13 @@
-join elise (default) left
-elise (Disappointed): (Ce lit est paaas super agréable..)
-leave elise
 (Aller dormir et terminer la journée?)
+[style name="compact"]
 - Oui
 	join elise left
 	if {util.isRoomDone} == false:
 		elise (Thinking): (Il est un peu tôt pour dormir en vrai..)
+		elise (Disappointed): (Puis ce lit est paaas super agréable..)
 	else:
 		do DayHandler.next()
-- non
+- Non
+	elise (Disappointed): (Ce lit est paaas super agréable..)
 jump event_1/
 [end_timeline]

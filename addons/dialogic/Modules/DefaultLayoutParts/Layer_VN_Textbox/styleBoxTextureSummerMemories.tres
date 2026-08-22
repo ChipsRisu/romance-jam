@@ -1,0 +1,8 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://c6rbau5jvn4sh"]
+
+[ext_resource type="Texture2D" uid="uid://eiv5tita1obp" path="res://game/UI/bulle dialogue.png" id="1_d7p0k"]
+
+[resource]
+content_margin_left = 19.0
+content_margin_top = 37.0
+texture = ExtResource("1_d7p0k")

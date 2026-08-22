@@ -7,3 +7,7 @@ elise: Merci mamie!
 rosine: Aujourd'hui, pourrais-tu m'aider à dépoussiérer un peu le grenier pour moi?
 rosine: À cause de mes jambes, ça fait très longtemps que je n'ai pas pu y aller.
 rosine (present/Sad): Tu sais comment c'est, la vieillesse..
+elise (Happy): Oui t'en fais pas, je vais m'en occuper.
+[style name="compact"]
+[wait time="0.5"]
+elise (Disappointed): (Bon j'ai pas vraiment envie, mais il faut bien aider un peu mamie)

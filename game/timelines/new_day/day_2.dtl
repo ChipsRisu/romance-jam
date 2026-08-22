@@ -1,0 +1,7 @@
+[style name="compact"]
+join elise left
+elise (Disappointed): Ugh, wow c'est vrai, je suis "en vacances".. il est quelle heure..?
+elise (Shocked): 5h? C'est mort, j'retourne au dodo..
+[background arg="res://game/BlackScreenTextProject.png" fade="0.5"]
+[wait time="3.0"]
+elise (Disappointed): 5h30.. et j'arrive pas à me rendormir, bon, et si je sortais de là?
