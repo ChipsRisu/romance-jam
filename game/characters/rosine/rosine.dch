@@ -28,6 +28,33 @@ Hobby : Photographie polaroid",
 "scale": 1,
 "scene": ""
 },
+"present/Nostalgic": {
+"export_overrides": {
+"image": "\"res://game/characters/rosine/present/Rosine(nostalgique)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"present/Sad": {
+"export_overrides": {
+"image": "\"res://game/characters/rosine/present/Rosine(triste)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"present/Sweet": {
+"export_overrides": {
+"image": "\"res://game/characters/rosine/present/Rosine(tendre)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "present/default": {
 "export_overrides": {
 "image": "\"res://game/characters/rosine/present/rosine.png\""

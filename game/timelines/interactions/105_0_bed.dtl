@@ -1,8 +1,11 @@
-[style name="compact"]
-Aller dormir et terminer la journée ?
-- oui
+join elise (default) left
+elise (Disappointed): (Ce lit est paaas super agréable..)
+leave elise
+(Aller dormir et terminer la journée?)
+- Oui
+	join elise left
 	if {util.isRoomDone} == false:
-		elise: Il est un peu tôt pour dormir...
+		elise (Thinking): (Il est un peu tôt pour dormir en vrai..)
 	else:
 		do DayHandler.next()
 - non

@@ -18,6 +18,51 @@ Objet : Crayon et carnet (écrit principalement, dessine un peu aussi)",
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
+"Disappointed": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(déçue)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Happy": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(sourire)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Laughing": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(rire)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Shocked": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(surprise)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Thinking": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(pensive)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "default": {
 "export_overrides": {
 "image": "\"res://game/characters/elise/elise.png\""

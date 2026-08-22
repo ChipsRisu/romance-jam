@@ -37,7 +37,13 @@ directories/dch_directory={
 "solene": "res://game/characters/solene/solene.dch"
 }
 directories/dtl_directory={
+"103_0_piano": "res://game/timelines/interactions/103_0_piano.dtl",
+"103_0_tv": "res://game/timelines/interactions/103_0_tv.dtl",
 "103_1_rosine_1": "res://game/timelines/interactions/103_1_rosine_1.dtl",
+"104_0_catpics": "res://game/timelines/interactions/104_0_catpics.dtl",
+"104_0_coffee": "res://game/timelines/interactions/104_0_coffee.dtl",
+"104_0_knives": "res://game/timelines/interactions/104_0_knives.dtl",
+"104_0_oven": "res://game/timelines/interactions/104_0_oven.dtl",
 "104_1_rosine_1": "res://game/timelines/interactions/104_1_rosine_1.dtl",
 "105_0_bed": "res://game/timelines/interactions/105_0_bed.dtl",
 "105_0_books": "res://game/timelines/interactions/105_0_books.dtl",
@@ -50,7 +56,7 @@ directories/dtl_directory={
 "spot_test_103_1": "res://game/timelines/place_holder/spot_test.dtl"
 }
 layout/style_directory={
-"": "res://game/timelines/styles/full.tres",
+"": "res://game/timelines/styles/compact.tres",
 "compact": "res://game/timelines/styles/compact.tres",
 "full": "res://game/timelines/styles/full.tres"
 }
@@ -68,7 +74,7 @@ variables={
 }
 glossary/default_case_sensitive=true
 layout/style_list=["res://game/timelines/styles/compact.tres", "res://game/timelines/styles/full.tres"]
-layout/default_style="res://game/timelines/styles/full.tres"
+layout/default_style="res://game/timelines/styles/compact.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1
@@ -101,6 +107,12 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+translation/enabled=false
+translation/original_locale="en"
+translation/file_mode=1
+translation/translation_folder=""
+translation/save_mode=0
+translation/add_separator=false
 
 [display]
 

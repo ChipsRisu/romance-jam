@@ -1,9 +1,9 @@
 join rosine (present/default) right
 rosine: Ah, Elise! Tu as bien dormi ?
-rosine: Tiens, c'est prêt, tu peux te servir
+rosine (present/Sweet): Tiens, c'est prêt, tu peux te servir.
 join elise left
 elise: Merci mamie!
 # fondu au noir
-rosine: Aujourd'hui, pourrais-tu m'aider à dépoussiérer un peu le grenier pour moi ?
-rosine: À cause de mes jambes,ça fait très longtemps que je n'ai pas pu y aller.
-rosine: Tu sais comment c'est, la vieillesse... -sourire triste
+rosine: Aujourd'hui, pourrais-tu m'aider à dépoussiérer un peu le grenier pour moi?
+rosine: À cause de mes jambes, ça fait très longtemps que je n'ai pas pu y aller.
+rosine (present/Sad): Tu sais comment c'est, la vieillesse..

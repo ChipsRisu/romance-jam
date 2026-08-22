@@ -1,6 +1,6 @@
-[style name="compact"]
-elise: Y a pas d'réseau.. -regard déçu-
-elise: Je peux même pas regarder mes vtubers préférés tels que...
-elise: {dialogue.favStreamer} !
-elise: (Abonnez-vous, leurs liens sont dans les crédits)
+join elise left
+elise (Disappointed): (Y a pas d'réseau..)
+elise (Disappointed): (Je peux même pas regarder mes vtubers préférés tels que...)
+elise (Happy): {dialogue.favStreamer} !
+elise (Happy): (Abonnez-vous, leurs liens sont dans les crédits)
 jump event_1/
