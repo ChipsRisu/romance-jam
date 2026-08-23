@@ -4,9 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="2_emt18"]
 [ext_resource type="Script" uid="uid://dtev185tk47ad" path="res://game/ui.gd" id="2_vop5m"]
 [ext_resource type="Script" uid="uid://c31o8eq45sq0q" path="res://game/dev_menu.gd" id="4_vop5m"]
-[ext_resource type="PackedScene" uid="uid://d0nh8r3de3nom" path="res://game/mini-games/Taquin/taquin.tscn" id="5_5un7r"]
 [ext_resource type="Texture2D" uid="uid://bsf4hs6ckr4s8" path="res://icon.svg" id="6_dgpao"]
-[ext_resource type="PackedScene" uid="uid://ca1t6cqxksvoy" path="res://game/mini-games/GrenierNettoyage/GrenierNettoyage.tscn" id="6_lx3aj"]
 [ext_resource type="Script" uid="uid://bpkfww5nx136i" path="res://game/menus.gd" id="6_wjctj"]
 [ext_resource type="Texture2D" uid="uid://dgue1vccuini7" path="res://game/situations/outside/house/front_wip.png" id="8_xkbyp"]
 
@@ -131,12 +129,7 @@ popup/item_2/id = 2
 [node name="SituationContainer" type="Node" parent="." unique_id=1260952937]
 
 [node name="MiniGames" type="CanvasLayer" parent="." unique_id=60564221]
-
-[node name="Taquin" parent="MiniGames" unique_id=759186582 instance=ExtResource("5_5un7r")]
-visible = false
-
-[node name="GrenierNettoyage" parent="MiniGames" unique_id=1388560005 instance=ExtResource("6_lx3aj")]
-visible = false
+unique_name_in_owner = true
 
 [node name="Menus" type="CanvasLayer" parent="." unique_id=1099572873]
 script = ExtResource("6_wjctj")

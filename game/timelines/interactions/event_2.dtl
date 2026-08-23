@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 if  == 0.0:
+=======
+if {"{photoCount}"} == 0.0:
+>>>>>>> dev
 	# (supposé arriver à notre passage au village, au jour 2 avant d'aller à la plage)
 	join elise (fullDisappointed) left
 	join gabin right
 	gabin (default): Salut, t’es qui toi?
 	elise (fullDisappointed): Euh.. salut..., Je suis Elise, la petite-fille de Rosine. Et toi?
+<<<<<<< HEAD
 	gabin (Laughing): Oh, de Rosine, ok! Moi c’est Gabin! Tu es là depuis quand? \
 	T'es là pour les vacances? Comment elle va, mamie Rosine? \
 	Ma maman m'a dit qu'elle n'était pas très bien ces derniers temps...
@@ -17,6 +22,16 @@ if  == 0.0:
 	60 kilos disparus dans la nuit!! Personne ne sait où il est allé!
 	gabin (Thinking): Les soigneurs ne pensaient même que les capybaras soient assez actifs \
 	dans leurs vies pour vouloir s'échapper, contrairement au ratel qui a réussi à s'échapper avec un râteau!
+=======
+	gabin (Laughing): Oh, de Rosine, ok! Moi c’est Gabin! Tu es là depuis quand? T'es là pour les vacances? Comment elle va, mamie Rosine? Ma maman m'a dit qu'elle n'était pas très bien ces derniers temps...
+	elise (fullShocked): Bah j-
+	gabin (Laughing): Tu es là pour l'aider? Tu as déjà visité le village? Tu vas faire quoi de tes vacances? Tu as quel âge? T-
+	elise (fullDisgusted): Ralentis s'il-te-plaît, il est 6h du mat'..
+	gabin (Laughing): Ahah t'es marrante, j'ai besoin de poser toutes les questions pour devenir le meilleur journaliste, un jour!
+	elise (fullShocked): Et alors, c'est quoi les news du jour de ce fameux journaliste?
+	gabin (Laughing): J'ai vu cette nuit qu'un capybara s'est échappé du zoo, t'imagines!! 60 kilos disparus dans la nuit!! Personne ne sait où il est allé!
+	gabin (Thinking): Les soigneurs ne pensaient même que les capybaras soient assez actifs dans leurs vies pour vouloir s'échapper, contrairement au ratel qui a réussi à s'échapper avec un râteau!
+>>>>>>> dev
 	elise (fullShocked): C'est vrai ???
 	gabin (Thinking): Pourquoi t'as un carnet? Y a quoi dedans?
 	elise: C'est rien. A plus!
