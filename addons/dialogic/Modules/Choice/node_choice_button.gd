@@ -41,6 +41,7 @@ signal choice_selected
 
 
 func _ready() -> void:
+	self.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND;
 	add_to_group('dialogic_choice_button')
 	shortcut_in_tooltip = false
 	hide()

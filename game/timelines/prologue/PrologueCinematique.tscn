@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://byb4ddv3aakl3" path="res://game/timelines/prologue/prologue_cinematique.gd" id="1_ewcwn"]
 [ext_resource type="Texture2D" uid="uid://bnhf6n5ajaan3" path="res://game/situations/outside/house/illu_maison_ext_final.png" id="2_bo64d"]
-[ext_resource type="Texture2D" uid="uid://bsf4hs6ckr4s8" path="res://icon.svg" id="3_bo64d"]
+[ext_resource type="Texture2D" uid="uid://baj8m3o054n8y" path="res://assets/UI/Logo.png" id="3_bo64d"]
 
 [sub_resource type="Animation" id="Animation_6rh8k"]
 length = 0.001
@@ -112,7 +112,8 @@ libraries/ = SubResource("AnimationLibrary_7bc7g")
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=2084538847]
 modulate = Color(1, 1, 1, 0)
-position = Vector2(557, 316)
+position = Vector2(572, 324)
+scale = Vector2(0.2058226, 0.20582262)
 texture = ExtResource("3_bo64d")
 
 [node name="Label" type="Label" parent="." unique_id=2036304546]

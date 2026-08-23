@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://btn2utjonrrun"]
+
+[ext_resource type="Script" uid="uid://rtucwe7w00vm" path="res://assets/styles/Layer_SpeakerPortraitTextboxCustom/speaker_portrait_textbox_layer.gd" id="1_oysvg"]
+[ext_resource type="Texture2D" uid="uid://btacsbyy1jhik" path="res://assets/UI/Bulle dialogue with character.png" id="2_0h35n"]
+[ext_resource type="Script" uid="uid://d0ptqnbudhkyj" path="res://addons/dialogic/Modules/Character/node_portrait_container.gd" id="2_ij6ut"]
+[ext_resource type="Script" uid="uid://bak74s0kcr0ao" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="3_qgdnf"]
+[ext_resource type="Script" uid="uid://drhfq6rmdeuri" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="4_8wt52"]
+[ext_resource type="Script" uid="uid://dpv2dfiv5dhmr" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="5_kyccj"]
+
+[node name="TextboxWithSpeakerPortrait" type="Control" unique_id=1404379257]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_oysvg")
+box_panel = "res://addons/dialogic/Modules/DefaultLayoutParts/Layer_SpeakerPortraitTextbox/default_stylebox.tres"
+
+[node name="BulleDialogueWithCharacter" type="Sprite2D" parent="." unique_id=412801388]
+position = Vector2(576, 501.00006)
+scale = Vector2(0.20652343, 0.22890568)
+texture = ExtResource("2_0h35n")
+
+[node name="Anchor" type="Control" parent="." unique_id=2095186247]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Panel" type="Control" parent="Anchor" unique_id=532687204]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="PortraitPanel" type="Control" parent="Anchor/Panel" unique_id=1911150247]
+unique_name_in_owner = true
+clip_children = 1
+anchors_preset = 0
+offset_left = -109.0
+offset_top = -89.081085
+offset_right = 91.0
+offset_bottom = 181.18918
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+mouse_filter = 2
+
+[node name="DialogicNode_PortraitContainer" type="Control" parent="Anchor/Panel/PortraitPanel" unique_id=1275344308]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = 1.0
+offset_right = -7.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_ij6ut")
+mode = 1
+container_ids = PackedStringArray("1")
+debug_character_portrait = "speaker"
+
+[node name="VBoxContainer" type="Control" parent="Anchor/Panel" unique_id=2034429740]
+anchors_preset = 0
+offset_left = 88.0
+offset_right = 588.0
+offset_bottom = 150.0
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="DialogicNode_NameLabel" type="Label" parent="Anchor/Panel/VBoxContainer" unique_id=37403072]
+unique_name_in_owner = true
+layout_mode = 0
+offset_top = -21.0
+offset_right = 374.0
+offset_bottom = -9.0
+theme_override_font_sizes/font_size = 8
+text = "Name"
+script = ExtResource("3_qgdnf")
+
+[node name="DialogicNode_DialogText" type="RichTextLabel" parent="Anchor/Panel/VBoxContainer" unique_id=1063776692 node_paths=PackedStringArray("textbox_root")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 5.0
+offset_top = 31.0
+offset_right = 487.0
+offset_bottom = 147.0
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 6
+bbcode_enabled = true
+text = "Some text"
+scroll_following = true
+visible_characters_behavior = 1
+script = ExtResource("4_8wt52")
+textbox_root = NodePath("")
+
+[node name="DialogicNode_TypeSounds" type="AudioStreamPlayer" parent="Anchor/Panel/VBoxContainer/DialogicNode_DialogText" unique_id=1655954649]
+script = ExtResource("5_kyccj")
