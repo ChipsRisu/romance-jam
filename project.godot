@@ -52,7 +52,9 @@ directories/dtl_directory={
 layout/style_directory={
 "": "res://game/timelines/styles/full.tres",
 "compact": "res://game/timelines/styles/compact.tres",
-"full": "res://game/timelines/styles/full.tres"
+"compactCustom": "res://assets/styles/compactCustom.tres",
+"full": "res://game/timelines/styles/full.tres",
+"vn_textbox_default_panel": "res://assets/styles/Layer_VN_TextboxCustom/vn_textbox_default_panel.tres"
 }
 variables={
 "dialogue": {
@@ -67,7 +69,7 @@ variables={
 }
 }
 glossary/default_case_sensitive=true
-layout/style_list=["res://game/timelines/styles/compact.tres", "res://game/timelines/styles/full.tres"]
+layout/style_list=["res://game/timelines/styles/compact.tres", "res://game/timelines/styles/full.tres", "res://assets/styles/compactCustom.tres", "res://assets/styles/Layer_VN_TextboxCustom/vn_textbox_default_panel.tres"]
 layout/default_style="res://game/timelines/styles/full.tres"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -101,6 +103,12 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+translation/enabled=false
+translation/original_locale="en"
+translation/file_mode=1
+translation/translation_folder=""
+translation/save_mode=0
+translation/add_separator=false
 
 [display]
 

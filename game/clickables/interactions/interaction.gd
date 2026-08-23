@@ -10,3 +10,6 @@ enum ClickableType {
 @export var key: String
 @export var type: ClickableType = ClickableType.ITM
 var checked: bool
+
+func _init() -> void:
+	self.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND;
