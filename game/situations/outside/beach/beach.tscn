@@ -1,9 +1,19 @@
 [gd_scene format=3 uid="uid://wqtox0vekobk"]
 
 [ext_resource type="PackedScene" uid="uid://duvo5ju3he11g" path="res://game/situations/situation.tscn" id="1_8e1sy"]
-[ext_resource type="Texture2D" uid="uid://b120fgj8c1odd" path="res://game/situations/outside/beach/illu_plage_final_jour.png" id="2_1l6vo"]
+[ext_resource type="Texture2D" uid="uid://bnqgt5eyat4lm" path="res://game/situations/outside/beach/illu_plage_final_jour.png" id="2_1l6vo"]
+[ext_resource type="Script" uid="uid://cxgf0bbqy1ufq" path="res://game/clickables/interactions/interaction.gd" id="3_1fahc"]
 [ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="3_drqwb"]
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/clickables/exits/exit.gd" id="4_1fahc"]
+[ext_resource type="Texture2D" uid="uid://c52i5hhf25hhw" path="res://game/situations/outside/beach/coquillage1.png" id="4_fcyi1"]
+[ext_resource type="Texture2D" uid="uid://bsk62qim2ymsc" path="res://game/situations/outside/beach/déchet1.png" id="5_5col0"]
+[ext_resource type="Texture2D" uid="uid://d37l7sqnpa3pf" path="res://game/situations/outside/beach/déchet2.png" id="6_5col0"]
+[ext_resource type="Texture2D" uid="uid://c6edobgdn0tor" path="res://game/situations/outside/beach/déchet3.png" id="6_jbo1k"]
+[ext_resource type="Texture2D" uid="uid://d14jatgme8gvd" path="res://game/situations/outside/beach/déchet4.png" id="7_4no00"]
+[ext_resource type="Texture2D" uid="uid://bo0kuxj7xuuq8" path="res://game/situations/outside/beach/déchet5.png" id="8_lss5v"]
+[ext_resource type="Texture2D" uid="uid://8yofq1uktbv2" path="res://game/situations/outside/beach/déchet6.png" id="9_waafc"]
+[ext_resource type="Texture2D" uid="uid://c7u4gpeb0l3lo" path="res://game/situations/outside/beach/déchet7.png" id="10_upisg"]
+[ext_resource type="Texture2D" uid="uid://c4uqgfe3a1u7t" path="res://game/situations/outside/beach/déchet8.png" id="11_8vsw6"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_8e1sy")]
 currentSituation = 300
@@ -11,6 +21,202 @@ currentSituation = 300
 [node name="Background" parent="." index="0" unique_id=1733816860]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_1l6vo")
+
+[node name="beachstand" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="0" unique_id=1894851944]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 262.0
+offset_right = 332.0
+offset_bottom = 324.0
+script = ExtResource("3_1fahc")
+key = "beachstand"
+dayPresenceList = Array[int]([2])
+ignoreDay = false
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="trash1" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="1" unique_id=533589217]
+layout_mode = 0
+offset_left = 600.0
+offset_top = 552.0
+offset_right = 712.3077
+offset_bottom = 625.0
+texture_normal = ExtResource("5_5col0")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_1fahc")
+key = "trash1"
+dayPresenceList = Array[int]([2])
+ignoreDay = false
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="trash2" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="2" unique_id=551306555]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 557.0
+offset_right = 113.23077
+offset_bottom = 628.0
+texture_normal = ExtResource("6_5col0")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_1fahc")
+key = "trash2"
+dayPresenceList = Array[int]([2])
+ignoreDay = false
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="trash3" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="3" unique_id=1999357376]
+layout_mode = 0
+offset_left = 1045.0
+offset_top = 553.0
+offset_right = 1175.7693
+offset_bottom = 638.0
+texture_normal = ExtResource("6_jbo1k")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_1fahc")
+key = "trash3"
+dayPresenceList = Array[int]([2])
+ignoreDay = false
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="trash4" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="4" unique_id=1627886396]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 479.0
+offset_right = 1070.2307
+offset_bottom = 576.0
+texture_normal = ExtResource("7_4no00")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_1fahc")
+key = "trash4"
+dayPresenceList = Array[int]([2])
+ignoreDay = false
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="trash5" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="5" unique_id=1194909975]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 378.0
+offset_right = 702.1539
+offset_bottom = 447.0
+texture_normal = ExtResource("8_lss5v")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_1fahc")
+key = "trash5"
+dayPresenceList = Array[int]([2])
+ignoreDay = false
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="trash6" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="6" unique_id=924072333]
+layout_mode = 0
+offset_left = 365.0
+offset_top = 353.0
+offset_right = 454.0
+offset_bottom = 442.0
+texture_normal = ExtResource("9_waafc")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_1fahc")
+key = "trash6"
+dayPresenceList = Array[int]([2])
+ignoreDay = false
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="trash7" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="7" unique_id=132699748]
+layout_mode = 0
+offset_left = 126.30769
+offset_top = 345.0
+offset_right = 247.84616
+offset_bottom = 424.0
+texture_normal = ExtResource("10_upisg")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_1fahc")
+key = "trash7"
+dayPresenceList = Array[int]([2])
+ignoreDay = false
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="trash8" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="8" unique_id=2024659280]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 338.0
+offset_right = 332.75
+offset_bottom = 413.0
+texture_normal = ExtResource("11_8vsw6")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_1fahc")
+key = "trash8"
+dayPresenceList = Array[int]([2])
+ignoreDay = false
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="seashell1" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="9" unique_id=190867600]
+layout_mode = 0
+offset_left = 1096.0
+offset_top = 503.0
+offset_right = 1161.2318
+offset_bottom = 553.0
+texture_normal = ExtResource("4_fcyi1")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_1fahc")
+key = "seashell1"
+dayPresenceList = Array[int]([2])
+ignoreDay = false
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="seashell2" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="10" unique_id=1075248490]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_1fahc")
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="seashell3" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="11" unique_id=97302815]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_1fahc")
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="seashell4" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="12" unique_id=617241023]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_1fahc")
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="seashell5" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="13" unique_id=1151896516]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_1fahc")
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="seashell6" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="14" unique_id=619088618]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_1fahc")
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="seashell7" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="15" unique_id=200051803]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_1fahc")
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="seashell8" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="16" unique_id=159789687]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_1fahc")
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
 [node name="toVillage" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2017786056]
 layout_mode = 0

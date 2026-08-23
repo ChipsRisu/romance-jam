@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfujty4nukipm"
-path="res://.godot/imported/photo3.png-2612166d43d2d1833fa162a0d11e3a80.ctex"
+uid="uid://c52i5hhf25hhw"
+path="res://.godot/imported/coquillage1.png-60a9d9ae89473f97892f618b06559d22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/photos/photo3.png"
-dest_files=["res://.godot/imported/photo3.png-2612166d43d2d1833fa162a0d11e3a80.ctex"]
+source_file="res://game/situations/outside/beach/coquillage1.png"
+dest_files=["res://.godot/imported/coquillage1.png-60a9d9ae89473f97892f618b06559d22.ctex"]
 
 [params]
 

@@ -3,7 +3,7 @@ join rosine (present/default) right
 rosine (present/default): Ah, Elise! Tu as bien dormi ?
 rosine (present/Sweet): Tiens, c'est prêt, tu peux te servir.
 join elise (fullDefault) left
-elise (fullDefault): Merci mamie!
+elise (fullDefault): Merciii mamie!
 leave elise
 leave rosine
 [background arg="res://game/Elisepdjnrosine.png" fade="0.5"]
