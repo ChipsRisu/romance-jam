@@ -10,10 +10,10 @@ extends TextureButton
 
 func isAlredyPlayed() -> bool:
 	if not playOne: return false;
-	return GameHandler.state.interactionsChecked.has(_getFormatedPathKey());
+	return GameHandler.hasPlayOnce(_getFormatedPathKey());
 
 func setChecked(state: bool) -> void:
-	GameHandler.state.interactionsChecked.set(_getFormatedPathKey(), true);
+	GameHandler.setPlayOnce(_getFormatedPathKey());
 	visible = false;
 
 func _getFormatedPathKey() -> String:
