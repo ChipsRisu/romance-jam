@@ -136,6 +136,7 @@ popup/item_2/id = 2
 visible = false
 
 [node name="GrenierNettoyage" parent="MiniGames" unique_id=1388560005 instance=ExtResource("6_lx3aj")]
+visible = false
 
 [node name="Menus" type="CanvasLayer" parent="." unique_id=1099572873]
 script = ExtResource("6_wjctj")
@@ -172,10 +173,12 @@ texture = ExtResource("6_dgpao")
 
 [node name="StartGameButton" type="Button" parent="Menus/StartMenu/VBoxContainer" unique_id=324110750]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "Nouvelle Partie"
 
 [node name="LoadGameButton" type="Button" parent="Menus/StartMenu/VBoxContainer" unique_id=1706154999]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 disabled = true
 text = "Continuer"
 

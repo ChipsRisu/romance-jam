@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="DialogicStyle" format=3 uid="uid://dwdinkxnjlg4d"]
+
+[ext_resource type="Script" uid="uid://bwg6yncmh2cml" path="res://addons/dialogic/Resources/dialogic_style_layer.gd" id="1_fvs5q"]
+[ext_resource type="Script" uid="uid://dv08k6ljua6fm" path="res://addons/dialogic/Resources/dialogic_style.gd" id="2_rry3r"]
+[ext_resource type="PackedScene" uid="uid://btn2utjonrrun" path="res://assets/styles/Layer_SpeakerPortraitTextboxCustom/textbox_with_speaker_portrait.tscn" id="3_1ho4c"]
+
+[sub_resource type="Resource" id="Resource_1ho4c"]
+script = ExtResource("1_fvs5q")
+
+[sub_resource type="Resource" id="Resource_do5g7"]
+script = ExtResource("1_fvs5q")
+scene = ExtResource("3_1ho4c")
+overrides = {
+"name_label_color_mode": "1",
+"name_label_custom_color": "Color(0, 0, 0, 1)",
+"text_custom_color": "Color(0, 0, 0, 1)",
+"text_use_global_color": "false"
+}
+
+[resource]
+script = ExtResource("2_rry3r")
+name = "compactCustom"
+layer_list = Array[String](["11"])
+layer_info = {
+"": SubResource("Resource_1ho4c"),
+"11": SubResource("Resource_do5g7")
+}
+metadata/_latest_layer = "11"
