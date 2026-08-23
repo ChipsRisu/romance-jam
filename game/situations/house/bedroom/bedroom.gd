@@ -8,7 +8,7 @@ func _process(_delta: float) -> void:
 		GameHandler.setActiveTag(TAG)
 		SituationHandler.hideHud(false)
 		Dialogic.VAR.set_variable("util.isRoomChecked", true)
-		GameHandler.state.tags.set(Situation.Key.HOUSE_KITCHEN, "morning")
+		GameHandler.setTag(Situation.Key.HOUSE_KITCHEN, "morning")
 	elif !isDoorOpen():
 		SituationHandler.hideHud(true)
 

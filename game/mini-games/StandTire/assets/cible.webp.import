@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:game/BlackScreen.png.import
-uid="uid://x8xshmbkqaeh"
-path="res://.godot/imported/BlackScreen.png-a10886afe6a8e0421a28c099fcbcd9b3.ctex"
-========
-uid="uid://n15apmfaiy2"
-path="res://.godot/imported/photo1.png-639f2a3979b6e26bf076812089009582.ctex"
->>>>>>>> dev:game/photos/photo1.png.import
+uid="uid://cylni1iket737"
+path="res://.godot/imported/cible.webp-2aa20e2f17118b32e60b1f80342d8593.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:game/BlackScreen.png.import
-source_file="res://game/BlackScreen.png"
-dest_files=["res://.godot/imported/BlackScreen.png-a10886afe6a8e0421a28c099fcbcd9b3.ctex"]
-========
-source_file="res://game/photos/photo1.png"
-dest_files=["res://.godot/imported/photo1.png-639f2a3979b6e26bf076812089009582.ctex"]
->>>>>>>> dev:game/photos/photo1.png.import
+source_file="res://game/mini-games/StandTire/assets/cible.webp"
+dest_files=["res://.godot/imported/cible.webp-2aa20e2f17118b32e60b1f80342d8593.ctex"]
 
 [params]
 

@@ -2,7 +2,7 @@ class_name GameState
 
 var situation: Situation.Key
 var day: Situation.Day
-var checks: Dictionary
+var situationVisited: Dictionary
 var inventory: Dictionary
 var tags: Dictionary
 

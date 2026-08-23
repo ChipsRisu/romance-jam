@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://clro6hg1s24od"]
+
+[ext_resource type="Script" uid="uid://cxdcsyc87fp8f" path="res://game/mini-games/StandTire/stand_tire.gd" id="1_8h863"]
+[ext_resource type="Texture2D" uid="uid://c55o64qeugqh5" path="res://game/situations/outside/beach/illu_plage_FETE VILLAGE.png" id="2_fvlvr"]
+[ext_resource type="Shader" uid="uid://ua2gqhakveox" path="res://game/mini-games/StandTire/blur.gdshader" id="3_awhfh"]
+[ext_resource type="Texture2D" uid="uid://cylni1iket737" path="res://game/mini-games/StandTire/assets/cible.webp" id="3_fvlvr"]
+[ext_resource type="Texture2D" uid="uid://8astr5ctwkbh" path="res://game/mini-games/StandTire/assets/viseur.png" id="4_awhfh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_awhfh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_evlpb"]
+shader = ExtResource("3_awhfh")
+shader_parameter/lod = 1.5
+
+[sub_resource type="Curve2D" id="Curve2D_fmcja"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 200, 0, 0, 0, 0, 0, 952, 0)
+}
+point_count = 2
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_evlpb"]
+radius = 42.0119
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xv7on"]
+
+[sub_resource type="Animation" id="Animation_fvlvr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D/Area2D/Sprite2D:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_awhfh"]
+resource_name = "bang"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D/Area2D/Sprite2D:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.2001, 0.5, 0.5001, 0.9, 0.9001, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 1.569051, -1.569051, 1.569051, -1.569051, 1.569051, -1.569051, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j3qp6"]
+_data = {
+&"RESET": SubResource("Animation_fvlvr"),
+&"bang": SubResource("Animation_awhfh")
+}
+
+[node name="StandTire" type="Node2D" unique_id=2033890238]
+script = ExtResource("1_8h863")
+
+[node name="IlluPlageFeteVillage" type="Sprite2D" parent="." unique_id=1761988790]
+material = SubResource("ShaderMaterial_awhfh")
+position = Vector2(576, 324)
+scale = Vector2(0.29999998, 0.29999998)
+texture = ExtResource("2_fvlvr")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=510494224]
+material = SubResource("ShaderMaterial_evlpb")
+offset_left = -37.0
+offset_top = -23.0
+offset_right = 1177.0
+offset_bottom = 670.0
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1477630458]
+position = Vector2(0, 324)
+curve = SubResource("Curve2D_fmcja")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D" unique_id=793455188]
+position = Vector2(200, 0)
+
+[node name="Area2D" type="Area2D" parent="Path2D/PathFollow2D" unique_id=320864364]
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D/Area2D" unique_id=448499539]
+rotation = 1.5707964
+scale = Vector2(0.116666675, 0.11666669)
+texture = ExtResource("3_fvlvr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Area2D" unique_id=291299281]
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("CircleShape2D_evlpb")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1023003319]
+position = Vector2(576, 324)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1044772649]
+scale = Vector2(0.04013379, 0.040133797)
+texture = ExtResource("4_awhfh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1411135667]
+shape = SubResource("CircleShape2D_xv7on")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=315049101]
+libraries/ = SubResource("AnimationLibrary_j3qp6")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
