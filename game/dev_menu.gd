@@ -33,7 +33,7 @@ func changeTag() -> void:
 	if selectedTag.is_empty():
 		GameHandler.state.tags.erase(selectedTagSituation);
 	else :
-		GameHandler.state.tags.set(selectedTagSituation, selectedTag);
+		GameHandler.setTag(selectedTagSituation, selectedTag);
 	print("Liste des tags : ", GameHandler.state.tags)
 	
 

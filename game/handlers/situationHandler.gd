@@ -49,6 +49,9 @@ func loadSituation(to: Situation.Key) -> void:
 	GameHandler.state.situation = to
 	
 	# TODO close loading screen
+	
+	_triggerSituationDialogue(to)
+	GameHandler.visitSituation(to)
 
 ## Recharge la Situation actuelle et effectue les change
 func reloadSituation() -> void:
@@ -95,3 +98,9 @@ func _resetHud() -> void:
 
 func hideHud(value: bool) -> void:
 	ui.movementVisibility(!value)
+
+func _triggerSituationDialogue(to: Situation.Key) -> void:
+	if !GameHandler.hasVisitedSituation(to):
+		DialogueHandler.start_situation_description(true)
+	elif !GameHandler.hasVisitedSituationToday(to):
+		DialogueHandler.start_situation_description(false)

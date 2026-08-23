@@ -31,7 +31,7 @@ func _ready() -> void:
 
 func _afterMiniGame() -> void:
 	for changeTag in changedTags:
-		GameHandler.state.tags.set(changeTag, changedTags[changeTag])
+		GameHandler.setTag(changeTag, changedTags[changeTag])
 	
 	if dialogicTimeLineAfterWin != null and not dialogicTimeLineAfterWin.is_empty():
 		Dialogic.start(dialogicTimeLineAfterWin);

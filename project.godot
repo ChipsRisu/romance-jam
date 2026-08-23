@@ -58,6 +58,8 @@ directories/dtl_directory={
 "event_photo_1": "res://game/timelines/interactions/event_photo_1.dtl",
 "npc_test_103_1": "res://game/timelines/place_holder/npc_test.dtl",
 "prologue_1": "res://game/timelines/prologue/prologue_1.dtl",
+"sit_200": "res://game/timelines/situation/sit_200.dtl",
+"sit_200_4": "res://game/timelines/situation/sit_200_4.dtl",
 "spot_test_103_1": "res://game/timelines/place_holder/spot_test.dtl"
 }
 layout/style_directory={
