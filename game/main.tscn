@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="2_emt18"]
 [ext_resource type="Script" uid="uid://dtev185tk47ad" path="res://game/ui.gd" id="2_vop5m"]
 [ext_resource type="Script" uid="uid://c31o8eq45sq0q" path="res://game/dev_menu.gd" id="4_vop5m"]
-[ext_resource type="Texture2D" uid="uid://bsf4hs6ckr4s8" path="res://icon.svg" id="6_dgpao"]
 [ext_resource type="Script" uid="uid://bpkfww5nx136i" path="res://game/menus.gd" id="6_wjctj"]
+[ext_resource type="Texture2D" uid="uid://baj8m3o054n8y" path="res://assets/UI/Logo.png" id="7_wjctj"]
 [ext_resource type="Texture2D" uid="uid://dgue1vccuini7" path="res://game/situations/outside/house/front_wip.png" id="8_xkbyp"]
 
 [node name="Main" type="Node" unique_id=1423148464]
@@ -161,8 +161,11 @@ grow_vertical = 2
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Menus/StartMenu/VBoxContainer" unique_id=1801926371]
+custom_minimum_size = Vector2(512.025, 299.195)
 layout_mode = 2
-texture = ExtResource("6_dgpao")
+texture = ExtResource("7_wjctj")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="StartGameButton" type="Button" parent="Menus/StartMenu/VBoxContainer" unique_id=324110750]
 layout_mode = 2

@@ -86,10 +86,15 @@ func _handle_exits() -> void:
 
 func _handle_interactions() -> void:
 	for interaction: Interaction in interactions.get_children():
-		if interaction.is_present_today() && interaction.match_tag(tag):
-			interaction.pressed.connect(func(): DialogueHandler.start(interaction))
+		if interaction.is_present_today() && interaction.match_tag(tag) && not interaction.isAlredyPlayed():
+			interaction.pressed.connect(_interactionClicked.bind(interaction));
 		else: 
 			interaction.hide()
+
+func _interactionClicked(interaction: Interaction) -> void:
+	DialogueHandler.start(interaction)
+	if interaction.playOne:
+		interaction.setChecked(true);
 
 func _handle_background() -> void: 
 	## get first alt background with tag and show it

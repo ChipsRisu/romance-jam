@@ -5,6 +5,20 @@ extends TextureButton
 @export var dayPresenceList: Array[Situation.Day]
 @export var ignoreDay: bool = true
 
+##Si coché n'est visible que 1 fois. Disparait après avoir était cliqué
+@export var playOne: bool = false;
+
+func isAlredyPlayed() -> bool:
+	if not playOne: return false;
+	return GameHandler.state.interactionsChecked.has(_getFormatedPathKey());
+
+func setChecked(state: bool) -> void:
+	GameHandler.state.interactionsChecked.set(_getFormatedPathKey(), true);
+	visible = false;
+
+func _getFormatedPathKey() -> String:
+	return str(self.get_path().get_concatenated_names(), GameHandler.state.day);
+
 ## Either has no tag or has matching tag
 func match_tag(_tag: String) -> bool:
 	return tag == null || tag.is_empty() || tag == _tag

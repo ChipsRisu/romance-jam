@@ -23,6 +23,7 @@ offset_right = 1129.0
 offset_bottom = 380.0
 script = ExtResource("3_k12ir")
 key = "pc"
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
 [node name="books" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="1" unique_id=1109607879]
