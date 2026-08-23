@@ -117,17 +117,22 @@ text = "Minigame"
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 selected = 0
-item_count = 2
+item_count = 3
 popup/item_0/text = "None"
 popup/item_0/id = 0
 popup/item_1/text = "Taquin Puzzle"
 popup/item_1/id = 1
+popup/item_2/text = "Grenier"
+popup/item_2/id = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1080960320]
 
 [node name="SituationContainer" type="Node" parent="." unique_id=1260952937]
 
 [node name="MiniGames" type="CanvasLayer" parent="." unique_id=60564221]
+
+[node name="GrenierNettoyage" parent="MiniGames" unique_id=1388560005 instance=ExtResource("5_dgpao")]
+visible = false
 
 [node name="Taquin" parent="MiniGames" unique_id=759186582 instance=ExtResource("5_5un7r")]
 visible = false
