@@ -3,6 +3,9 @@ extends Node
 const PROLOGUE_TIMELINE = "prologue_1"
 const EPILOGUE_TIMELINE = "epilogue_1"
 
+const DAY_KEY = "day"
+const SITUATION_KEY = "sit"
+
 func start(interaction: Interaction) -> void:
 	interaction.checked = true
 	interaction.on_clicked_custom()
@@ -16,11 +19,11 @@ func start_epilogue() -> void:
 	_start(EPILOGUE_TIMELINE)
 
 func start_day_description() -> void:
-	_start("day_%s" % [GameHandler.state.day])
+	_start("%s_%s" % [DAY_KEY, GameHandler.state.day])
 
 func start_situation_description(ignoreDay: bool = true) -> void:
-	if ignoreDay: _start("situation_%s" % [GameHandler.state.situation])
-	else: _start("situation_%s_%s" % [GameHandler.state.situation, GameHandler.state.day])
+	if ignoreDay: _start("%s_%s" % [SITUATION_KEY, GameHandler.state.situation])
+	else: _start("%s_%s_%s" % [SITUATION_KEY, GameHandler.state.situation, GameHandler.state.day])
 
 func _start(timeline: String) -> void:
 	# For Dev purpose only
