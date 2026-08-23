@@ -1,8 +1,9 @@
+[background arg="res://game/situations/house/livingroom/illu_salon.png" fade="0.5"]
 join elise left
-elise: Tiens, Mamie, j'ai trouvé cette photo, c'est qui dessus ?
+elise (fullDefault): Tiens, Mamie, j'ai trouvé cette photo, c'est qui dessus ?
 [background arg="res://game/photos/photo1.png" fade="0.5"]
 join rosine right
 rosine (present/Nostalgic): Oh mais c'est moi il y a..
 rosine: Avec euh..
 rosine (present/Sad): Je ne me souviens plus de son nom, mais son souvenir m'est empli de douceur.
-elise: (Mmh.. je me demande si je peux en apprendre plus sur elle par ici?)
+elise (fullThinking): (Mmh.. je me demande si je peux en apprendre plus sur elle par ici?)

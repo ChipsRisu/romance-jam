@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvur8vxrhrjea"
-path="res://.godot/imported/lucia.png-53f71ac46712ce5ef83e2747af30e3e8.ctex"
+uid="uid://p2isllraesdv"
+path="res://.godot/imported/Lucia(surprise)_RomanceJAM2026.PNG-f581af387b4669cf97b539cbc534d0b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/characters/lucia/lucia.png"
-dest_files=["res://.godot/imported/lucia.png-53f71ac46712ce5ef83e2747af30e3e8.ctex"]
+source_file="res://game/characters/unknown_lucia/Lucia(surprise)_RomanceJAM2026.PNG"
+dest_files=["res://.godot/imported/Lucia(surprise)_RomanceJAM2026.PNG-f581af387b4669cf97b539cbc534d0b6.ctex"]
 
 [params]
 

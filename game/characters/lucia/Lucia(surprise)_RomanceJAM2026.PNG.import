@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvnt6c5knjyvf"
-path="res://.godot/imported/BlackScreenTextProject.png-30f1e8b58777532987a9790083615df3.ctex"
+uid="uid://dtpop8328wok2"
+path="res://.godot/imported/Lucia(surprise)_RomanceJAM2026.PNG-26ae7376921b56524214e6c64e44d98e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/BlackScreenTextProject.png"
-dest_files=["res://.godot/imported/BlackScreenTextProject.png-30f1e8b58777532987a9790083615df3.ctex"]
+source_file="res://game/characters/lucia/Lucia(surprise)_RomanceJAM2026.PNG"
+dest_files=["res://.godot/imported/Lucia(surprise)_RomanceJAM2026.PNG-26ae7376921b56524214e6c64e44d98e.ctex"]
 
 [params]
 

@@ -9,6 +9,7 @@
 currentSituation = 200
 
 [node name="Background" parent="." index="0" unique_id=1733816860]
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_bj178")
 
 [node name="Exits" parent="." index="2" unique_id=2130133361]
