@@ -44,3 +44,5 @@ func _on_mini_game_selector_item_selected(index: int) -> void:
 	match index:
 		1:
 			$"../../MiniGames/Taquin".visible = true;
+		2:
+			$"../../MiniGames/GrenierNettoyage".visible = true;
