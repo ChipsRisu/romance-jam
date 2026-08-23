@@ -1,0 +1,38 @@
+if {util.isBagObtained} == false:
+	if {util.isBeachStandChecked} == false:
+		# Dialogue qui ne s'active première fois qu'on intéragit avec le stand de la plage
+		[style name="compact"]
+		join elise left
+		elise (Thinking): (Qu'est-ce que c'est, là-bas..? Allons voir.)
+		[style name="full"]
+		join elise (fullDefault) left
+		join lucia right
+		unknown_lucia (default): Tiens? Salut petite, comme on se retrouve!\
+		Tu as pu trouver l'inspiration, finalement avec la sirène?
+		- Bien sûr, regardez!
+			unknown_lucia (Shocked): Ooh! C'est vraiment bien écrit.. impressionnant pour ton âge.
+		- Désolée, je préfère pas..
+			unknown_lucia (Smile): Pas de soucis, je respecte ton petit jardin secret!
+		unknown_lucia (Smile): Enfin bref, je suppose que tu n'es pas venue pour ça?
+		elise (fullDefault): Non en effet, j'étais curieuse et je suis venue voir ce qu'il y avait ici!
+		unknown_lucia (Smile): Alors pour le coup, ici on vend plusieurs articles pour la plage, et sache que si tu nous ramènes assez de déchets, tu pourras avoir un sac!
+		elise (fullHappy): Oh, je veux bien un sac oui s'il-vous-plaît!
+		set {util.isBeachStandChecked} = true
+	join unknown_lucia (Smile) right [animation="Instant In"]
+	if {util.trashCollected} == 8.0:
+		# Si on a ramassé les 8 déchets, on a le sac
+		unknown_lucia (Smile): La plage est super propre grâce à toi! Tiens, prends ce sac, tu l'as bien mérité!
+		Obtenu\: sac plastique
+		set {util.isBagObtained} = true
+	else:
+		# Si on a pas ramassé les 8 déchets, on a pas le sac
+		if {util.trashCollected} == 0.0:
+			# Si on a encore rien ramassé
+			unknown_lucia (Laughing): Vas-y, choppe-les moi ces déchets, tu peux le faire!
+		else:
+			# Si on a pas encore tout ramassé
+			if {util.trashCollected} < 8.0:
+			unknown_lucia (Laughing): Allez, t'y es presque! Encore que quelques déchets!
+else:
+	join unknown_lucia (Smile) right
+	unknown_lucia (Smile): Allez, t'as ramassé assez de déchets pour aujourd'hui, retourne t'amuser!

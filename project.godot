@@ -32,6 +32,7 @@ directories/dch_directory={
 "lucia": "res://game/characters/lucia/lucia.dch",
 "maman": "res://game/characters/mere/maman.dch",
 "marius": "res://game/characters/marius/marius.dch",
+"photo1": "res://game/photos/photo1.dch",
 "place_holder": "res://game/characters/place_holder/place_holder.dch",
 "rosine": "res://game/characters/rosine/rosine.dch",
 "smut_tribal": "res://game/characters/misc/smut_tribal.dch",
@@ -50,6 +51,23 @@ directories/dtl_directory={
 "105_0_bed": "res://game/timelines/interactions/105_0_bed.dtl",
 "105_0_books": "res://game/timelines/interactions/105_0_books.dtl",
 "105_0_pc": "res://game/timelines/interactions/105_pc.dtl",
+"300_0_beachstand_2": "res://game/timelines/interactions/300_0_beachstand_2.dtl",
+"300_0_seashell1_2": "res://game/timelines/interactions/300_0_seashell1_2.dtl",
+"300_0_seashell2_2": "res://game/timelines/interactions/300_0_seashell2_2.dtl",
+"300_0_seashell3_2": "res://game/timelines/interactions/300_0_seashell3_2.dtl",
+"300_0_seashell4_2": "res://game/timelines/interactions/300_0_seashell4_2.dtl",
+"300_0_seashell5_2": "res://game/timelines/interactions/300_0_seashell5_2.dtl",
+"300_0_seashell6_2": "res://game/timelines/interactions/300_0_seashell6_2.dtl",
+"300_0_seashell7_2": "res://game/timelines/interactions/300_0_seashell7_2.dtl",
+"300_0_seashell8_2": "res://game/timelines/interactions/300_0_seashell8_2.dtl",
+"300_0_trash1_2": "res://game/timelines/interactions/300_0_trash1_2.dtl",
+"300_0_trash2_2": "res://game/timelines/interactions/300_0_trash2_2.dtl",
+"300_0_trash3_2": "res://game/timelines/interactions/300_0_trash3_2.dtl",
+"300_0_trash4_2": "res://game/timelines/interactions/300_0_trash4_2.dtl",
+"300_0_trash5_2": "res://game/timelines/interactions/300_0_trash5_2.dtl",
+"300_0_trash6_2": "res://game/timelines/interactions/300_0_trash6_2.dtl",
+"300_0_trash7_2": "res://game/timelines/interactions/300_0_trash7_2.dtl",
+"300_0_trash8_2": "res://game/timelines/interactions/300_0_trash8_2.dtl",
 "day_1": "res://game/timelines/new_day/day_1.dtl",
 "day_2": "res://game/timelines/new_day/day_2.dtl",
 "event_1": "res://game/timelines/interactions/event_1.dtl",
@@ -77,8 +95,12 @@ variables={
 "skipIntro": false,
 "util": {
 "booksClickedCounter": 0,
+"isBagObtained": false,
+"isBeachStandChecked": false,
 "isRoomChecked": false,
-"isRoomDone": false
+"isRoomDone": false,
+"seashellsCollected": 0,
+"trashCollected": 0
 }
 }
 glossary/default_case_sensitive=true
