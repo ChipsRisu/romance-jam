@@ -3,9 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://dgxhb7cwv83tf" path="res://game/situations/house/house.tscn" id="1_nqwdd"]
 [ext_resource type="Texture2D" uid="uid://c0du4vsoocpu5" path="res://game/situations/house/attic/illu_grenier.png" id="2_drqy5"]
 [ext_resource type="Script" uid="uid://bkxb5bsfprnxl" path="res://game/situations/house/attic/photo.gd" id="3_o40di"]
+[ext_resource type="PackedScene" uid="uid://f1vqc5wjfdyx" path="res://game/detectors/miniGameDetector.tscn" id="4_m6nwp"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_nqwdd")]
-currentSituation = 106
+currentSituation = 0
 
 [node name="Background" parent="." index="0" unique_id=1733816860]
 scale = Vector2(0.300463, 0.30046296)
@@ -25,3 +26,14 @@ offset_left = 873.0
 offset_top = 554.0
 offset_right = 924.0
 offset_bottom = 605.0
+
+[node name="MiniGameDetector" parent="." index="3" unique_id=1490097843 instance=ExtResource("4_m6nwp")]
+changedTags = Dictionary[int, String]({
+103: "photo",
+104: "",
+106: ""
+})
+dialogicTimeLineAfterWin = "event_photo_1"
+tag = "sale"
+dayPresenceList = Array[int]([1])
+ignoreDay = false

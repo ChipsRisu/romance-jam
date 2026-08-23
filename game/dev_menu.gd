@@ -43,6 +43,6 @@ func _on_mini_game_selector_item_selected(index: int) -> void:
 	
 	match index:
 		1:
-			$"../../MiniGames/Taquin".visible = true;
+			MiniGameHandler.startMiniGame(MiniGameHandler.MiniGame.TAQUIN);
 		2:
-			$"../../MiniGames/GrenierNettoyage".visible = true;
+			MiniGameHandler.startMiniGame(MiniGameHandler.MiniGame.GRENIER);

@@ -22,6 +22,7 @@ SituationHandler="*uid://20shskkv1isi"
 DialogueHandler="*uid://b848jypnm7a10"
 GameHandler="*uid://bs27mxysm0d6b"
 DayHandler="*uid://2716wtum0pls"
+MiniGameHandler="*uid://b4tb6vukjyu2g"
 
 [dialogic]
 

@@ -97,6 +97,7 @@ func GameIsWin() -> void:
 	$AnimationPlayer.play("finishGame");
 	await $AnimationPlayer.animation_finished;
 	#TODO faire la suite pour sortire du minijeu. Pas oublié de queue free le jeu ou le rendre visible false;
+	queue_free();
 
 
 #region private methode

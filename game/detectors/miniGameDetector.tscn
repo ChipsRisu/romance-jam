@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://f1vqc5wjfdyx"]
+
+[ext_resource type="Script" uid="uid://btw4f1iwp0j5e" path="res://game/detectors/miniGameDetector.gd" id="1_rif6i"]
+
+[node name="MiniGameDetector" type="Node" unique_id=1490097843]
+script = ExtResource("1_rif6i")

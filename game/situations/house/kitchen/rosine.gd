@@ -7,4 +7,5 @@ func on_clicked_custom() -> void:
 	
 	if hasPlumeau == null || hasPlumeau == false:
 		GameHandler.state.tags.set(Situation.Key.HOUSE_ENTRANCE, TAG)
+		GameHandler.state.tags.set(Situation.Key.HOUSE_ATTIC, "sale")
 		GameHandler.state.inventory.set("plumeau", true)
