@@ -1,5 +1,5 @@
 [style name="compact"]
-elise: Est-ce que y a de la romance..?
+elise: (Est-ce que y a de la romance..?)
 audio -
 elise: *fouille*
 if {util.booksClickedCounter} == 3.0:
@@ -8,5 +8,5 @@ if {util.booksClickedCounter} == 3.0:
 	audio -
 	[wait_input]
 else:
-	elise: Mmmh.. non. Nul. -expression déçue-
+	elise (Disappointed): Mmmh.. non. Nul.
 jump event_1/

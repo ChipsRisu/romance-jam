@@ -1,11 +1,16 @@
 [gd_scene format=3 uid="uid://cpc5s1p0gcdlc"]
 
 [ext_resource type="PackedScene" uid="uid://duvo5ju3he11g" path="res://game/situations/situation.tscn" id="1_ffwsb"]
+[ext_resource type="Texture2D" uid="uid://pxmvefippw6r" path="res://game/situations/outside/village/illu_village_AVEC RIEN.png" id="2_bj178"]
 [ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="2_we228"]
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/clickables/exits/exit.gd" id="3_bj178"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_ffwsb")]
 currentSituation = 200
+
+[node name="Background" parent="." index="0" unique_id=1733816860]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_bj178")
 
 [node name="Exits" parent="." index="2" unique_id=2130133361]
 visible = true
@@ -30,6 +35,8 @@ offset_bottom = 238.0
 texture_normal = ExtResource("2_we228")
 script = ExtResource("3_bj178")
 target = 300
+dayPresenceList = Array[int]([2, 6])
+ignoreDay = false
 metadata/_custom_type_script = "uid://bkutm1ui3usqp"
 
 [node name="standLegume" type="TextureButton" parent="Exits" index="2" unique_id=821792962]
@@ -40,6 +47,8 @@ offset_right = 147.0
 offset_bottom = 398.0
 texture_normal = ExtResource("2_we228")
 script = ExtResource("3_bj178")
+dayPresenceList = Array[int]([3])
+ignoreDay = false
 metadata/_custom_type_script = "uid://bkutm1ui3usqp"
 
 [node name="standBonbon" type="TextureButton" parent="Exits" index="3" unique_id=859277076]
@@ -50,4 +59,12 @@ offset_right = 1073.0
 offset_bottom = 431.0
 texture_normal = ExtResource("2_we228")
 script = ExtResource("3_bj178")
+dayPresenceList = Array[int]([3])
+ignoreDay = false
 metadata/_custom_type_script = "uid://bkutm1ui3usqp"
+
+[node name="IlluVillageAvecRien" type="Sprite2D" parent="." index="3" unique_id=581637854]
+visible = false
+position = Vector2(576, 324.25)
+scale = Vector2(0.2997685, 0.2997685)
+texture = ExtResource("2_bj178")

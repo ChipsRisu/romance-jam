@@ -36,6 +36,8 @@ offset_bottom = 418.0
 texture_normal = ExtResource("3_sw6yt")
 script = ExtResource("4_qnv1c")
 target = 400
+dayPresenceList = Array[int]([4, 5, 6])
+ignoreDay = false
 metadata/_custom_type_script = "uid://bkutm1ui3usqp"
 
 [node name="toVillage" type="TextureButton" parent="Exits" index="2" unique_id=1065319695]
@@ -47,4 +49,5 @@ offset_bottom = 414.0
 texture_normal = ExtResource("3_sw6yt")
 script = ExtResource("4_qnv1c")
 target = 200
+dayPresenceList = Array[int]([2, 6])
 metadata/_custom_type_script = "uid://bkutm1ui3usqp"

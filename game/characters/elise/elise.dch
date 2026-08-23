@@ -15,12 +15,147 @@
 Objet : Crayon et carnet (écrit principalement, dessine un peu aussi)",
 &"display_name": "Elise",
 &"mirror": false,
-&"nicknames": [""],
+&"nicknames": ["La protagoniste"],
 &"offset": Vector2(0, 0),
 &"portraits": {
+"Disappointed": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(déçue)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Disgusted": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(dégoûtée)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Happy": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(sourire)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Laughing": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(rire)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Shocked": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(surprise)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Thinking": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(pensive)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Yawn": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(bâille)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "default": {
 "export_overrides": {
+"image": "\"res://game/characters/elise/Elise(neutre)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"fullDefault": {
+"export_overrides": {
 "image": "\"res://game/characters/elise/elise.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"fullDisappointed": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(full-déçue)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"fullDisgusted": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(full-dégoûtée)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"fullHappy": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(full-sourire)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"fullLaughing": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(full-rire)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"fullShocked": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(full-surprise)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"fullThinking": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(full-pensive)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"fullYawn": {
+"export_overrides": {
+"image": "\"res://game/characters/elise/Elise(full-bâille)_RomanceJAM2026.PNG\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

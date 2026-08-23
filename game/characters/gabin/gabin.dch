@@ -18,6 +18,33 @@ Objet : Kazoo ",
 &"nicknames": ["L'enfant aux infos"],
 &"offset": Vector2(0, 0),
 &"portraits": {
+"Laughing": {
+"export_overrides": {
+"image": "\"res://game/characters/gabin/Gabin(rire)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Shocked": {
+"export_overrides": {
+"image": "\"res://game/characters/gabin/Gabin(surpris)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Thinking": {
+"export_overrides": {
+"image": "\"res://game/characters/gabin/Gabin(pensif)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "default": {
 "export_overrides": {
 "image": "\"res://game/characters/gabin/gabin.png\""

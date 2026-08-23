@@ -1,9 +1,20 @@
+[background arg="res://game/situations/house/kitchen/cuisine.png" fade="0.5"]
 join rosine (present/default) right
-rosine: Ah, Elise! Tu as bien dormi ?
-rosine: Tiens, c'est prêt, tu peux te servir
-join elise left
-elise: Merci mamie!
-# fondu au noir
-rosine: Aujourd'hui, pourrais-tu m'aider à dépoussiérer un peu le grenier pour moi ?
-rosine: À cause de mes jambes,ça fait très longtemps que je n'ai pas pu y aller.
-rosine: Tu sais comment c'est, la vieillesse... -sourire triste
+rosine (present/default): Ah, Elise! Tu as bien dormi ?
+rosine (present/Sweet): Tiens, c'est prêt, tu peux te servir.
+join elise (fullDefault) left
+elise (fullDefault): Merci mamie!
+leave elise
+leave rosine
+[background arg="res://game/Elisepdjnrosine.png" fade="0.5"]
+[wait time="3.0"]
+[background arg="res://game/situations/house/kitchen/cuisine.png" fade="0.5"]
+join rosine (present/default) right
+rosine: Aujourd'hui, pourrais-tu m'aider à dépoussiérer un peu le grenier pour moi?
+rosine: À cause de mes jambes, ça fait très longtemps que je n'ai pas pu y aller.
+rosine (present/Sad): Tu sais comment c'est, la vieillesse..
+join elise (fullHappy) left
+elise (fullHappy): Oui t'en fais pas, je vais m'en occuper.
+[style name="compact"]
+[wait time="1.0"]
+elise (Disappointed): (Bon j'ai pas vraiment envie, mais il faut bien aider un peu mamie)

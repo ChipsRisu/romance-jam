@@ -1,0 +1,10 @@
+[style name="compact"]
+[background arg="res://game/EliseSendort.png" fade="0.5"]
+[wait time="3.0"]
+[background arg="res://game/situations/house/bedroom/chambre.png" fade="0.5"]
+join elise left
+elise (Yawn): Ugh, wow c'est vrai, je suis "en vacances".. il est quelle heure..?
+elise (Yawn): 5h? C'est mort, j'retourne au dodo..
+[background arg="res://game/UnMomentPassa.png" fade="0.5"]
+[wait time="3.0"]
+elise (Disappointed): 5h30.. et j'arrive pas à me rendormir, bon, et si je sortais de là?

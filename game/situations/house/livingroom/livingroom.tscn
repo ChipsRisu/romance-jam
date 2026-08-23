@@ -41,6 +41,16 @@ dayPresenceList = Array[int]([1])
 ignoreDay = false
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
+[node name="piano" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="2" unique_id=1478979284]
+layout_mode = 0
+offset_left = 790.0
+offset_top = 260.0
+offset_right = 1085.0
+offset_bottom = 502.0
+script = ExtResource("4_2unxk")
+key = "piano"
+metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
 [node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
 offset_left = 1064.0
 offset_top = 338.0

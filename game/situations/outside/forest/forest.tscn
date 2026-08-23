@@ -33,3 +33,13 @@ texture_normal = ExtResource("3_ti3em")
 script = ExtResource("4_56n5a")
 target = 100
 metadata/_custom_type_script = "uid://bkutm1ui3usqp"
+
+[node name="toCove" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="2" unique_id=920530577]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("3_ti3em")
+script = ExtResource("4_56n5a")
+target = 301
+tag = "telescope"
+metadata/_custom_type_script = "uid://bkutm1ui3usqp"
