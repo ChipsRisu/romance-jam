@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wqtox0vekobk"]
 
 [ext_resource type="PackedScene" uid="uid://duvo5ju3he11g" path="res://game/situations/situation.tscn" id="1_8e1sy"]
-[ext_resource type="Texture2D" uid="uid://bnqgt5eyat4lm" path="res://game/situations/outside/beach/illu_plage_final_jour.png" id="2_1l6vo"]
+[ext_resource type="Texture2D" uid="uid://cjhy7iyjhw1mg" path="res://game/situations/outside/beach/illu_plage_final_jour.png" id="2_1l6vo"]
 [ext_resource type="Script" uid="uid://cxgf0bbqy1ufq" path="res://game/clickables/interactions/interaction.gd" id="3_1fahc"]
 [ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="3_drqwb"]
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/clickables/exits/exit.gd" id="4_1fahc"]
@@ -14,6 +14,12 @@
 [ext_resource type="Texture2D" uid="uid://8yofq1uktbv2" path="res://game/situations/outside/beach/déchet6.png" id="9_waafc"]
 [ext_resource type="Texture2D" uid="uid://c7u4gpeb0l3lo" path="res://game/situations/outside/beach/déchet7.png" id="10_upisg"]
 [ext_resource type="Texture2D" uid="uid://c4uqgfe3a1u7t" path="res://game/situations/outside/beach/déchet8.png" id="11_8vsw6"]
+[ext_resource type="Texture2D" uid="uid://drni37hd7be4" path="res://game/situations/outside/beach/coquillage2.png" id="13_kjh1j"]
+[ext_resource type="Texture2D" uid="uid://dvs42hqkhxrwq" path="res://game/situations/outside/beach/coquillage3.png" id="14_33jlg"]
+[ext_resource type="Texture2D" uid="uid://biy1qinpt0lii" path="res://game/situations/outside/beach/coquillage4.png" id="15_hqp2o"]
+[ext_resource type="Texture2D" uid="uid://btemyi8s5o1wl" path="res://game/situations/outside/beach/coquillage5.png" id="16_pyfhr"]
+[ext_resource type="Texture2D" uid="uid://cy3qcb3vylnyv" path="res://game/situations/outside/beach/coquillage6.png" id="17_i8uc6"]
+[ext_resource type="Texture2D" uid="uid://ijjtg678i2o4" path="res://game/situations/outside/beach/coquillage7.png" id="18_a21tr"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_8e1sy")]
 currentSituation = 300
@@ -40,14 +46,19 @@ offset_left = 600.0
 offset_top = 552.0
 offset_right = 712.3077
 offset_bottom = 625.0
-texture_normal = ExtResource("5_5col0")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_1fahc")
 key = "trash1"
 dayPresenceList = Array[int]([2])
 ignoreDay = false
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/trash1" index="0" unique_id=867206233]
+position = Vector2(56, 39)
+scale = Vector2(0.31196588, 0.31196588)
+texture = ExtResource("5_5col0")
 
 [node name="trash2" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="2" unique_id=551306555]
 layout_mode = 0
@@ -55,14 +66,19 @@ offset_left = 4.0
 offset_top = 557.0
 offset_right = 113.23077
 offset_bottom = 628.0
-texture_normal = ExtResource("6_5col0")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_1fahc")
 key = "trash2"
 dayPresenceList = Array[int]([2])
 ignoreDay = false
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/trash2" index="0" unique_id=205069816]
+position = Vector2(46, 38)
+scale = Vector2(0.41452992, 0.41452992)
+texture = ExtResource("6_5col0")
 
 [node name="trash3" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="3" unique_id=1999357376]
 layout_mode = 0
@@ -70,29 +86,39 @@ offset_left = 1045.0
 offset_top = 553.0
 offset_right = 1175.7693
 offset_bottom = 638.0
-texture_normal = ExtResource("6_jbo1k")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_1fahc")
 key = "trash3"
 dayPresenceList = Array[int]([2])
 ignoreDay = false
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/trash3" index="0" unique_id=39864196]
+position = Vector2(50.305, 42.555)
+scale = Vector2(0.40916693, 0.3856183)
+texture = ExtResource("6_jbo1k")
 
 [node name="trash4" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="4" unique_id=1627886396]
 layout_mode = 0
-offset_left = 921.0
-offset_top = 479.0
-offset_right = 1070.2307
-offset_bottom = 576.0
-texture_normal = ExtResource("7_4no00")
+offset_left = 909.0
+offset_top = 451.0
+offset_right = 1058.2307
+offset_bottom = 548.0
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_1fahc")
 key = "trash4"
 dayPresenceList = Array[int]([2])
 ignoreDay = false
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/trash4" index="0" unique_id=1340894157]
+position = Vector2(89.068, 46.635)
+scale = Vector2(0.43162397, 0.43162394)
+texture = ExtResource("7_4no00")
 
 [node name="trash5" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="5" unique_id=1194909975]
 layout_mode = 0
@@ -100,14 +126,19 @@ offset_left = 596.0
 offset_top = 378.0
 offset_right = 702.1539
 offset_bottom = 447.0
-texture_normal = ExtResource("8_lss5v")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_1fahc")
 key = "trash5"
 dayPresenceList = Array[int]([2])
 ignoreDay = false
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/trash5" index="0" unique_id=406331407]
+position = Vector2(52.00001, 39.000004)
+scale = Vector2(0.3803419, 0.3803419)
+texture = ExtResource("8_lss5v")
 
 [node name="trash6" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="6" unique_id=924072333]
 layout_mode = 0
@@ -122,7 +153,13 @@ script = ExtResource("3_1fahc")
 key = "trash6"
 dayPresenceList = Array[int]([2])
 ignoreDay = false
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/trash6" index="0" unique_id=1464696312]
+position = Vector2(46.000023, 42.000004)
+scale = Vector2(0.32051283, 0.32051283)
+texture = ExtResource("9_waafc")
 
 [node name="trash7" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="7" unique_id=132699748]
 layout_mode = 0
@@ -130,14 +167,19 @@ offset_left = 126.30769
 offset_top = 345.0
 offset_right = 247.84616
 offset_bottom = 424.0
-texture_normal = ExtResource("10_upisg")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_1fahc")
 key = "trash7"
 dayPresenceList = Array[int]([2])
 ignoreDay = false
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/trash7" index="0" unique_id=1571157774]
+position = Vector2(60.6923, 38.999996)
+scale = Vector2(0.3888889, 0.3888889)
+texture = ExtResource("10_upisg")
 
 [node name="trash8" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="8" unique_id=2024659280]
 layout_mode = 0
@@ -145,14 +187,19 @@ offset_left = 239.0
 offset_top = 338.0
 offset_right = 332.75
 offset_bottom = 413.0
-texture_normal = ExtResource("11_8vsw6")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_1fahc")
 key = "trash8"
 dayPresenceList = Array[int]([2])
 ignoreDay = false
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/trash8" index="0" unique_id=716570547]
+position = Vector2(45, 38)
+scale = Vector2(0.35470086, 0.35470086)
+texture = ExtResource("11_8vsw6")
 
 [node name="seashell1" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="9" unique_id=190867600]
 layout_mode = 0
@@ -160,63 +207,113 @@ offset_left = 1096.0
 offset_top = 503.0
 offset_right = 1161.2318
 offset_bottom = 553.0
-texture_normal = ExtResource("4_fcyi1")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_1fahc")
 key = "seashell1"
 dayPresenceList = Array[int]([2])
 ignoreDay = false
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/seashell1" index="0" unique_id=1901871950]
+position = Vector2(29.999996, 27)
+scale = Vector2(0.37417218, 0.37417218)
+texture = ExtResource("4_fcyi1")
 
 [node name="seashell2" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="10" unique_id=1075248490]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 854.0
+offset_top = 490.0
+offset_right = 894.0
+offset_bottom = 530.0
 script = ExtResource("3_1fahc")
+key = "seashell2"
+dayPresenceList = Array[int]([2])
+ignoreDay = false
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/seashell2" index="0" unique_id=1358002526]
+position = Vector2(17.000015, 20)
+scale = Vector2(0.30132452, 0.30132452)
+texture = ExtResource("13_kjh1j")
 
 [node name="seashell3" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="11" unique_id=97302815]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 697.0
+offset_top = 498.0
+offset_right = 737.0
+offset_bottom = 538.0
 script = ExtResource("3_1fahc")
+key = "seashell3"
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/seashell3" index="0" unique_id=1793357295]
+position = Vector2(15.000004, 21)
+scale = Vector2(0.36092716, 0.36092716)
+texture = ExtResource("14_33jlg")
 
 [node name="seashell4" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="12" unique_id=617241023]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 299.0
+offset_top = 519.0
+offset_right = 339.0
+offset_bottom = 559.0
 script = ExtResource("3_1fahc")
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/seashell4" index="0" unique_id=1057014947]
+position = Vector2(11.000015, 19)
+scale = Vector2(0.30132452, 0.30132452)
+texture = ExtResource("15_hqp2o")
 
 [node name="seashell5" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="13" unique_id=1151896516]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 532.0
+offset_top = 379.0
+offset_right = 572.0
+offset_bottom = 419.0
 script = ExtResource("3_1fahc")
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/seashell5" index="0" unique_id=843583082]
+position = Vector2(25.00003, 17)
+scale = Vector2(0.4933775, 0.49337748)
+texture = ExtResource("16_pyfhr")
 
 [node name="seashell6" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="14" unique_id=619088618]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 404.0
+offset_top = 351.0
+offset_right = 444.0
+offset_bottom = 391.0
 script = ExtResource("3_1fahc")
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/seashell6" index="0" unique_id=78261283]
+position = Vector2(15.000013, 14.000002)
+scale = Vector2(0.5264901, 0.5264901)
+texture = ExtResource("17_i8uc6")
 
 [node name="seashell7" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="15" unique_id=200051803]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 130.0
+offset_top = 401.0
+offset_right = 170.0
+offset_bottom = 441.0
 script = ExtResource("3_1fahc")
+playOne = true
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
-[node name="seashell8" type="TextureButton" parent="Interactions" parent_id_path=PackedInt32Array(317613732) index="16" unique_id=159789687]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("3_1fahc")
-metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
+[node name="Sprite2D" type="Sprite2D" parent="Interactions/seashell7" index="0" unique_id=884407991]
+position = Vector2(21.000004, 17)
+scale = Vector2(0.59933776, 0.59933776)
+texture = ExtResource("18_a21tr")
 
 [node name="toVillage" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2017786056]
 layout_mode = 0

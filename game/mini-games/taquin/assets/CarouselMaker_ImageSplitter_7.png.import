@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cr8nrda5qas34"
-path="res://.godot/imported/CarouselMaker_ImageSplitter_7.png-0fe7359f813063631f50b7d60c0fde10.ctex"
+path="res://.godot/imported/CarouselMaker_ImageSplitter_7.png-1f6864a94f132c5feecaa2cbd5ab5ea3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://game/mini-games/Taquin/assets/CarouselMaker_ImageSplitter_7.png"
-dest_files=["res://.godot/imported/CarouselMaker_ImageSplitter_7.png-0fe7359f813063631f50b7d60c0fde10.ctex"]
+source_file="res://game/mini-games/taquin/assets/CarouselMaker_ImageSplitter_7.png"
+dest_files=["res://.godot/imported/CarouselMaker_ImageSplitter_7.png-1f6864a94f132c5feecaa2cbd5ab5ea3.ctex"]
 
 [params]
 
