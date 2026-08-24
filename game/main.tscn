@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dtev185tk47ad" path="res://game/ui.gd" id="2_vop5m"]
 [ext_resource type="Texture2D" uid="uid://btug72k5ausmx" path="res://assets/UI/cursor 2.png" id="3_wjctj"]
 [ext_resource type="Script" uid="uid://c31o8eq45sq0q" path="res://game/dev_menu.gd" id="4_vop5m"]
+[ext_resource type="AudioStream" uid="uid://udh1nxiodrav" path="res://assets/music/wip_loop.wav" id="5_xkbyp"]
 [ext_resource type="Script" uid="uid://bpkfww5nx136i" path="res://game/menus.gd" id="6_wjctj"]
 [ext_resource type="Texture2D" uid="uid://baj8m3o054n8y" path="res://assets/UI/Logo.png" id="7_wjctj"]
 [ext_resource type="Texture2D" uid="uid://dgue1vccuini7" path="res://game/situations/outside/house/front_wip.png" id="8_xkbyp"]
@@ -125,6 +126,9 @@ popup/item_2/text = "Grenier"
 popup/item_2/id = 2
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1080960320]
+stream = ExtResource("5_xkbyp")
+volume_db = -7.0
+autoplay = true
 
 [node name="SituationContainer" type="Node" parent="." unique_id=1260952937]
 
@@ -197,6 +201,7 @@ layout_mode = 2
 [connection signal="item_selected" from="UI/DEV MENU/Panel/VBoxContainer/TagsHBox/TagSelector" to="UI/DEV MENU" method="_on_tag_selector_item_selected"]
 [connection signal="text_changed" from="UI/DEV MENU/Panel/VBoxContainer/TagsHBox/LineEdit" to="UI/DEV MENU" method="_on_line_edit_text_changed"]
 [connection signal="item_selected" from="UI/DEV MENU/Panel/VBoxContainer/MiniGameHBox/MiniGameSelector" to="UI/DEV MENU" method="_on_mini_game_selector_item_selected"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]
 [connection signal="pressed" from="Menus/StartMenu/VBoxContainer/StartGameButton" to="Menus" method="_on_start_game_button_pressed"]
 [connection signal="pressed" from="Menus/StartMenu/VBoxContainer/LoadGameButton" to="Menus" method="_on_load_game_button_pressed"]
 [connection signal="toggled" from="Menus/DevModeHBoxContainer/DevModeCheckButton" to="Menus" method="_on_dev_mode_check_button_toggled"]
