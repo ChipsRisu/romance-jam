@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dtev185tk47ad" path="res://game/ui.gd" id="2_vop5m"]
 [ext_resource type="Texture2D" uid="uid://btug72k5ausmx" path="res://assets/UI/cursor 2.png" id="3_wjctj"]
 [ext_resource type="Script" uid="uid://c31o8eq45sq0q" path="res://game/dev_menu.gd" id="4_vop5m"]
-[ext_resource type="AudioStream" uid="uid://qaqufhtigxdl" path="res://assets/music/wip_main.mp3" id="5_xkbyp"]
+[ext_resource type="AudioStream" uid="uid://udh1nxiodrav" path="res://assets/music/wip_loop.wav" id="5_xkbyp"]
 [ext_resource type="Script" uid="uid://bpkfww5nx136i" path="res://game/menus.gd" id="6_wjctj"]
 [ext_resource type="Texture2D" uid="uid://baj8m3o054n8y" path="res://assets/UI/Logo.png" id="7_wjctj"]
 [ext_resource type="Texture2D" uid="uid://dgue1vccuini7" path="res://game/situations/outside/house/front_wip.png" id="8_xkbyp"]
