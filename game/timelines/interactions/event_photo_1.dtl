@@ -1,3 +1,6 @@
 # Cinématique appareil photo
-elise (Shocked): (Tiens, c'est qui ces gens sur la photo?)
-elise (Thinking): (Allons demander à mamie!)
+join elise (fullShocked) left [z_index="1"]
+join photo1 (Photo_1) center
+[wait time="1.0"]
+elise (fullShocked): (Tiens, c'est qui ces gens sur la photo?)
+elise (fullThinking): (Allons demander à mamie!)

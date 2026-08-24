@@ -26,6 +26,15 @@
 "scale": 1,
 "scene": ""
 },
+"Sad": {
+"export_overrides": {
+"image": "\"res://game/characters/lucia/Lucia(triste)_RomanceJAM2026.PNG\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "Shocked": {
 "export_overrides": {
 "image": "\"res://game/characters/unknown_lucia/Lucia(surprise)_RomanceJAM2026.PNG\""

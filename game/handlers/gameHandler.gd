@@ -33,6 +33,12 @@ func setTag(situation: Situation.Key, tag: String) -> void:
 	if _isValidSituation(situation):
 		state.tags.set(situation, tag)
 
+func hasPlayOnce(key: String) -> bool:
+	return state.interactionsChecked.has(key);
+
+func setPlayOnce(key: String) -> void:
+	state.interactionsChecked.set(key, true);
+
 func getActiveTag() -> String: 
 	return getTag(state.situation)
 
