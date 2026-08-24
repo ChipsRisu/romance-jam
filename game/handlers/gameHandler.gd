@@ -24,7 +24,7 @@ func _setup() -> void:
 	SituationHandler.loadSituation(state.situation)
 	
 	## TODO dev mode only
-	Dialogic.VAR.set_variable("skipIntro", true);
+	# Dialogic.VAR.set_variable("skipIntro", true);
 
 func getTag(situation: Situation.Key) -> String:
 	return str(state.tags.get(situation)) if _isValidSituation(situation) else ""

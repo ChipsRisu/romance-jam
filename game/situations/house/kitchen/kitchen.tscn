@@ -71,7 +71,8 @@ key = "oven"
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
 [node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
-offset_left = 25.0
-offset_top = 360.0
-offset_right = 76.0
-offset_bottom = 411.0
+offset_left = 103.59835
+offset_top = 323.10367
+offset_right = 154.59834
+offset_bottom = 380.70282
+rotation = 1.5707964
