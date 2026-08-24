@@ -96,7 +96,9 @@ func GameIsWin() -> void:
 	gameIsFinish = true;
 	$AnimationPlayer.play("finishGame");
 	await $AnimationPlayer.animation_finished;
+	visible = false;
 	#TODO faire la suite pour sortire du minijeu. Pas oublié de queue free le jeu ou le rendre visible false;
+	DialogueHandler._start("104_0_knives")
 	queue_free();
 
 
