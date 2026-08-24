@@ -43,6 +43,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "103_0_piano": "res://game/timelines/interactions/103_0_piano.dtl",
 "103_0_tv": "res://game/timelines/interactions/103_0_tv.dtl",
+"103_1_rosine2_2": "res://game/timelines/interactions/103_1_rosine2_2.dtl",
 "103_1_rosine_1": "res://game/timelines/interactions/103_1_rosine_1.dtl",
 "104_0_catpics": "res://game/timelines/interactions/104_0_catpics.dtl",
 "104_0_coffee": "res://game/timelines/interactions/104_0_coffee.dtl",
@@ -60,7 +61,6 @@ directories/dtl_directory={
 "300_0_seashell5_2": "res://game/timelines/interactions/300_0_seashell5_2.dtl",
 "300_0_seashell6_2": "res://game/timelines/interactions/300_0_seashell6_2.dtl",
 "300_0_seashell7_2": "res://game/timelines/interactions/300_0_seashell7_2.dtl",
-"300_0_seashell8_2": "res://game/timelines/interactions/300_0_seashell8_2.dtl",
 "300_0_trash1_2": "res://game/timelines/interactions/300_0_trash1_2.dtl",
 "300_0_trash2_2": "res://game/timelines/interactions/300_0_trash2_2.dtl",
 "300_0_trash3_2": "res://game/timelines/interactions/300_0_trash3_2.dtl",
@@ -73,10 +73,11 @@ directories/dtl_directory={
 "day_2": "res://game/timelines/new_day/day_2.dtl",
 "event_1": "res://game/timelines/interactions/event_1.dtl",
 "event_2": "res://game/timelines/interactions/event_2.dtl",
-"event_3": "res://game/timelines/interactions/event_3.dtl",
 "event_photo_1": "res://game/timelines/interactions/event_photo_1.dtl",
 "npc_test_103_1": "res://game/timelines/place_holder/npc_test.dtl",
 "prologue_1": "res://game/timelines/prologue/prologue_1.dtl",
+"sit_200_2": "res://game/timelines/situation/sit_200_2.dtl",
+"sit_200_3": "res://game/timelines/situation/sit_200_3.dtl",
 "sit_300_2": "res://game/timelines/situation/sit_300_2.dtl",
 "spot_test_103_1": "res://game/timelines/place_holder/spot_test.dtl"
 }

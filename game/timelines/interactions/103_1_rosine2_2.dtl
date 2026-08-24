@@ -1,0 +1,22 @@
+if {util.seashellsCollected} < 7.0:
+	elise (default): (Mamie est entrain de coudre.. mieux vaut ne pas la déranger.)
+else:
+	join elise (fullHappy) left
+	join rosine (present/Sweet) right [z_index="1"]
+	rosine (present/Sweet): Oooh, je vois que tu reviens de tes aventures..\
+	Tu as ramené des coquillages!\
+	Tant de souvenirs..
+	elise (fullLaughing): Oh? Raconte-moi mamie s'il-te-plaît!
+	join elise (fullHappy) left [animation="Instant In" z_index="1"]
+	join photo1 (Photo_2) center
+	rosine (present/Nostalgic): Ca me rappelle cette photo!\
+	Oui, la même personne que sur la première que tu m'as montré..
+	rosine: La première fois que je l'ai vu.. J'étais sortie tôt de la maison pour une promenade et comme toi, j'étais peu contente de passer du temps avec ma grand-mère, donc je profitais de chaque moment pour m'échapper..
+	elise (fullShocked): Tu voulais pas rester avec arrière arrière grand-mère..?
+	rosine: Et non, comme toi je ne voulais pas forcément passer du temps avec ma mamie, haha
+	elise (fullDisappointed): Hahaha..
+	rosine: Enfin bon, comme je le disais, la première fois que je l'ai vu, c'était sur cette plage.\
+	Elle cherchait des coquillages ici et là, et lorsqu'elle a relevé la tête vers moi vers moi, j'ai vu la plus belle personne que je n'avais jamais vu.
+	rosine: Elle cherchait des coquillages ici et là, et lorsqu'elle a relevé la tête vers moi vers moi, j'ai vu la plus belle personne que je n'avais jamais vu.
+	rosine: J'avais mon appareil photo sur moi et elle m'a laissé la photographier. Avec le soleil levant, elle était plus rayonnante que n'importe qui..
+	do DayHandler.next()

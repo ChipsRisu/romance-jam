@@ -1,1 +1,67 @@
-blablabla
+[background arg="res://game/situations/outside/beach/illu_plage_final_sunset.png" fade="0.0"]
+# #(supposé arriver à notre arrivée à la plage au jour 2)
+Le soleil est entrain de se lever, les reflets rouges,\
+oranges et roses du soleil se reflètent sur les vagues
+Elise s'installe dans le sable et regarde\
+les vagues irridescentes s'échouer sur la plage
+[style name="compact"]
+join elise (Shocked) left
+elise (Shocked): C'est tellement beau.. Ca en vaudrait presque la peine de se lever si tôt.
+leave elise
+[style name="full"]
+Elle est perdue dans ses pensées entrain d'écrire,\
+tandis qu'une jeune femme d'environ le double de son âge s'approche
+join unknown_lucia (Smile) right
+unknown_lucia: Qu'est-ce qu'une si jeune fille vient faire ici à cette heure-là?
+join elise (fullYawn) left
+elise: Je n'arrivais pas à dormir.. donc je me suis dit qu'aller à la plage pourrait me faire du bien.
+unknown_lucia (Smile): Je vois.. c'est vrai que c'est une sacrée vue, la plage à cette heure-là,\
+ça fait partie des raisons pour lesquelles je me lève si tôt.
+unknown_lucia (Shocked): Oh, mais tu as un carnet! Tu écris ma petite?
+elise (fullHappy): Oui! Je profite de la vue pour m'inspirer.
+unknown_lucia (Shocked): Et si tu écrivais à propos de la sirène?
+elise (fullThinking): La.. sirène..?
+unknown_lucia (Laughing): Oh! Tu n'es pas venue dans ce village à propos de la légende de la sirène?
+elise (fullHappy): Non, je suis venue voir mamie Rosine!
+unknown_lucia (Laughing): Oh, tu es donc sa petite fille! Je suis étonnée qu'elle ne t'en ai pas parlé..
+unknown_lucia (Sad): Quoique, j'ai cru comprendre qu'elle commençait à avoir pas mal de soucis de mémoires.. ceci explique cela.
+unknown_lucia (Smile): Pour en revenir à cette fameuse sirène.. c'est une légende urbaine concernant ce village!
+unknown_lucia (Smile): Tout le monde a un peu une version différente ici,\
+dans ma famille on dit que la sirène ne se montre jamais,\
+mais qu'elle est présente dans la baie depuis toujours.
+unknown_lucia (Laughing): Certains disent qu'elle protège l'amour, d'autres qu'elle mange des humains!
+elise (fullLaughing): C'est.. vraiment différent!
+unknown_lucia (Laughing): N'est-ce pas, haha!
+unknown_lucia (Laughing): Bon allez, trêve de bavardages, si je n'y vais pas,\
+je n'aurai plus le temps de nager, à toute petite!
+elise (fullHappy): Ouiii, à une prochaine fois!
+[style name="compact"]
+[wait time="1.0"]
+[background arg="res://game/BlackScreen.png" fade="0.5"]
+elise (Thinking): (Mmmh, c'est vrai que c'est assez inspirant,\
+cette histoire de sirène.. et si j'écrivais à propos de..?)
+- La sirène qui protège l'amour
+	elise (Happy): "Curiosité de la sirène,\
+	Quitta la mer non sans peines,\
+	Séduit par l'humain et son amour,\
+	Regardant ces êtres sans détour,
+	elise (Happy): Protégeant à jamais cette symbiose,\
+	Rêvant d'être la prochaine,\
+	Elle bénit les couples sans peine,\
+	Pour que l'amour ne devienne jamais morose."
+	elise (Happy): (Je suis plutôt satisfaite du résultat.. \
+	je me demande si j'en apprendrai plus \
+	à propos de cette fameuse sirène ici!)
+- La sirène qui dévore les humains
+	elise (Thinking): "Chant de la sirène t'emmène à la mer,\
+	Comme un rêve séduisant,\
+	Le chant est l'hameçon et tu es son ver,
+	elise (Thinking): Ses lèvres contre ta peau tu sens,\
+	Elle t'enchante dans les profondeurs,\
+	Tandis que tu te fais dévorer sans peur."
+	elise (Disgusted): (Oula.. c'est la première fois que j'écris ce genre de choses.)
+	elise (Happy): (Malgré ça.. je suis plutôt satisfaite du résultat! \\
+	Je me demande si j'en apprendrai plus à propos de cette fameuse sirène ici!)
+[background arg="res://game/situations/outside/beach/illu_plage_final_jour.png" fade="0.5"]
+elise (Yawn): (Bon, j'vais pas faire ça toute la journée, je suis dehors, autant profiter un peu!)
+elise (Yawn): (Qu'est-ce que je pourrais bien faire sur une plage..? J'ai pas vraiment envie de me baigner.)

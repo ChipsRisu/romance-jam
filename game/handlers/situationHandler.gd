@@ -102,5 +102,5 @@ func hideHud(value: bool) -> void:
 func _triggerSituationDialogue(to: Situation.Key) -> void:
 	if !GameHandler.hasVisitedSituation(to):
 		DialogueHandler.start_situation_description(true)
-	elif !GameHandler.hasVisitedSituationToday(to):
+	if !GameHandler.hasVisitedSituationToday(to):
 		DialogueHandler.start_situation_description(false)
