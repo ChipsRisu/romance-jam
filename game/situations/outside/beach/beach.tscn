@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://duvo5ju3he11g" path="res://game/situations/situation.tscn" id="1_8e1sy"]
 [ext_resource type="Texture2D" uid="uid://bnqgt5eyat4lm" path="res://game/situations/outside/beach/illu_plage_final_jour.png" id="2_1l6vo"]
 [ext_resource type="Script" uid="uid://cxgf0bbqy1ufq" path="res://game/clickables/interactions/interaction.gd" id="3_1fahc"]
-[ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="3_drqwb"]
+[ext_resource type="Texture2D" uid="uid://c8b7s3iy4qyh4" path="res://assets/UI/arrow_down.png" id="3_drqwb"]
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/clickables/exits/exit.gd" id="4_1fahc"]
 [ext_resource type="Texture2D" uid="uid://c52i5hhf25hhw" path="res://game/situations/outside/beach/coquillage1.png" id="4_fcyi1"]
 [ext_resource type="Texture2D" uid="uid://bsk62qim2ymsc" path="res://game/situations/outside/beach/déchet1.png" id="5_5col0"]
@@ -218,13 +218,18 @@ offset_bottom = 40.0
 script = ExtResource("3_1fahc")
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
-[node name="toVillage" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2017786056]
+[node name="Exits" parent="." index="2" unique_id=2130133361]
+visible = true
+
+[node name="toVillage" type="TextureButton" parent="Exits" index="0" unique_id=2017786056]
 layout_mode = 0
 offset_left = 533.0
-offset_top = 570.0
+offset_top = 560.0
 offset_right = 584.0
 offset_bottom = 621.0
 texture_normal = ExtResource("3_drqwb")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("4_1fahc")
 target = 200
 metadata/_custom_type_script = "uid://bkutm1ui3usqp"
