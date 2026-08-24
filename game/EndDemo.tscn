@@ -1,0 +1,252 @@
+[gd_scene format=3 uid="uid://dpn4nrhmgvcg"]
+
+[ext_resource type="Script" uid="uid://bpwpnfm68mkjx" path="res://game/end_demo.gd" id="1_pr3og"]
+[ext_resource type="Texture2D" uid="uid://bnhf6n5ajaan3" path="res://game/situations/outside/house/illu_maison_ext_final.png" id="1_usby3"]
+[ext_resource type="Texture2D" uid="uid://baj8m3o054n8y" path="res://assets/UI/Logo.png" id="2_pr3og"]
+
+[sub_resource type="Animation" id="Animation_7lkjc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IlluMaisonExtFinal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(576, -323.99997)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/TextureRect:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/Label:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/VBoxContainer/Label2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer/VBoxContainer/HBoxContainer:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pr3og"]
+resource_name = "creditTexts"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer/TextureRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer/Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer/VBoxContainer/Label2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer/VBoxContainer/HBoxContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jiekx"]
+resource_name = "deplacement"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("IlluMaisonExtFinal:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.65, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(576, -323.99997), Vector2(576, -323.99997), Vector2(576, 972)]
+}
+
+[sub_resource type="Animation" id="Animation_es7t0"]
+resource_name = "new_animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7lkjc"]
+_data = {
+&"RESET": SubResource("Animation_7lkjc"),
+&"creditTexts": SubResource("Animation_pr3og"),
+&"deplacement": SubResource("Animation_jiekx"),
+&"new_animation": SubResource("Animation_es7t0")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_es7t0"]
+
+[sub_resource type="Theme" id="Theme_pr3og"]
+Label/styles/normal = SubResource("StyleBoxFlat_es7t0")
+
+[sub_resource type="Theme" id="Theme_es7t0"]
+Label/styles/normal = SubResource("StyleBoxFlat_es7t0")
+
+[node name="EndDemo" type="Control" unique_id=1480418594]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pr3og")
+
+[node name="IlluMaisonExtFinal" type="Sprite2D" parent="." unique_id=651075411]
+position = Vector2(576, -323.99997)
+scale = Vector2(0.29999998, 0.29999998)
+texture = ExtResource("1_usby3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1723734595]
+libraries/ = SubResource("AnimationLibrary_7lkjc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1309072714]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -494.5
+offset_top = -23.5
+offset_right = 494.5
+offset_bottom = 23.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1356640517]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme = SubResource("Theme_pr3og")
+theme_override_font_sizes/font_size = 34
+text = "Merci d'avoir jouer à la démo de Summer Memories"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer" unique_id=1423180981]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 296.345)
+layout_mode = 2
+texture = ExtResource("2_pr3og")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1925480140]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/VBoxContainer" unique_id=1207788133]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_es7t0")
+theme_override_font_sizes/font_size = 26
+text = "Jeu réalisé pour la Romance Jam 2026"
+horizontal_alignment = 1
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer" unique_id=1482131821]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+theme_override_constants/separation = 168
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer" unique_id=1883294491]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1151030952]
+layout_mode = 2
+theme = SubResource("Theme_pr3og")
+theme_override_font_sizes/font_size = 24
+text = "Mevennus
+Lumiole
+Meika
+Yaga
+Iloya"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/HBoxContainer" unique_id=466630021]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/HBoxContainer/VBoxContainer2" unique_id=2120600939]
+layout_mode = 2
+theme = SubResource("Theme_pr3og")
+theme_override_font_sizes/font_size = 24
+text = "Shu
+Plumeep
+ChipsRisu
+Vulcainos
+Aconit"
+horizontal_alignment = 1
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
