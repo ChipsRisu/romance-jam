@@ -1,9 +1,10 @@
 if {skipIntro} == true:
 	jump SKIP
+[background arg="res://game/illu_voiture FINAL.png" fade="0.5"]
 maman: Je suis contente que tu acceptes de voir ta grand-mère.
 maman: Je suis sûre que Mamie sera contente de te voir, tu en reviendra grandie!
-join elise left
-elise: Tu m'as quand même un peu forcé à venir pour aider Mamie.. -expression grognon-
+join elise (fullDisappointed) left
+elise: Tu m'as quand même un peu forcé à venir pour aider mamie..
 [clear time="1.0"]
 # Jouer la cinématique
 [background scene="res://game/timelines/prologue/PrologueCinematique.tscn" fade="0.5" transition="Simple Fade"]
@@ -11,36 +12,46 @@ elise: Tu m'as quand même un peu forcé à venir pour aider Mamie.. -expression
 [wait_input]
 do SituationHandler.loadSituation(100)
 [clear time="1.0"]
+[style name="full"]
+[wait time="1.0"]
 join rosine (present/default) right
-rosine: Oh, vous êtes arrivées déjà !!
-rosine: Je suis tellement contente mais ça fait si longtemps, rappelle moi ton prénom?
-rosine: La route s'est bien passé?
-rosine: Viens, viens je vais te montrer ta chambre, il est déjà assez tard. Veux-tu grignoter un truc avant?  -sourire doux-
-- Oui
+rosine (present/Sweet): Oh, vous êtes arrivées déjà!!
+rosine (present/default): Je suis tellement contente mais ça fait si longtemps, rappelle-moi ton prénom?
+join elise (fullDefault) left
+elise: Bonjour Mamie!\
+Mon prénom c'est Elise.
+rosine: Oooh, oui je me rappelle, ça y est, et alors, la route s'est bien passé, ma petite Elise?
+elise (fullDisgusted): Sans encombres! Hormis quelques envies de vomir, tu sais, la conduite de maman c'est.. quelque chose.
+join elise (fullDefault) left [animation="Instant In"]
+rosine (present/Sweet): Ohohoh! Oui, j'ai entendu dire, mais cela fait belle lurette que je n'ai pas été en voiture avec elle!
+rosine: Viens, viens, je vais te montrer ta chambre, il est déjà assez tard. Veux-tu grignoter quelque chose avant?
+- Oui, je veux bien!
 	[clear time="1.0"]
 	# Scène de repas
-	[background arg="res://game/situations/house/kitchen/cuisine.png" fade="0.0"]
-	*un lourd silence s'installe pendant le repas*
-	join elise left
+	[background arg="res://game/slncrps.png" fade="0.0"]
+	[wait time="3.0"]
+	[background arg="res://game/situations/house/kitchen/cuisine.png" fade="0.5"]
+	join elise (fullDefault) left
 	elise: (Mh.. je la croyais plus bavarde, peut-être que je devrais dire quelque chose?)
 	elise: Ca fait longtemps que tu es installée ici..?
 	join rosine right
-	rosine: Oh oui tu sais, ça fait quelques décennies hahaha -sourire nostalgique-
-	rosine: C'est ici que j'ai passé mes plus beaux souvenirs d'enfance! Mais je n'ai plus tout mes souvenirs de cette époque, c'était il y a de cela bien longtemps.
+	rosine (present/Nostalgic): Oh oui tu sais, ça fait quelques décennies, hahaha.
+	rosine: C'est ici que j'ai passé mes plus beaux souvenirs d'enfance! Mais je n'ai plus tous mes souvenirs de cette époque, c'était il y a de cela bien longtemps.
 	rosine: Je me rappelle uniquement que j'étais venue passer les vacances ici, comme toi.
 	elise: Ooooh, mh d'accord.
-- Non
+- Non, le voyage m'a épuisé
 	[clear time="1.0"]
 	join rosine (present/default) right
 	# Scène de chambre
 	[background arg="res://game/situations/house/bedroom/chambre.png" fade="0.0"]
 	[wait time="2.0"]
-	rosine: Je te laisse ranger tes affaires, je vais me coucher, on se voit demain pour commencer ce qu'il y a à faire.
+	rosine (present/Sweet): Je te laisse ranger tes affaires, je vais me coucher, on se voit demain pour commencer ce qu'il y a à faire.
 	leave rosine [animation="Fade Out" wait="true"]
 label SKIP (Skip intro)
 do SituationHandler.loadSituation(105)
 [clear time="1.0"]
 [style name="compact"]
-elise: Je vais aller voir ce que je peux faire...
+[wait time="1.0"]
+elise (default): Je vais aller voir ce que je peux faire...
 do DayHandler.next()
 [end_timeline]
