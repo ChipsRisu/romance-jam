@@ -46,6 +46,7 @@ key = "bed"
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
 [node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
-offset_left = 649.0
-offset_top = 553.0
-offset_right = 700.0
+offset_left = 644.0
+offset_top = 575.0
+offset_right = 685.0
+offset_bottom = 622.7887

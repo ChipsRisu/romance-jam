@@ -2,8 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://duvo5ju3he11g" path="res://game/situations/situation.tscn" id="1_f3uog"]
 [ext_resource type="Texture2D" uid="uid://bnhf6n5ajaan3" path="res://game/situations/outside/house/illu_maison_ext_final.png" id="2_sw6yt"]
-[ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="3_sw6yt"]
+[ext_resource type="Texture2D" uid="uid://c8b7s3iy4qyh4" path="res://assets/UI/arrow_down.png" id="3_qnv1c"]
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/clickables/exits/exit.gd" id="4_qnv1c"]
+[ext_resource type="Texture2D" uid="uid://esaawsinyme1" path="res://assets/UI/arrow.png" id="5_qnv1c"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_f3uog")]
 currentSituation = 100
@@ -18,22 +19,27 @@ visible = true
 
 [node name="toHouseInsinside" type="TextureButton" parent="Exits" index="0" unique_id=588566584]
 layout_mode = 0
-offset_left = 509.0
-offset_top = 401.0
-offset_right = 560.0
-offset_bottom = 452.0
-texture_normal = ExtResource("3_sw6yt")
+offset_left = 514.0
+offset_top = 451.0
+offset_right = 565.0
+offset_bottom = 517.0
+texture_normal = ExtResource("3_qnv1c")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
 script = ExtResource("4_qnv1c")
 target = 101
 metadata/_custom_type_script = "uid://bkutm1ui3usqp"
 
 [node name="toForest" type="TextureButton" parent="Exits" index="1" unique_id=1683096844]
 layout_mode = 0
-offset_left = 1082.0
+offset_left = 1073.0
 offset_top = 367.0
 offset_right = 1133.0
 offset_bottom = 418.0
-texture_normal = ExtResource("3_sw6yt")
+texture_normal = ExtResource("5_qnv1c")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("4_qnv1c")
 target = 400
 dayPresenceList = Array[int]([4, 5, 6])
@@ -44,9 +50,12 @@ metadata/_custom_type_script = "uid://bkutm1ui3usqp"
 layout_mode = 0
 offset_left = 35.0
 offset_top = 363.0
-offset_right = 86.0
+offset_right = 98.0
 offset_bottom = 414.0
-texture_normal = ExtResource("3_sw6yt")
+texture_normal = ExtResource("5_qnv1c")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
 script = ExtResource("4_qnv1c")
 target = 200
 dayPresenceList = Array[int]([2, 6])

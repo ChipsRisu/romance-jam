@@ -22,10 +22,10 @@ script = ExtResource("3_o40di")
 metadata/_custom_type_script = "uid://cxgf0bbqy1ufq"
 
 [node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
-offset_left = 873.0
-offset_top = 554.0
-offset_right = 924.0
-offset_bottom = 605.0
+offset_left = 909.0
+offset_top = 547.0
+offset_right = 961.0
+offset_bottom = 608.17645
 
 [node name="MiniGameDetector" parent="." index="3" unique_id=1490097843 instance=ExtResource("4_m6nwp")]
 changedTags = Dictionary[int, String]({

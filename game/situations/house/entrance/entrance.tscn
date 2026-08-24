@@ -3,10 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://dgxhb7cwv83tf" path="res://game/situations/house/house.tscn" id="1_qm48i"]
 [ext_resource type="Texture2D" uid="uid://djkkmwrgjwcue" path="res://game/situations/house/entrance/illu_entree_grenier_OUVERT_SOLO.png" id="2_ruivo"]
 [ext_resource type="Texture2D" uid="uid://crwjxmxkwx7tc" path="res://game/situations/house/entrance/illu_entree_TOUT_OUVERT.png" id="3_h54gt"]
-[ext_resource type="Texture2D" uid="uid://26i3m78yj535" path="res://game/clickables/exits/icon_ph.png" id="3_ruivo"]
 [ext_resource type="Script" uid="uid://te5kw2qd31t2" path="res://game/situations/altBackground.gd" id="4_da2dy"]
 [ext_resource type="Script" uid="uid://bkutm1ui3usqp" path="res://game/clickables/exits/exit.gd" id="4_h54gt"]
 [ext_resource type="Texture2D" uid="uid://bty56ygi6xm3b" path="res://game/situations/house/entrance/illu_entree_TOUT_FERMER.png" id="5_027fo"]
+[ext_resource type="Texture2D" uid="uid://esaawsinyme1" path="res://assets/UI/arrow.png" id="6_vhykh"]
+[ext_resource type="Texture2D" uid="uid://c8b7s3iy4qyh4" path="res://assets/UI/arrow_down.png" id="8_of2vf"]
 
 [node name="Situation" unique_id=1060838879 instance=ExtResource("1_qm48i")]
 
@@ -30,67 +31,78 @@ script = ExtResource("4_da2dy")
 tag = "both"
 metadata/_custom_type_script = "uid://te5kw2qd31t2"
 
-[node name="Exits" parent="." index="2" unique_id=2130133361]
-visible = true
-
-[node name="toEntrance" parent="Exits" index="0" unique_id=2138552675]
+[node name="toEntrance" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="0" unique_id=2138552675]
 offset_left = 546.0
-offset_top = 573.0
+offset_top = 568.0
 offset_right = 597.0
 offset_bottom = 624.0
 target = 100
 dayPresenceList = Array[int]([2, 3, 4])
 ignoreDay = false
 
-[node name="toKitchen" type="TextureButton" parent="Exits" index="1" unique_id=396106836]
+[node name="toKitchen" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="1" unique_id=396106836]
 layout_mode = 0
-offset_left = 925.0
-offset_top = 309.0
-offset_right = 965.0
-offset_bottom = 349.0
-texture_normal = ExtResource("3_ruivo")
+offset_left = 848.0
+offset_top = 354.0
+offset_right = 899.7
+offset_bottom = 398.0
+texture_normal = ExtResource("6_vhykh")
+ignore_texture_size = true
+stretch_mode = 0
 script = ExtResource("4_h54gt")
 target = 104
 
-[node name="toAttic" type="TextureButton" parent="Exits" index="2" unique_id=319703694]
+[node name="toAttic" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="2" unique_id=319703694]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 19.0
 offset_right = 636.0
 offset_bottom = 59.0
-texture_normal = ExtResource("3_ruivo")
+texture_normal = ExtResource("8_of2vf")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
 script = ExtResource("4_h54gt")
 target = 106
 tag = "attic"
 
-[node name="toAttic2" type="TextureButton" parent="Exits" index="3" unique_id=654177368]
+[node name="toAttic2" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="3" unique_id=654177368]
 layout_mode = 0
 offset_left = 596.0
 offset_top = 19.0
 offset_right = 636.0
 offset_bottom = 59.0
-texture_normal = ExtResource("3_ruivo")
+texture_normal = ExtResource("8_of2vf")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
 script = ExtResource("4_h54gt")
 target = 106
 tag = "both"
 
-[node name="toLivingroom" type="TextureButton" parent="Exits" index="4" unique_id=1280012470]
+[node name="toLivingroom" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="4" unique_id=1280012470]
 layout_mode = 0
 offset_left = 24.0
 offset_top = 326.0
-offset_right = 75.0
+offset_right = 85.0
 offset_bottom = 377.0
-texture_normal = ExtResource("3_ruivo")
+texture_normal = ExtResource("6_vhykh")
+ignore_texture_size = true
+stretch_mode = 0
+flip_h = true
 script = ExtResource("4_h54gt")
 target = 103
 
-[node name="toBedroom" type="TextureButton" parent="Exits" index="5" unique_id=432658431]
+[node name="toBedroom" type="TextureButton" parent="Exits" parent_id_path=PackedInt32Array(2130133361) index="5" unique_id=432658431]
 layout_mode = 0
-offset_left = 371.0
-offset_top = 248.0
-offset_right = 422.0
-offset_bottom = 299.0
-texture_normal = ExtResource("3_ruivo")
+offset_left = 388.0
+offset_top = 334.0
+offset_right = 432.0
+offset_bottom = 385.7647
+texture_normal = ExtResource("8_of2vf")
+ignore_texture_size = true
+stretch_mode = 0
+flip_v = true
 script = ExtResource("4_h54gt")
 target = 105
 tag = "both"
