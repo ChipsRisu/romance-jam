@@ -16,7 +16,7 @@ if {util.isBagObtained} == false:
 		unknown_lucia (Smile): Enfin bref, je suppose que tu n'es pas venue pour ça?
 		elise (fullDefault): Non en effet, j'étais curieuse et je suis venue voir ce qu'il y avait ici!
 		unknown_lucia (Smile): Alors pour le coup, ici on vend plusieurs articles pour la plage, et sache que si tu nous ramènes assez de déchets, tu pourras avoir un sac!
-		elise (fullHappy): Oh, je veux bien un sac oui s'il-vous-plaît!
+		elise (fullHappy): Oh, je veux bien un sac oui, s'il-vous-plaît!
 		set {util.isBeachStandChecked} = true
 	join unknown_lucia (Smile) right [animation="Instant In"]
 	if {util.trashCollected} == 8.0:
@@ -33,6 +33,7 @@ if {util.isBagObtained} == false:
 			# Si on a pas encore tout ramassé
 			if {util.trashCollected} < 8.0:
 			unknown_lucia (Laughing): Allez, t'y es presque! Encore que quelques déchets!
+leave lucia [animation="Instant Out"]
 else:
 	join unknown_lucia (Smile) right
 	unknown_lucia (Smile): Allez, t'as ramassé assez de déchets pour aujourd'hui, retourne t'amuser!
